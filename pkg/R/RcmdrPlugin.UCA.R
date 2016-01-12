@@ -1,6 +1,6 @@
 # Some Rcmdr dialogs for the orloca package (non graphical functions)
 
-.First.lib <- function(libname, pkgname){
+.onAttach <- function(libname, pkgname){
     if (!interactive()) return()
     Rcmdr <- options()$Rcmdr
     plugins <- Rcmdr$plugins

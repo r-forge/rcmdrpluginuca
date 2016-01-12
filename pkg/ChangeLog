@@ -1,4 +1,8 @@
+Version 1.0-1
+2012-03-12
+ * Change in package load function
+ * ChangeLog file added
 Version 1.0-0
 2011-12-02
  * First release
- * "Drop unused factor levels" option has been added to Rcmdr menu
+ * "Drop unused factor levels" option has been added to Rcmdr menu 
