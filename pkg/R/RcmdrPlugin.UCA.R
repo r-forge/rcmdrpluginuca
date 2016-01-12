@@ -73,5 +73,5 @@ randomnessNTest <- function()
 	dialogSuffix(rows=6, columns=1)
 }
 
-numeric.runs.test <- function(x, ...) randtest.runs.test(x, ...)
-twolevelfactor.runs.test <- function(x, ...) tseries.runs.test(x, ...)
+numeric.runs.test <- function(...) randtest.runs.test(...)
+twolevelfactor.runs.test <- function(...) tseries.runs.test(...)
