@@ -1,86 +1,74 @@
-# Some Rcmdr dialogs for the orloca package (non graphical functions)
+# Some Rcmdr useful extensions
 
-globalVariables(c('top', 'buttonsFrame'), 'RcmdrPlugin.UCA')
-
+# Note (last modified: 2013-01-24 by J. Fox): the following function (with contributions from Richard Heiberger and Milan Bouchet-Valat) 
+# can be included in any Rcmdr plug-in package to cause the package to load
+# the Rcmdr if it is not already loaded
 .onAttach <- function(libname, pkgname){
     if (!interactive()) return()
+    putRcmdr("slider.env", new.env())    
     Rcmdr <- options()$Rcmdr
     plugins <- Rcmdr$plugins
-    # Load required packages
-    if ((!pkgname %in% plugins) && !getRcmdr("autoRestart")) {
+    if (!pkgname %in% plugins) {
         Rcmdr$plugins <- c(plugins, pkgname)
         options(Rcmdr=Rcmdr)
-        closeCommander(ask=FALSE, ask.save=TRUE)
-        Commander()
+        if("package:Rcmdr" %in% search()) {
+            if(!getRcmdr("autoRestart")) {
+                closeCommander(ask=FALSE, ask.save=TRUE)
+                Commander()
+            }
+        }
+        else {
+            Commander()
         }
     }
+}
 
-# Function to be called by Rcmdr to drop unused levels in active data set
-Rcmdr.droplevels <- function()
+# Function to be called by Rcmdr to test for randomness using runs.test from tseries packages
+randomnessFTest <- function()
   {
   # To ensure that menu name is included in pot file
-  gettext("Drop unused factor levels...", domain="R-RcmdrPlugin.UCA")
-  ### Base function subsetDataSet <- function(){
-  dataSet <- activeDataSet()
-  ### initializeDialog(title=gettextRcmdr("Subset Data Set"))
-  initializeDialog(title=gettext("Drop unused factor levels...", domain="R-RcmdrPlugin.UCA"))
-  allVariablesFrame <- tkframe(top)
-	allVariables <- tclVar("1")
-	allVariablesCheckBox <- tkcheckbutton(allVariablesFrame, variable=allVariables)
-	variablesBox <- variableListBox(top, Factors(), selectmode="multiple",
-		initialSelection=NULL, title=gettextRcmdr("Variables (select one or more)"))
-	subsetVariable <- tclVar(gettextRcmdr("<all cases>"))
-	subsetFrame <- tkframe(top)
-	newDataSetName <- tclVar(gettextRcmdr("<same as active data set>"))
-	dataSetNameFrame <- tkframe(top)
-	dataSetNameEntry <- ttkentry(dataSetNameFrame, width="25", textvariable=newDataSetName)
+  gettext("Randomness test for two level factor...", domain="R-RcmdrPlugin.UCA")
+  # Build dialog
+  initializeDialog(title=gettext("Randomness test for two level factor", domain="R-RcmdrPlugin.UCA"))
+  variablesBox <- variableListBox(top, TwoLevelFactors(), selectmode="single", initialSelection=NULL, title=gettextRcmdr("Variable (pick one)"))
 	onOK <- function(){
-		newName <- trim.blanks(tclvalue(newDataSetName))
-		if (newName == gettextRcmdr("<same as active data set>")) newName <- ActiveDataSet()
-		if (!is.valid.name(newName)){
-			errorCondition(recall=Rcmdr.droplevels,
-				message=paste('"', newName, '" ', gettextRcmdr("is not a valid name."), sep=""))
-			return()
-		}
-		if (is.element(newName, listDataSets())) {
-			if ("no" == tclvalue(checkReplace(newName, type=gettextRcmdr("Data set")))){
-				closeDialog()
-				return()
-			}
-		}
-		selectVars <- if (tclvalue(allVariables) == "1") ""
-			else {
-				x <- getSelection(variablesBox)
-				if (0 > length(x)) {
-					errorCondition(recall=Rcmdr.droplevels,
-						message=gettextRcmdr("No variables were selected."))
-					return()
-				}
-				paste("[, c(\"", paste(x, collapse="\",\""), "\")]", sep="")
-			}
-		closeDialog()
-                # If new name is given, it is neccesary to create the new data set befor filter
-                if (!identical(newName, ActiveDataSet())){
-                  command <- paste(newName, " <- ", ActiveDataSet(), sep="")
-                  logger(command)
-                  justDoIt(command)
+		x <- getSelection(variablesBox)
+		if (length(x) == 0) {
+                    errorCondition(recall=randomnessNTest, message=gettextRcmdr("No variables were selected."))
+                    return()
                 }
-                command <- paste(newName, selectVars, " <- droplevels(", ActiveDataSet(), selectVars, ")",sep="")
-		logger(command)
-		result <- justDoIt(command)
-		if (class(result)[1] !=  "try-error") activeDataSet(newName)
+		closeDialog()
+                # Apply test
+                doItAndPrint(paste("with(", ActiveDataSet(), ", twolevelfactor.runs.test(", x, "))", sep = ""))
 		tkfocus(CommanderWindow())
 	}
-	OKCancelHelp(helpSubject="subset")
-	tkgrid(labelRcmdr(allVariablesFrame, text=gettextRcmdr("Include all variables")),
-		allVariablesCheckBox, sticky="w")
-	tkgrid(allVariablesFrame, sticky="w")
-	tkgrid(labelRcmdr(top, text=gettextRcmdr("   OR"), fg="red"), sticky="w")
+	OKCancelHelp(helpSubject="tseries::runs.test", reset = "randomnessFTest", apply = "randomnessFTest")
 	tkgrid(getFrame(variablesBox), sticky="nw")
-	tkgrid(subsetFrame, sticky="w")
-	tkgrid(labelRcmdr(dataSetNameFrame, text=gettextRcmdr("Name for new data set")), sticky="w")
-	tkgrid(dataSetNameEntry, sticky="w")
-	tkgrid(dataSetNameFrame, sticky="w")
+	tkgrid(buttonsFrame, sticky="w")
+	dialogSuffix(rows=6, columns=1)
+}
+
+# Function to be called by Rcmdr to test for randomness using runs.test from randtest packages
+randomnessNTest <- function()
+  {
+  # To ensure that menu name is included in pot file
+  gettext("Randomness test for numeric variable...", domain="R-RcmdrPlugin.UCA")
+  # Build dialog
+  initializeDialog(title=gettext("Randomness test for numeric variable", domain="R-RcmdrPlugin.UCA"))
+  variablesBox <- variableListBox(top, Numeric(), selectmode="single", initialSelection=NULL, title=gettextRcmdr("Variable (pick one)"))
+	onOK <- function(){
+		x <- getSelection(variablesBox)
+		if (length(x) == 0) {
+                    errorCondition(recall=randomnessNTest, message=gettextRcmdr("No variables were selected."))
+                    return()
+                }
+		closeDialog()
+                # Apply test
+                doItAndPrint(paste("with(", ActiveDataSet(), ", numeric.runs.test(", x, "))", sep = ""))
+		tkfocus(CommanderWindow())
+	}
+	OKCancelHelp(helpSubject="randtests::runs.test", reset = "randomnessNTest", apply = "randomnessNTest")
+	tkgrid(getFrame(variablesBox), sticky="nw")
 	tkgrid(buttonsFrame, sticky="w")
 	dialogSuffix(rows=6, columns=1)
 }

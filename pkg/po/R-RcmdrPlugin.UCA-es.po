@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RcmdrPlugin.UCA\n"
 "Report-Msgid-Bugs-To: manuel.munoz@uca.es\n"
-"POT-Creation-Date: 2013-10-18 10:53+0200\n"
-"PO-Revision-Date: 2013-10-18 10:54+0100\n"
+"POT-Creation-Date: 2015-06-05 11:01+0200\n"
+"PO-Revision-Date: 2015-06-05 11:03+0100\n"
 "Last-Translator: Manuel Munoz-Marquez <manuel.munoz@uca.es>\n"
 "Language-Team:  <manuel.munoz@uca.es>\n"
 "Language: es_ES\n"
@@ -16,9 +16,23 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.7.5\n"
 
-#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:20
-#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:24
-msgid "Drop unused factor levels..."
-msgstr "Desechar niveles vacíos de factores..."
+#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:30
+msgid "Randomness test for two level factor..."
+msgstr "Test de aleatoriedad para un factor de dos niveles..."
+
+#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:32
+msgid "Randomness test for two level factor"
+msgstr "Test de aleatoriedad para un factor de dos niveles"
+
+#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:55
+msgid "Randomness test for numeric variable..."
+msgstr "Test de aleatoriedad para variable numérica..."
+
+#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:57
+msgid "Randomness test for numeric variable"
+msgstr "Test de aleatoriedad para variable numérica"
+
+#~ msgid "Drop unused factor levels..."
+#~ msgstr "Desechar niveles vacíos de factores..."

@@ -1,1 +1,10 @@
-export(Rcmdr.droplevels)
+export(randomnessFTest)
+export(randomnessNTest)
+
+import(Rcmdr)
+import(stats)
+
+importFrom("randtests", numeric.runs.test = "runs.test")
+importFrom("tcltk", "tkbutton")
+importFrom("tseries", twolevelfactor.runs.test = "runs.test")
+

@@ -1,6 +1,7 @@
 \name{RcmdrPlugin.UCA-internal}
-\title{RcmdrPlugin.UCA:  Some customization to Rcmdr made by R-UCA project}
-\alias{Rcmdr.droplevels}
+\title{RcmdrPlugin.UCA: Some extension to Rcmdr (R Commander) made by R-UCA project and used in teaching statistics at University of Cadiz (UCA).}
+\alias{randomnessFTest}
+\alias{randomnessNTest}
 
 \encoding{UTF-8}
 \description{Internal functions (should not be called by the user) for
