@@ -33,6 +33,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
 <!-- get project title  -->
 <!-- own website starts here, the following may be changed as you like -->
 
+<!-- MMM
 <?php if ($handle=fopen('http://'.$domain.'/export/projtitl.php?group_name='.$group_name,'r')){
 $contents = '';
 while (!feof($handle)) {
@@ -40,12 +41,18 @@ while (!feof($handle)) {
 }
 fclose($handle);
 echo $contents; } ?>
+MMM -->
 
 <!-- end of project description -->
 
-<p> No content added. </p>
+<h1>[EN] Welcome to RcmdrPlugin.UCA project!</h1>
+<p>An Rcmdr plugin that customize Rcmdr to teach statistics in a first university course on statistics</p>
+<p>The <strong>project summary page</strong> you can find <a href="http://<?php echo $domain; ?>/projects/<?php echo $group_name; ?>/"><strong>here</strong></a>. </p>
 
-<p> The <strong>project summary page</strong> you can find <a href="http://<?php echo $domain; ?>/projects/<?php echo $group_name; ?>/"><strong>here</strong></a>. </p>
+<h1>[ES] ¡Bienvenido al proyecto RcmdrPlugin.UCA!</h1>
+<p>Un a&ntilde;adido a Rcmdr para la ense&ntilde;anza de un primer curso universitario en estad&iacute;stica</p>
+<p>La <strong>p&aacute;gina resumen del proyecto</strong> se puede encontrar <a href="http://<?php echo $domain; ?>/projects/<?php echo $group_name; ?>/"><strong>aqu&iacute;</strong></a>. </p>
+
 
 </body>
 </html>
