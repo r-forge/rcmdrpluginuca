@@ -1,5 +1,7 @@
 # Some Rcmdr dialogs for the orloca package (non graphical functions)
 
+globalVariables(c('top', 'buttonsFrame'), 'RcmdrPlugin.UCA')
+
 .onAttach <- function(libname, pkgname){
     if (!interactive()) return()
     Rcmdr <- options()$Rcmdr
@@ -17,11 +19,11 @@
 Rcmdr.droplevels <- function()
   {
   # To ensure that menu name is included in pot file
-  gettext("Drop unused factor levels", domain="R-RcmdrPlugin.UCA")
+  gettext("Drop unused factor levels...", domain="R-RcmdrPlugin.UCA")
   ### Base function subsetDataSet <- function(){
   dataSet <- activeDataSet()
   ### initializeDialog(title=gettextRcmdr("Subset Data Set"))
-  initializeDialog(title=gettext("Drop unused factor levels", domain="R-RcmdrPlugin.UCA"))
+  initializeDialog(title=gettext("Drop unused factor levels...", domain="R-RcmdrPlugin.UCA"))
   allVariablesFrame <- tkframe(top)
 	allVariables <- tclVar("1")
 	allVariablesCheckBox <- tkcheckbutton(allVariablesFrame, variable=allVariables)

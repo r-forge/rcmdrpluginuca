@@ -4,4 +4,4 @@
 # last modified: Nov 2011 by M. Munoz-Marquez
 
 #   type    menu/item      operation/parent  label                         command/menu       activation           install?
-    item    activeMenu     command           "Drop unused factor levels"   Rcmdr.droplevels   "activeDataSetP()"   ""
+    item    activeMenu     command           "Drop unused factor levels..."   Rcmdr.droplevels   "activeDataSetP()"   ""

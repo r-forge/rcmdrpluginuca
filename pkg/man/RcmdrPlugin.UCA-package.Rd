@@ -17,7 +17,7 @@ Package: \tab RcmdrPlugin.UCA\cr
 Type: \tab Package\cr
 Version: \tab 1.0-1\cr
 Date: \tab 2012-03-12\cr
-License: \tab GPL version 2 or newer\cr
+License: \tab GPL version 3 or newer\cr
 }
 }
 
