@@ -18,7 +18,7 @@
 \tabular{ll}{
 Paquete: \tab RcmdrPlugin.UCA\cr
 Tipo: \tab Paquete\cr
-Version: \tab 2.0-3\cr
+Version: \tab 2.0-4\cr
 Fecha: \tab 2015-06-10\cr
 Licencia: \tab GPL (>= 3)\cr
 }

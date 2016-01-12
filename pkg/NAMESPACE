@@ -1,10 +1,11 @@
-export(randomnessFTest)
-export(randomnessNTest)
+import("Rcmdr")
+import("stats")
 
-import(Rcmdr)
-import(stats)
-
-importFrom("randtests", numeric.runs.test = "runs.test")
+importFrom("randtests", randtest.runs.test = "runs.test")
 importFrom("tcltk", "tkbutton")
-importFrom("tseries", twolevelfactor.runs.test = "runs.test")
+importFrom("tseries", tseries.runs.test = "runs.test")
 
+export("numeric.runs.test")
+export("randomnessFTest")
+export("randomnessNTest")
+export("twolevelfactor.runs.test")

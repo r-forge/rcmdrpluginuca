@@ -42,7 +42,7 @@ randomnessFTest <- function()
                 doItAndPrint(paste("with(", ActiveDataSet(), ", twolevelfactor.runs.test(", x, "))", sep = ""))
 		tkfocus(CommanderWindow())
 	}
-	OKCancelHelp(helpSubject="tseries::runs.test", reset = "randomnessFTest", apply = "randomnessFTest")
+	OKCancelHelp(helpSubject="runs.test", reset = "randomnessFTest", apply = "randomnessFTest")
 	tkgrid(getFrame(variablesBox), sticky="nw")
 	tkgrid(buttonsFrame, sticky="w")
 	dialogSuffix(rows=6, columns=1)
@@ -67,9 +67,11 @@ randomnessNTest <- function()
                 doItAndPrint(paste("with(", ActiveDataSet(), ", numeric.runs.test(", x, "))", sep = ""))
 		tkfocus(CommanderWindow())
 	}
-	OKCancelHelp(helpSubject="randtests::runs.test", reset = "randomnessNTest", apply = "randomnessNTest")
+	OKCancelHelp(helpSubject="runs.test", reset = "randomnessNTest", apply = "randomnessNTest")
 	tkgrid(getFrame(variablesBox), sticky="nw")
 	tkgrid(buttonsFrame, sticky="w")
 	dialogSuffix(rows=6, columns=1)
 }
 
+numeric.runs.test <- function(x, ...) randtest.runs.test(x, ...)
+twolevelfactor.runs.test <- function(x, ...) tseries.runs.test(x, ...)
