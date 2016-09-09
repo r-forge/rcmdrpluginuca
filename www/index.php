@@ -46,11 +46,17 @@ MMM -->
 <!-- end of project description -->
 
 <h1>[EN] Welcome to RcmdrPlugin.UCA project!</h1>
-<p>An Rcmdr plugin that customize Rcmdr to teach statistics in a first university course on statistics</p>
+
+<p>Some extension to Rcmdr (R Commander) to teach statistics in a first universitary course made by R-UCA project and used at University of Cadiz (UCA).</p>
+
 <p>The <strong>project summary page</strong> you can find <a href="http://<?php echo $domain; ?>/projects/<?php echo $group_name; ?>/"><strong>here</strong></a>. </p>
 
 <h1>[ES] ¡Bienvenido al proyecto RcmdrPlugin.UCA!</h1>
-<p>Un a&ntilde;adido a Rcmdr para la ense&ntilde;anza de un primer curso universitario en estad&iacute;stica</p>
+
+<p>Algunas extensiones a Rcmdr (R Commander) para la ense&ntilde;anza de un primer curso universitario en estad&iacute;stica hechas por el proyecto R-UCA y usadas en la Universidad de C&aacute;diz (UCA).</p>
+
+<p>Todas las adaptaciones serán propuestas para su incorporación a Rcmdr. Las adaptaciones que se incorporen al paquete Rcmdr se suprimirán de este paquete.</p>
+
 <p>La <strong>p&aacute;gina resumen del proyecto</strong> se puede encontrar <a href="http://<?php echo $domain; ?>/projects/<?php echo $group_name; ?>/"><strong>aqu&iacute;</strong></a>. </p>
 
 
