@@ -6,6 +6,8 @@ importFrom("tcltk", "tkbutton")
 importFrom("tseries", tseries.runs.test = "runs.test")
 
 export("numeric.runs.test")
+export("input2predict")
+export("predict4dataset")
 export("randomnessFTest")
 export("randomnessNTest")
 export("twolevelfactor.runs.test")

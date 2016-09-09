@@ -1,9 +1,9 @@
 # Some Rcmdr useful extensions
 
-# Note (last modified: 2013-01-24 by J. Fox): the following function (with contributions from Richard Heiberger and Milan Bouchet-Valat) 
+# Note for the next function (last modified: 2013-01-24 by J. Fox): the following function (with contributions from Richard Heiberger and Milan Bouchet-Valat)
 # can be included in any Rcmdr plug-in package to cause the package to load
 # the Rcmdr if it is not already loaded
-.onAttach <- function(libname, pkgname){
+.onAttach <- function(libname, pkgname) {
     if (!interactive()) return()
     putRcmdr("slider.env", new.env())    
     Rcmdr <- options()$Rcmdr
@@ -23,9 +23,43 @@
     }
 }
 
+# Function to input data and predict values using current model
+input2predict <- function() {
+    # To ensure that menu name is included in pot file
+    gettext("Predict using current model", domain="R-RcmdrPlugin.UCA")
+    gettext("Input data and predict", domain="R-RcmdrPlugin.UCA")
+    doItAndPrint(paste0(".data <- edit(", ActiveDataSet(), "[0,])"))
+    doItAndPrint(".data")
+    doItAndPrint(paste0("predict(", ActiveModel(), ", .data)"))
+    doItAndPrint("remove(.data)")
+    }
+
+# Funnction to predict values for existing data set
+predict4dataset <- function() {
+    # To ensure that menu name is included in pot file
+    gettext("Add predictions to existing dataset...", domain="R-RcmdrPlugin.UCA")
+    dataSets <- listDataSets()
+    .activeDataSet <- ActiveDataSet()
+    initializeDialog(title=gettextRcmdr("Select Data Set"))
+    dataSetsBox <- variableListBox(top, dataSets, title=gettextRcmdr("Data Sets (pick one)"), initialSelection=if (is.null(.activeDataSet)) NULL else which(.activeDataSet == dataSets) - 1)
+    onOK <- function(){
+        selection <- getSelection(dataSetsBox)
+        closeDialog()
+        setBusyCursor()
+        on.exit(setIdleCursor())
+        doItAndPrint(paste0(selection, "$fitted <- predict(", ActiveModel(), ", ", selection, ")"))
+        activeDataSet(selection)
+        tkfocus(CommanderWindow())
+    }
+    OKCancelHelp()
+    tkgrid(getFrame(dataSetsBox), sticky="nw")
+    tkgrid(buttonsFrame, sticky="w")
+    dialogSuffix()
+
+}
+
 # Function to be called by Rcmdr to test for randomness using runs.test from tseries packages
-randomnessFTest <- function()
-  {
+randomnessFTest <- function() {
   # To ensure that menu name is included in pot file
   gettext("Randomness test for two level factor...", domain="R-RcmdrPlugin.UCA")
   # Build dialog
@@ -49,8 +83,7 @@ randomnessFTest <- function()
 }
 
 # Function to be called by Rcmdr to test for randomness using runs.test from randtest packages
-randomnessNTest <- function()
-  {
+randomnessNTest <- function() {
   # To ensure that menu name is included in pot file
   gettext("Randomness test for numeric variable...", domain="R-RcmdrPlugin.UCA")
   # Build dialog
