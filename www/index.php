@@ -47,9 +47,11 @@ MMM -->
 
 <h1>[EN] Welcome to RcmdrPlugin.UCA project!</h1>
 
-<p>Some extension to Rcmdr (R Commander) to teach statistics in a first universitary course made by R-UCA project and used at University of Cadiz (UCA).</p>
+<p>Some extension to Rcmdr (R Commander) to teach statistics in a first university course made by R-UCA project and used at University of Cadiz (UCA).</p>
 
-<p>The <strong>project summary page</strong> you can find <a href="http://<?php echo $domain; ?>/projects/<?php echo $group_name; ?>/"><strong>here</strong></a>. </p>
+<p>All the customizations provides by this package will be propose to be part of the Rcmdr package. All the customization included in the Rcmdr package will be dropped from here.</p>
+
+<p>More information in <a href="http://<?php echo $domain; ?>/projects/<?php echo $group_name; ?>/"><strong>project summary page</strong></a>.</p>
 
 <h1>[ES] ¡Bienvenido al proyecto RcmdrPlugin.UCA!</h1>
 
@@ -57,8 +59,7 @@ MMM -->
 
 <p>Todas las adaptaciones serán propuestas para su incorporación a Rcmdr. Las adaptaciones que se incorporen al paquete Rcmdr se suprimirán de este paquete.</p>
 
-<p>La <strong>p&aacute;gina resumen del proyecto</strong> se puede encontrar <a href="http://<?php echo $domain; ?>/projects/<?php echo $group_name; ?>/"><strong>aqu&iacute;</strong></a>. </p>
-
+<p>M&aacute; informaci&oacute;n en la <a href="http://<?php echo $domain; ?>/projects/<?php echo $group_name; ?>/"><strong>p&aacute;gina resumen del proyecto</strong></a>.</p>
 
 </body>
 </html>
