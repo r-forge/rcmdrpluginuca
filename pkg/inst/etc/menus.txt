@@ -8,6 +8,6 @@
     item    nonparametricMenu command           "Randomness test for numeric variable..."   randomnessNTest   "numericP()"         ""
     item    modelsMenu        separator         ""                                          ""                ""                   ""
     menu    predictMenu	      modelsMenu        ""                                          ""                ""                   ""
-    item    modelsMenu        cascade           "Predict using current model"  		    predictMenu       ""                   ""
+    item    modelsMenu        cascade           "Predict using active model"  		    predictMenu       ""                   ""
     item    predictMenu       command           "Input data and predict"		    input2predict     "activeModelP()"     ""
     item    predictMenu       command           "Add predictions to existing dataset..."    predict4dataset   "activeModelP()"     ""

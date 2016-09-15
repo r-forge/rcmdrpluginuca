@@ -19,8 +19,8 @@ msgstr ""
 "X-Generator: Poedit 1.8.7.1\n"
 
 #: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:29
-msgid "Predict using current model"
-msgstr "Predecir usando el modelo actual"
+msgid "Predict using active model"
+msgstr "Predecir usando el modelo activo"
 
 #: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:30
 msgid "Input data and predict"

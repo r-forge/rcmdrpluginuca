@@ -1,3 +1,5 @@
+import("car")       # For examples
+import("randtests") # For examples
 import("Rcmdr")
 import("stats")
 
@@ -5,8 +7,8 @@ importFrom("randtests", randtest.runs.test = "runs.test")
 importFrom("tcltk", "tkbutton")
 importFrom("tseries", tseries.runs.test = "runs.test")
 
-export("numeric.runs.test")
 export("input2predict")
+export("numeric.runs.test")
 export("predict4dataset")
 export("randomnessFTest")
 export("randomnessNTest")

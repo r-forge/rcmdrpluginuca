@@ -1,11 +1,11 @@
 Package: RcmdrPlugin.UCA
 Type: Package
 Title: UCA Rcmdr Plug-in
-Version: 3.0-1
-Date: 2016-09-09
+Version: 3.1-0
+Date: 2016-09-15
 Author: Manuel Munoz-Marquez <manuel.munoz@uca.es>
 Maintainer: Manuel Munoz-Marquez <manuel.munoz@uca.es>
-Depends: Rcmdr (>= 1.6), randtests, tseries
+Depends: car, randtests, Rcmdr (>= 1.6), tseries
 Description: Some extension to Rcmdr (R Commander) made by R-UCA project and used in teaching statistics at University of Cadiz (UCA).
 License: GPL (>= 3)
 URL: http://knuth.uca.es/RcmdrPlugin.UCA

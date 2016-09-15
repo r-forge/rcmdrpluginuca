@@ -23,10 +23,10 @@
     }
 }
 
-# Function to input data and predict values using current model
+# Function to input data and predict values using active model
 input2predict <- function() {
     # To ensure that menu name is included in pot file
-    gettext("Predict using current model", domain="R-RcmdrPlugin.UCA")
+    gettext("Predict using active model", domain="R-RcmdrPlugin.UCA")
     gettext("Input data and predict", domain="R-RcmdrPlugin.UCA")
     doItAndPrint(paste0(".data <- edit(", ActiveDataSet(), "[0,])"))
     doItAndPrint(".data")
