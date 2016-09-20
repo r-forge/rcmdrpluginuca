@@ -6,7 +6,8 @@
 \encoding{UTF-8}
 
 \description{
-  Algunas extensiones a Rcmdr (R Commander) para la \enc{enseñanza}{ensenanza} de
+  Algunas extensiones a Rcmdr (R Commander), test de aleatoriedad y
+  predicciones utilizando el modelo activo, para la \enc{enseñanza}{ensenanza} de
   un primer curso universitario en \enc{estadística}{estadistica} hechas por el
   proyecto R-UCA y usadas en la Universidad de \enc{Cádiz}{Cadiz} (UCA).
 
@@ -18,8 +19,8 @@
 \tabular{ll}{
 Paquete: \tab RcmdrPlugin.UCA\cr
 Tipo: \tab Paquete\cr
-Version: \tab 3.1-1\cr
-Fecha: \tab 2016-09-18\cr
+Version: \tab 3.1-2\cr
+Fecha: \tab 2016-09-20\cr
 Licencia: \tab GPL (>= 3)\cr
 }
 }

@@ -5,7 +5,7 @@
 \docType{package}
 \encoding{UTF-8}
 \description{
-  Some extension to Rcmdr (R Commander) to teach statistics in a first
+  Some extension to Rcmdr (R Commander), randomness test and predictions using active model, to teach statistics in a first
   university course made by R-UCA project and used at University of
   Cadiz (UCA).
 
@@ -17,8 +17,8 @@
 \tabular{ll}{
 Package: \tab RcmdrPlugin.UCA\cr
 Type: \tab Package\cr
-Version: \tab 3.1-1\cr
-Date: \tab 2016-09-18\cr
+Version: \tab 3.1-2\cr
+Date: \tab 2016-09-20\cr
 License: \tab GPL version 3 or newer\cr
 }
 }
