@@ -4,7 +4,7 @@
 # last modified: May 2017 by M. Munoz-Marquez
 
 #   type    menu/item         operation/parent  label                                       command/menu      activation           install?
-    item    variancesMenu     command           "Single-sample Chi-square-test..."          sigmaTest         "numericP()"	   ""
+    item    variancesMenu     command           "Single-Sample Chi-squared-Test..."          sigmaTest         "numericP()"	   ""
     item    nonparametricMenu command           "Randomness test for two level factor..."   randomnessFTest   "twoLevelFactorsP()" ""
     item    nonparametricMenu command           "Randomness test for numeric variable..."   randomnessNTest   "numericP()"         ""
     item    modelsMenu        separator         ""                                          ""                ""                   ""

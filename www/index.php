@@ -1,7 +1,3 @@
-
-<!-- This is the project specific website template -->
-<!-- It can be changed as liked or replaced by other content -->
-
 <?php
 
 $domain=ereg_replace('[^\.]*\.(.*)$','\1',$_SERVER['HTTP_HOST']);
@@ -43,8 +39,6 @@ fclose($handle);
 echo $contents; } ?>
 MMM -->
 
-<!-- end of project description -->
-
 <h1>[EN] Welcome to RcmdrPlugin.UCA project!</h1>
 
 <p>Some extension to Rcmdr (R Commander) to teach statistics in a first university course made by R-UCA project and used at University of Cadiz (UCA).</p>
@@ -59,7 +53,7 @@ MMM -->
 
 <p>Todas las adaptaciones serán propuestas para su incorporación a Rcmdr. Las adaptaciones que se incorporen al paquete Rcmdr se suprimirán de este paquete.</p>
 
-<p>M&aacute; informaci&oacute;n en la <a href="http://<?php echo $domain; ?>/projects/<?php echo $group_name; ?>/"><strong>p&aacute;gina resumen del proyecto</strong></a>.</p>
+<p>M&aacute;s informaci&oacute;n en la <a href="http://<?php echo $domain; ?>/projects/<?php echo $group_name; ?>/"><strong>p&aacute;gina resumen del proyecto</strong></a>.</p>
 
 </body>
 </html>

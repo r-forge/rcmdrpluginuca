@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RcmdrPlugin.UCA\n"
 "Report-Msgid-Bugs-To: manuel.munoz@uca.es\n"
-"POT-Creation-Date: 2016-09-09 21:17+0200\n"
-"PO-Revision-Date: 2016-09-09 21:18+0200\n"
-"Last-Translator: Manuel Munoz-Marquez <manuel.munoz@uca.es>\n"
+"POT-Creation-Date: 2017-05-22 00:16+0200\n"
+"PO-Revision-Date: 2017-05-22 00:16+0200\n"
+"Last-Translator: Manuel Muñoz Márquez <r-uca@uca.es>\n"
 "Language-Team: manuel.munoz@uca.es\n"
 "Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 1.8.7.1\n"
+"X-Generator: Poedit 2.0.1\n"
 
 #: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:29
 msgid "Predict using active model"
@@ -45,6 +45,22 @@ msgstr "Test de aleatoriedad para variable numérica..."
 #: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:90
 msgid "Randomness test for numeric variable"
 msgstr "Test de aleatoriedad para variable numérica"
+
+#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:112
+msgid "Single-Sample Chi-squared-Test..."
+msgstr "Test Chi-cuadrado para una muestra..."
+
+#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:115
+msgid "Single-Sample Chi-squared-Test"
+msgstr "Test Chi-cuadrado para una muestra"
+
+#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:134
+msgid "Population variance"
+msgstr "Varianza poblacional"
+
+#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:144
+msgid "Null hypothesis: sigma ="
+msgstr "Hipótesis nula: sigma ="
 
 #~ msgid "Drop unused factor levels..."
 #~ msgstr "Desechar niveles vacíos de factores..."

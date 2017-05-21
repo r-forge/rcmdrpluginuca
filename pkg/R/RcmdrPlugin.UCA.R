@@ -108,9 +108,11 @@ randomnessNTest <- function() {
 
 sigmaTest <- function() {
     ## This function is developed from singleSampleTTest in Rcmdr and use function sigma.test in package TeachingDemos
+    ## To ensure that menu name is included in pot file
+    gettext("Single-Sample Chi-squared-Test...", domain="R-RcmdrPlugin.UCA")
     defaults <- list (initial.x = NULL, initial.alternative = "two.sided", initial.level = ".95", initial.sigma = "1.0")
     dialog.values <- getDialog ("sigmaTest", defaults)
-    initializeDialog(title = gettextRcmdr("Single-Sample Chi-squared-Test"))
+    initializeDialog(title = gettext("Single-Sample Chi-squared-Test", domain="R-RcmdrPlugin.UCA"))
     xBox <- variableListBox(top, Numeric(), title = gettextRcmdr("Variable (pick one)"), initialSelection = varPosn(dialog.values$initial.x, "numeric"))
     onOK <- function() {
         x <- getSelection(xBox)
@@ -129,7 +131,7 @@ sigmaTest <- function() {
     }
     OKCancelHelp(helpSubject = "sigma.test", reset = "sigmaTest", apply = "sigmaTest")
     optionsFrame <- tkframe(top)
-    radioButtons(optionsFrame, name = "alternative", buttons = c("twosided", "less", "greater"), values = c("two.sided", "less", "greater"), labels = gettextRcmdr(c("Population variance != sigma0", "Population variance < sigma0", "Population variance > sigma0")), title = gettextRcmdr("Alternative Hypothesis"), initialValue = dialog.values$initial.alternative)
+    radioButtons(optionsFrame, name = "alternative", buttons = c("twosided", "less", "greater"), values = c("two.sided", "less", "greater"), labels = paste(gettext("Population variance", domain="R-RcmdrPlugin.UCA"), c("!= sigma0", "< sigma0", "> sigma0")), title = gettextRcmdr("Alternative Hypothesis"), initialValue = dialog.values$initial.alternative)
     rightFrame <- tkframe(optionsFrame)
     confidenceFrame <- tkframe(rightFrame)
     confidenceLevel <- tclVar(dialog.values$initial.level)
@@ -139,7 +141,7 @@ sigmaTest <- function() {
     sigmaField <- ttkentry(sigmaFrame, width = "8", textvariable = sigmaVariable)
     tkgrid(getFrame(xBox), sticky = "nw")
     tkgrid(labelRcmdr(rightFrame, text = ""), sticky = "w")
-    tkgrid(labelRcmdr(sigmaFrame, text = gettextRcmdr("Null hypothesis: sigma = ")),  sigmaField, sticky = "w", padx=c(10, 0))
+    tkgrid(labelRcmdr(sigmaFrame, text = gettext("Null hypothesis: sigma =", domain="R-RcmdrPlugin.UCA")),  sigmaField, sticky = "w", padx=c(10, 0))
     tkgrid(sigmaFrame, sticky = "w")
     tkgrid(labelRcmdr(confidenceFrame, text = gettextRcmdr("Confidence Level: ")), confidenceField, sticky = "w", padx=c(10, 0))
     tkgrid(confidenceFrame, sticky = "w")
