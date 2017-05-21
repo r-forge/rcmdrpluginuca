@@ -5,6 +5,7 @@
 \alias{predict4dataset}
 \alias{randomnessFTest}
 \alias{randomnessNTest}
+\alias{sigmaTest}
 \alias{twolevelfactor.runs.test}
 
 \encoding{UTF-8}

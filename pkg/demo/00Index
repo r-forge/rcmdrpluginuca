@@ -6,3 +6,5 @@ predecir_y_guardar	Ejemplo de prediccion para un conjunto de datos existente
 predict_and_save	Example of predict values for an existing data set
 randomness_numeric_variable	Example of randomness test for a numeric variable
 randomness_two_level_factor	Example of randomnes test for two level factor
+sigma_test			Example of test and confidence interval of sigma for one normal population
+test_sigma			Ejemplo de test e intervalo de confianza para sigma para una poblacion normal

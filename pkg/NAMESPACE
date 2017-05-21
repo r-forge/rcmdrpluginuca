@@ -4,6 +4,7 @@ import("Rcmdr")
 import("stats")
 
 importFrom("randtests", randtest.runs.test = "runs.test")
+importFrom("TeachingDemos", "sigma.test")
 importFrom("tcltk", "tkbutton")
 importFrom("tseries", tseries.runs.test = "runs.test")
 
@@ -13,3 +14,5 @@ export("predict4dataset")
 export("randomnessFTest")
 export("randomnessNTest")
 export("twolevelfactor.runs.test")
+export("sigmaTest")
+

@@ -1,9 +1,10 @@
 # Some Rcmdr menus for the RcmdrPlugin.UCA package
 # When the plug-in is loaded, these menus are merged with the standard Rcmdr menus
 
-# last modified: Sep 2016 by M. Munoz-Marquez
+# last modified: May 2017 by M. Munoz-Marquez
 
 #   type    menu/item         operation/parent  label                                       command/menu      activation           install?
+    item    variancesMenu     command           "Single-sample Chi-square-test..."          sigmaTest         "numericP()"	   ""
     item    nonparametricMenu command           "Randomness test for two level factor..."   randomnessFTest   "twoLevelFactorsP()" ""
     item    nonparametricMenu command           "Randomness test for numeric variable..."   randomnessNTest   "numericP()"         ""
     item    modelsMenu        separator         ""                                          ""                ""                   ""

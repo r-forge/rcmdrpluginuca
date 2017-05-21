@@ -1,27 +1,32 @@
+Version 4.1-0
+2017-05-21
+ * New option in menu to build confidence interval and test the variance from one normal population
+ * New entries in help for menu entry "Predict using active model"
+ * New entries in help for menu entries "Randomness test for two level factor..." and "Randomness test for numeric variable...".
 Version 3.1-0
 2016-09-15
- * demo for menu options in the packages are added.
+ * demo for menu options in the package are added.
 Version 3.0-1
 2016-09-09
  * Two new options added in "Models menu" to fit values using current model.
 Version 2.0-5
 2016-01-12
- * Minor bug fixed
+ * Minor bug fixed.
 Version 2.0-4
 2015-06-10
- * Bug correction
+ * Minor bug fixed.
 Version 2.0-3
 2015-06-10
- * The option "Drop unused factor levels" has been moved to Rcmdr so dropped from this packages
+ * The option "Drop unused factor levels" has been moved to Rcmdr so dropped from this package.
  * Two options for randomness test has been added to Rcmdr menu. One for numeric variable and the other for two level factor.
 Version 1.0-2
 2013-10-18
  * Just a new build
 Version 1.0-1
 2012-03-12
- * Change in package load function
- * ChangeLog file added
+ * Change in package load function.
+ * ChangeLog file added.
 Version 1.0-0
 2011-12-02
- * First release
- * "Drop unused factor levels" option has been added to Rcmdr menu
+ * First release.
+ * "Drop unused factor levels" option has been added to Rcmdr menu.
