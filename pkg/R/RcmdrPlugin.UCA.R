@@ -27,7 +27,7 @@
 input2predict <- function() {
     # To ensure that menu name is included in pot file
     gettext("Predict using active model", domain="R-RcmdrPlugin.UCA")
-    gettext("Input data and predict", domain="R-RcmdrPlugin.UCA")
+    gettext("Input data and predict...", domain="R-RcmdrPlugin.UCA")
     doItAndPrint(paste0(".data <- edit(", ActiveDataSet(), "[0,])"))
     doItAndPrint(".data")
     doItAndPrint(paste0("predict(", ActiveModel(), ", .data)"))
@@ -47,7 +47,7 @@ predict4dataset <- function() {
         closeDialog()
         setBusyCursor()
         on.exit(setIdleCursor())
-        doItAndPrint(paste0(selection, "$fitted <- predict(", ActiveModel(), ", ", selection, ")"))
+        doItAndPrint(paste0(selection, "$fitted.", ActiveModel(), " <- predict(", ActiveModel(), ", ", selection, ")"))
         activeDataSet(selection)
         tkfocus(CommanderWindow())
     }
@@ -76,7 +76,7 @@ randomnessFTest <- function() {
                 doItAndPrint(paste("with(", ActiveDataSet(), ", twolevelfactor.runs.test(", x, "))", sep = ""))
 		tkfocus(CommanderWindow())
 	}
-	OKCancelHelp(helpSubject="runs.test", reset = "randomnessFTest", apply = "randomnessFTest")
+	OKCancelHelp(helpSubject="Randomness test", reset = "randomnessFTest", apply = "randomnessFTest")
 	tkgrid(getFrame(variablesBox), sticky="nw")
 	tkgrid(buttonsFrame, sticky="w")
 	dialogSuffix(rows=6, columns=1)
@@ -100,7 +100,7 @@ randomnessNTest <- function() {
                 doItAndPrint(paste("with(", ActiveDataSet(), ", numeric.runs.test(", x, "))", sep = ""))
 		tkfocus(CommanderWindow())
 	}
-	OKCancelHelp(helpSubject="runs.test", reset = "randomnessNTest", apply = "randomnessNTest")
+	OKCancelHelp(helpSubject="Randomness test", reset = "randomnessNTest", apply = "randomnessNTest")
 	tkgrid(getFrame(variablesBox), sticky="nw")
 	tkgrid(buttonsFrame, sticky="w")
 	dialogSuffix(rows=6, columns=1)
@@ -109,10 +109,10 @@ randomnessNTest <- function() {
 sigmaTest <- function() {
     ## This function is developed from singleSampleTTest in Rcmdr and use function sigma.test in package TeachingDemos
     ## To ensure that menu name is included in pot file
-    gettext("Single-Sample Chi-squared-Test...", domain="R-RcmdrPlugin.UCA")
+    gettext("Single-Sample Variance Test...", domain="R-RcmdrPlugin.UCA")
     defaults <- list (initial.x = NULL, initial.alternative = "two.sided", initial.level = ".95", initial.sigma = "1.0")
     dialog.values <- getDialog ("sigmaTest", defaults)
-    initializeDialog(title = gettext("Single-Sample Chi-squared-Test", domain="R-RcmdrPlugin.UCA"))
+    initializeDialog(title = gettext("Single-Sample Variance Test", domain="R-RcmdrPlugin.UCA"))
     xBox <- variableListBox(top, Numeric(), title = gettextRcmdr("Variable (pick one)"), initialSelection = varPosn(dialog.values$initial.x, "numeric"))
     onOK <- function() {
         x <- getSelection(xBox)

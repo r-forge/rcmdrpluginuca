@@ -1,6 +1,10 @@
+Version 4.1-2
+2017-10-03
+ * The entry "Input data and predict..." in "Models menu" now add the name of the active model to the name of the new predicted variable
+ * Minor changes in help
 Version 4.1-1
 2017-05-22
-  * Translation into Spanish of new strings
+ * Translation into Spanish of new strings
 Version 4.1-0
 2017-05-21
  * New option in menu to build confidence interval and test the variance from one normal population

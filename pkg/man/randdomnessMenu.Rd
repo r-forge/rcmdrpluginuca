@@ -66,5 +66,5 @@ Manuel Munoz-Marquez <manuel.munoz@uca.es>
 For more information see \code{\link[Rcmdr]{Rcmdr-package}}. 
 
 Para ayuda en \enc{español}{espanol}, \enc{véase}{vease}
-\code{\link{Test de aleatoriedad (es)}}. (For Spanish help see \code{\link{Test de aleatoriedad (es)}}.) 
+\code{\link{Test de aleatoriedad (es)}}. (For help in Spanish see \code{\link{Test de aleatoriedad (es)}}.) 
 }

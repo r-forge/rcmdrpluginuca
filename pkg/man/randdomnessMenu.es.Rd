@@ -5,14 +5,12 @@
 \encoding{UTF-8}
 \description{
   Dentro del menú "Test no paramétricos" se proporcionan dos nuevas
-  entradas para realizar el test de aleatoriedad. Esta opción usa la
-  función \code{runs.test} del paquete \code{tseries}. Para más
-  información véase \code{\link[tseries]{runs.test}}.
+  entradas para realizar el test de aleatoriedad.
 
   La primera "Test de aleatoriedad para un factor de dos niveles..." sirve para
   contrastar la aleatoriedad de una variable de tipo factor con dos
   niveles. Esta opción usa la función \code{runs.test} del paquete
-  \code{randtest}. Para más información véase \code{\link[randtests]{runs.test}}.
+  \code{tseries}. Para más información véase \code{\link[tseries]{runs.test}}.
 
   La segunda entrada del menú
   "Test de aleatoriedad para una variable numérica..." sirve para
@@ -71,4 +69,7 @@ Manuel Munoz-Marquez <manuel.munoz@uca.es>
 \seealso{
 Para más información véase \code{\link[Rcmdr]{Rcmdr-package}}. 
 
+
+For help in English see \code{\link{Randomness test}}. (Para ayuda en \enc{inglés}{ingles}, \enc{véase}{vease}
+\code{\link{Randomness test}}.) 
 }
