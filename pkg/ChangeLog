@@ -1,5 +1,5 @@
 Version 4.1-2
-2017-10-03
+2017-10-06
  * The entry "Input data and predict..." in "Models menu" now add the name of the active model to the name of the new predicted variable
  * Minor changes in help
 Version 4.1-1
