@@ -9,3 +9,8 @@ data(AMSsurvey, package="car")
 # select "sex" and "OK"
 # Rcmdr reply with the following command in source pane (R Script)
 with(AMSsurvey, twolevelfactor.runs.test(sex))
+#	Runs Test
+# data:  sex
+# Standard Normal = 4.5917, p-value = 0.000004397
+# alternative hypothesis: two.sided
+

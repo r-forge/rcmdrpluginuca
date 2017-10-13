@@ -10,3 +10,7 @@ sweetpotato <- as.data.frame(sweetpotato)
 # select "yield" and "OK"
 # Rcmdr reply with the following command in source pane (R Script)
 with(sweetpotato, numeric.runs.test(yield))
+#	Runs Test
+# data:  yield
+# statistic = -4.5751, runs = 17, n1 = 35, n2 = 35, n = 70, p-value = 0.000004759
+# alternative hypothesis: nonrandomness

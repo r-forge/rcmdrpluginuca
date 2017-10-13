@@ -10,3 +10,13 @@ sweetpotato <- as.data.frame(sweetpotato)
 # select "yield" and "OK"
 # Rcmdr reply with the following command in source pane (R Script)
 with(sweetpotato, sigma.test(yield))
+#	One sample Chi-squared test for variance
+#
+# data:  yield
+# X-squared = 6514.8, df = 69, p-value < 2.2e-16
+# alternative hypothesis: true variance is not equal to 1
+# 95 percent confidence interval:
+#  69.41231 135.93966
+# sample estimates:
+# var of yield 
+#    94.41731 

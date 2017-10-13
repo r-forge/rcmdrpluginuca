@@ -10,3 +10,7 @@ sweetpotato <- as.data.frame(sweetpotato)
 # Elegir "yield" y "Aceptar"
 # Rcmdr responde con la siguiente instruccion en el cuadro de instrucciones (R Script)
 with(sweetpotato, numeric.runs.test(yield))
+#	Runs Test
+# data:  yield
+# statistic = -4.5751, runs = 17, n1 = 35, n2 = 35, n = 70, p-value = 0.000004759
+# alternative hypothesis: nonrandomness
