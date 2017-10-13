@@ -45,7 +45,7 @@ MMM -->
 
 <p>All the customizations provides by this package will be propose to be part of the Rcmdr package. All the customization included in the Rcmdr package will be dropped from here.</p>
 
-<p>More information in <a href="http://<?php echo $domain; ?>/projects/<?php echo $group_name; ?>/"><strong>project summary page</strong></a>.</p>
+<p>More information in <a href="http://<?php echo $domain; ?>/projects/<?php echo $group_name; ?>/"><strong>r-forge project summary page</strong></a> or in <a href="http://knuth.uca.es/moodle/course/view.php?id=60&lang=en">project page</a>.</p>
 
 <h1>[ES] ¡Bienvenido al proyecto RcmdrPlugin.UCA!</h1>
 
@@ -53,7 +53,7 @@ MMM -->
 
 <p>Todas las adaptaciones serán propuestas para su incorporación a Rcmdr. Las adaptaciones que se incorporen al paquete Rcmdr se suprimirán de este paquete.</p>
 
-<p>M&aacute;s informaci&oacute;n en la <a href="http://<?php echo $domain; ?>/projects/<?php echo $group_name; ?>/"><strong>p&aacute;gina resumen del proyecto</strong></a>.</p>
+<p>M&aacute;s informaci&oacute;n en la <a href="http://<?php echo $domain; ?>/projects/<?php echo $group_name; ?>/"><strong>p&aacute;gina r-forge resumen del proyecto</strong></a> o en la <a href="http://knuth.uca.es/moodle/course/view.php?id=60&lang=es">p&aacute;gina del proyecto</a>.</p>
 
 </body>
 </html>
