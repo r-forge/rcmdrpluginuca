@@ -41,7 +41,8 @@ MMM -->
 
 <h1>[EN] Welcome to RcmdrPlugin.UCA project!</h1>
 
-<p>Some extension to Rcmdr (R Commander) to teach statistics in a first university course made by R-UCA project and used at University of Cadiz (UCA).</p>
+<p>Some extension to Rcmdr (R Commander) to teach statistics in a first university course made by R-UCA project and used at University of Cadiz (UCA).
+This customization includes: test for randomness, confidence interval and test for sigma for one normal sample and predictions using active model.</p>
 
 <p>All the customizations provides by this package will be propose to be part of the Rcmdr package. All the customization included in the Rcmdr package will be dropped from here.</p>
 
@@ -49,7 +50,8 @@ MMM -->
 
 <h1>[ES] ¡Bienvenido al proyecto RcmdrPlugin.UCA!</h1>
 
-<p>Algunas extensiones a Rcmdr (R Commander) para la ense&ntilde;anza de un primer curso universitario en estad&iacute;stica hechas por el proyecto R-UCA y usadas en la Universidad de C&aacute;diz (UCA).</p>
+<p>Algunas extensiones a Rcmdr (R Commander) para la ense&ntilde;anza de un primer curso universitario en estad&iacute;stica hechas por el proyecto R-UCA y usadas en la Universidad de C&aacute;diz (UCA).
+Estas extensiones incluyen: test de aleatoriedad, intervalo de confianza y test de hip&oacute;tesis para sigma en una poblaci&oacute;n normal y realizaci&oacute;n de predicciones usando el modelo activo./p>
 
 <p>Todas las adaptaciones serán propuestas para su incorporación a Rcmdr. Las adaptaciones que se incorporen al paquete Rcmdr se suprimirán de este paquete.</p>
 
