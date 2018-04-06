@@ -5,6 +5,7 @@
 \alias{predict4dataset}
 \alias{randomnessFTest}
 \alias{randomnessNTest}
+\alias{sigma.test}
 \alias{sigmaTest}
 \alias{twolevelfactor.runs.test}
 

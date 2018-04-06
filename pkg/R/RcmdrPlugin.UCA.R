@@ -48,14 +48,13 @@ predict4dataset <- function() {
         setBusyCursor()
         on.exit(setIdleCursor())
         doItAndPrint(paste0(selection, "$fitted.", ActiveModel(), " <- predict(", ActiveModel(), ", ", selection, ")"))
-        activeDataSet(selection)
+        if (selection != .activeDataSet) activeDataSet(selection)
         tkfocus(CommanderWindow())
     }
     OKCancelHelp()
     tkgrid(getFrame(dataSetsBox), sticky="nw")
     tkgrid(buttonsFrame, sticky="w")
     dialogSuffix()
-
 }
 
 # Function to be called by Rcmdr to test for randomness using runs.test from tseries packages
@@ -120,12 +119,12 @@ sigmaTest <- function() {
             errorCondition(recall = sigmaTest, message = gettextRcmdr("You must select a variable."))
             return()
         }
-        alternative <- as.character(tclvalue(alternativeVariable))
+        alternative <- tclvalue(alternativeVariable)
         level <- tclvalue(confidenceLevel)
         sigma <- tclvalue(sigmaVariable)
         putDialog("sigmaTest", list (initial.x = x, initial.alternative = alternative, initial.level = level, initial.sigma = sigma))
         closeDialog()
-        doItAndPrint(paste("with(", ActiveDataSet (), ", (sigma.test(", x, ", alternative='", alternative, "', sigma=", sigma, ", conf.level=", level, ")))", sep = ""))
+        doItAndPrint(paste("with(", ActiveDataSet (), ", sigma.test(", x, ", alternative='", alternative, "', sigma=", sigma, ", conf.level=", level, "))", sep = ""))
         tkdestroy(top)
         tkfocus(CommanderWindow())
     }

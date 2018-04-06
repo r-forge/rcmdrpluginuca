@@ -16,7 +16,7 @@ summary(RegModel.1)
 # "Modelos" -> "Predecir usando el modelo activo" -> "Introducir datos y predecir"
 # En la columna edad (age) introduzca 35 y 40 y cierre el editor.
 # Rcmdr responde con la siguiente instruccion en el cuadro de instrucciones (R Script)
-.data <- edit(Chile[0,])
+.data <- edit(data.frame(age = numeric(0)))
 .data
 predict(RegModel.1, .data)
 remove(.data)
