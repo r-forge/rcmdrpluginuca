@@ -1,12 +1,7 @@
-#import("car")       # For examples
-#import("carData")   # For examples
-#import("randtests") # For examples
 import("Rcmdr")
-#import("stats")
-#import("TeachingDemos")
 
 importFrom("randtests", randtest.runs.test = "runs.test")
-importFrom("TeachingDemos", sigma.test = "sigma.test")
+importFrom("TeachingDemos", "sigma.test")
 importFrom("tcltk", "tkbutton")
 importFrom("tseries", tseries.runs.test = "runs.test")
 
@@ -16,6 +11,5 @@ export("predict4dataset")
 export("randomnessFTest")
 export("randomnessNTest")
 export("twolevelfactor.runs.test")
-export("sigma.test")
 export("sigmaTest")
 

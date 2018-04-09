@@ -1,12 +1,13 @@
 Package: RcmdrPlugin.UCA
 Type: Package
 Title: UCA Rcmdr Plug-in
-Version: 4.1-3
+Version: 4.1-4
 Date: 2018-04-09
 Author: Manuel Munoz-Marquez <manuel.munoz@uca.es>
 Maintainer: Manuel Munoz-Marquez <manuel.munoz@uca.es>
-Depends:
-Imports: car, carData, randtests, Rcmdr (>= 1.6), TeachingDemos, tseries
+Depends: randtests, TeachingDemos, tseries
+Suggests: car, carData
+Imports:  Rcmdr (>= 1.6)
 Description: Some extensions to Rcmdr (R Commander), randomness test, 
  variance test for one normal sample and predictions using active model, 
  made by R-UCA project and used in teaching statistics at University of Cadiz (UCA).

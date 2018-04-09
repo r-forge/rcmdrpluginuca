@@ -4,14 +4,14 @@
 \docType{package}
 \encoding{UTF-8}
 \description{
-  Within the "Variances" menu, a new entry is provided for calculate
+  Within the "Statistics" -> Variances" menu, a new entry is provided for calculate
   confidence intervals and make contrasts on variance in a normal
   population. This option uses the function \code{sigma.test} of the
   package \code{TeachingDemos}. For more information see \code{\link[TeachingDemos]{sigma.test}}.
 }
 
 \details{
-  Here is an example of "Single-sample Chi-square-test..." menu entry.
+  Here is an example of "Single-Sample Variance Test..." menu entry.
 
   Load data "sweetpotato" selecting from Rcmdr menu: "Data" ->
   "Data in packages" -> "Read data set from an attached package..." then
@@ -22,10 +22,9 @@
 
   \code{sweetpotato <- as.data.frame(sweetpotato)}
 
-  To build a confidence interval for sigma on variable "yield", select from Rcmdr menu: "Statistics" -> "Variances" -> "Single-sample Chi-square-test..." select "yield" and
-  "OK". Rcmdr reply with the following command in source pane (R Script)
+  To build a confidence interval for sigma on variable "yield", select from Rcmdr menu: "Statistics" -> "Variances" -> "Single-sample Variance Test..." select "yield" and  "OK". Rcmdr reply with the following command in source pane (R Script)
 
-  \code{with(sweetpotato, sigma.test(yield))}
+  \code{with(sweetpotato, sigma.test(yield[!is.na[yield]]))}
   }
 
 \author{

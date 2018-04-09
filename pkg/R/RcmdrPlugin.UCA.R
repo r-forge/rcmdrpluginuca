@@ -124,7 +124,7 @@ sigmaTest <- function() {
         sigma <- tclvalue(sigmaVariable)
         putDialog("sigmaTest", list (initial.x = x, initial.alternative = alternative, initial.level = level, initial.sigma = sigma))
         closeDialog()
-        doItAndPrint(paste("with(", ActiveDataSet (), ", sigma.test(", x, ", alternative='", alternative, "', sigma=", sigma, ", conf.level=", level, "))", sep = ""))
+        doItAndPrint(paste("with(", ActiveDataSet (), ", sigma.test(", x, "[!is.na(", x, ")], alternative='", alternative, "', sigma=", sigma, ", conf.level=", level, "))", sep = ""))
         tkdestroy(top)
         tkfocus(CommanderWindow())
     }
