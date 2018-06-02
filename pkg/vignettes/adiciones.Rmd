@@ -1,0 +1,234 @@
+---
+title: "Opciones adicionales en Rcmdr usando RcmdrPlugin.UCA"
+author: "Manuel Munoz-Marquez"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{RcmdrPlugin.UCA}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.width = 6,
+  fig.height = 4
+)
+library(RcmdrPlugin.UCA)
+sigma.test <- TeachingDemos::sigma.test
+```
+
+# Introducción
+
+El paquete __RcmdrPlugin.UCA__ añade algunas opciones al menú de Rcmdr que son útiles para los usuarios noveles en R. A saber:
+
+* Constraste de hipótesis e intervalo de confianza para la varianza
+* Test de aleatoriedad para variables numéricas y dicotómicas
+* Predicción de valores usando el modelo activo
+
+En las siguientes secciones se describirán detalladamente cada una de estas opciones.
+
+# Test de hipótesis e intervalo de confianza para la varianza de una población normal
+
+Dentro del menú "Estadísticos" -> "Varianzas", se proporcionan una nueva entrada para calcular intervalos de confianza y hacer contrastes sobre la varianza en una población normal. Esta opción usa la función `sigma.test` del paquete TeachingDemos.
+
+## Ejemplo de uso del menú "Test de varianza para una muestra..."
+
+En primer lugar cargaremos el paquete randtest del cual vamos a cargar los datos. Para ello:
+
+1. Del menú de Rcmdr elegit la opción "Herramientas" -> "Cargar paquete(s)..."
+2. Buscar en el cuadro de diálogo randtest y seleccionarlo
+3. Pulsar aceptar
+
+En la ventana de mensajes debe aparecer `[x] NOTA: Paquetes cargados: randtest`. 
+Si randtest no aparece en la lista deberá previamente instalar el paquete.
+
+A continuación cargaremos un conjunto de datos, por ejemplo, "sweetpotato" mediante los pasos siguientes:
+
+1. Elegir del menú de Rcmdr: "Datos" -> "Conjuntos de datos en paquetes" -> "Leer conjunto de datos desde paquete adjunto..."
+2. Pulsar dos veces sobre "randtests"
+3. Pulsar sobre "sweetpotato" y sobre "Aceptar".
+
+Rcmdr responde con la siguiente instruccion en el cuadro de instrucciones (R Script)
+
+```{r, include = TRUE}
+data(sweetpotato, package="randtests")
+sweetpotato <- as.data.frame(sweetpotato)
+```
+
+En la ventana de mensajes aparecerá `[x] NOTA: El conjunto de datos sweetpotato tiene 70 filas y 4 columnas.` y en el cuadro de diálogo anexo a la etiqueta "Conjunto de datos:" aparecerá "sweetpotato".
+
+Para construir el intervalo de confianza para sigma para la variable "yield" (rendimiento), seleccione del menú de Rcmdr: "Estadísticos" -> "Varianzas" -> "Test de varianza para una muestra..." seleccione "yield" y "OK". Rcmdr responde con la siguiente instruccion en el cuadro de instrucciones (R Script)
+```{r, include = TRUE, results = 'hide'}
+with(sweetpotato, sigma.test(yield[!is.na(yield)], alternative='two.sided', sigmasq=1.0, conf.level=0.95))
+```
+y en el cuadro de salida
+```{r, include = TRUE}
+with(sweetpotato, sigma.test(yield[!is.na(yield)], alternative='two.sided', sigmasq=1.0, conf.level=0.95))
+```
+
+Se ha rechazado la hipótesis nula $\sigma = 1$ a un nivel de confianza del 95%, obeniéndose un intervalo de confianza a dicho nivel para $\sigma$ de $(69.41231, 135.93966)$.
+
+Si se desea en el cuadro de diálogo anterior se puede especificar:
+
+1. la hipótesis alternativa
+2. el valor de sigma bajo la hipótesis nula
+3. el nivel de confianza.
+
+# Test de aleatoriedad
+
+Se proporcionan dos opciones dentro del menú "Test no paramétricos" para realizar el test de aleatoriedad según el tipo de variable.
+
+## Test de aleatoriedad para una variable dicotómica
+
+Dentro del menú "Estadísticos" -> "Test no paramétricos" -> "Test de aleatoriedad para un factor de dos niveles...", se proporcionan una nueva entrada para contrastar la aleatoriedad de una variable de tipo factor con dos niveles. Esta opción usa la función `runs.test` del paquete tseries, si bien para evitar conflictos ha sido renombrada a `twolevelfactor.runs.test`.
+
+### Ejemplo de uso del menú "Test de aleatoriedad para un factor de dos niveles..."
+
+En primer lugar cargaremos un conjunto de datos, por ejemplo, "AMSsurvey" mediante los pasos siguientes:
+
+1. Elegir del menú de Rcmdr: "Datos" -> "Conjuntos de datos en paquetes" -> "Leer conjunto de datos desde paquete adjunto..."
+2. Pulsar dos veces sobre "car"
+3. Pulsar sobre "AMSsurvey" y sobre "Aceptar".
+
+Rcmdr responde con la siguiente instruccion en el cuadro de instrucciones (R Script)
+
+```{r, include = TRUE}
+data(AMSsurvey, package="car")
+```
+
+En la ventana de mensajes aparecerá `[x] NOTA: El conjunto de datos AMSsurvey tiene 24 filas y 5 columnas.` y en el cuadro de diálogo anexo a la etiqueta "Conjunto de datos:" aparecerá "AMSsurvey".
+
+Para hacer el test de aleatoriedad a la variable "sex", seleccionamos del menú de Rcmdr: "Estadísticos" -> "Test no paramétricos" -> "Test de aleatoriedad para un factor con dos niveles...", seleccionamos "sex" y "OK". Rcmdr responde con la siguiente instruccion en el cuadro de instrucciones (R Script) 
+```{r, include = TRUE, results = 'hide'}
+with(AMSsurvey, twolevelfactor.runs.test(sex))
+```
+y en el cuadro de salida
+```{r, include = TRUE}
+with(AMSsurvey, twolevelfactor.runs.test(sex))
+```
+
+Se ha rechazado la hipótesis nula de aleatoriedad con un p-valor de $`r with(AMSsurvey, twolevelfactor.runs.test(sex))$p.value`$, antes de proseguir con el estudio habría que investigar la causa de esta falta de aleatoriedad.
+
+## Test de aleatoriedad para una variable numérica
+
+Dentro del menú "Estadísticos" -> "Test no paramétricos" -> "Test de aleatoriedad para una variable numérica...", se proporcionan una nueva entrada para contrastar la aleatoriedad de una variable de numérico. Esta opción usa la función `runs.test` del paquete randtest, si bien para evitar conflictos ha sido renombrada a `numeric.runs.test`.
+
+### Ejemplo de uso del menú "Test de aleatoriedad para una variable numérica..."
+
+En primer lugar, si aún no lo hemos hecho, cargaremos el conjunto de datos sweetpotato. 
+Si el conjunto de datos está cargado pero no está activo, se pulsa el botón anexo al texto "Conjunto de datos:", se selecciona sweetpotato y se pulsa "Aceptar". 
+El texto del botón cambia a "sweetpotato". 
+
+Para hacer el test de aleatoriedad a la variable "yield" (rendimiento), seleccionamos del menú de Rcmdr: "Estadísticos" -> "Test no paramétricos" -> "Test de aleatoriedad para una variable numérica..." seleccionamos "yield" y "OK".
+Rcmdr responde con la siguiente instruccion en el cuadro de instrucciones (R Script) 
+```{r, include = TRUE, results = 'hide'}
+with(sweetpotato, numeric.runs.test(yield))
+```
+y en el cuadro de salida
+```{r, include = TRUE}
+with(sweetpotato, numeric.runs.test(yield))
+```
+
+La hipótesis de aleatoriedad se rechaza con un p-valor de `r with(sweetpotato, numeric.runs.test(yield))$p.value`, antes de proseguir con el estudio habría que investigar la causa de esta falta de aleatoriedad.
+
+
+# Predicciones usando el modelo activo
+
+La entrada de menú "Predecir usando el modelo activo", en el menú modelos, tiene dos opciones para predecir datos usando el modelo activo dependiendo de cómo se proporcionen los valores para las variables predictoras.
+
+## Introducir datos y predecir
+
+Si selecciona "Modelos" -> "Predecir usando el modelo activo" -> "Introducir datos y predecir", se creará un nuevo conjunto de datos, como un data.frame y se abrirá el editor automáticamente. A continuación, se pueden introducir los valores de la variable predictora que se desea utilizar para la predicción, no es necesario introducir los valores de las variables no predictoras. Al cerrar el editor de datos se muestran los valores predichos.
+
+### Ejemplo de uso del menú "Introducir datos y predecir..."
+
+Cargar los datos "Chile" eligiendo del menu de Rcmdr: "Datos" -> "Conjuntos de datos en paquetes" -> "Leer conjunto de datos desde paquete adjunto..." pulsar dos veces sobre "car", pulsar sobre "Chile" y sobre "Aceptar". Rcmdr responde con la siguiente instruccion en el cuadro de instrucciones (R Script)
+
+```{r, include = TRUE}
+data(Chile, package="car")
+```
+
+En la ventana de mensajes aparecerá `[x] NOTA: El conjunto de datos car tiene 2700 filas y 8 columnas.` y en el cuadro de diálogo anexo a la etiqueta "Conjunto de datos:" aparecerá "Chile".
+
+Para construir un modelo seleccione del menú de Rcmdr: "Estadisticos" -> "Ajuste de modelos" -> "Regresion lineal...". Como "Variable explicada" seleccione income y age como "Variables explicativas" y pulse "Aceptar". Rcmdr responde con la siguiente instruccion en el cuadro de instrucciones (R Script)
+```{r include = TRUE, results = 'hide'}
+RegModel.1 <- lm(income~age, data=Chile)
+summary(RegModel.1)
+```
+y en el cuadro de salida
+```{r include = TRUE}
+RegModel.1 <- lm(income~age, data=Chile)
+summary(RegModel.1)
+```
+
+Obsérvese que el modelo se ha establecido a RegModel.1. 
+Si quiere predecir el ingreso (income) para personas de 35 y 40 años de edad (age). 
+Del menú de Rcmdr seleccione: "Modelos" -> "Predecir usando el modelo activo" -> "Introducir datos y predecir". 
+En la columna edad (age) introduzca 35 y 40 y cierre el editor. 
+Rcmdr responde con la siguiente instruccion en el cuadro de instrucciones (R Script)
+```{r include=TRUE, echo = FALSE, results='hide'}
+edit <- function(x)
+{
+.data <- Chile[0,]
+.data[1:2,] <- NA
+.data$age <- c(34, 45)
+.data
+}
+```
+```{r include = TRUE, results = 'hide'}
+.data <- edit(Chile[0,])
+.data
+predict(RegModel.1, .data)
+remove(.data)
+```
+y en el cuadro de salida, suponiendo que se han introducido 35 y 45 en la columna age
+```{r include = TRUE}
+.data <- edit(Chile[0,])
+.data
+predict(RegModel.1, .data)
+remove(.data)
+```
+Se muestra el valor predicho de ingresos para esas edades usando el modelo activo (RegModel.1).
+
+
+## Opción "Agregar predicciones a un conjunto de datos existente ..."
+
+Si se selecciona "Modelos" -> "Predecir usando el modelo activo" -> Agregar predicciones a un conjunto de datos existente ..." se agregan las predicciones usando el modelo activo al conjunto de datos seleccionado, usando para las variables predictoras los valores de dicho conjunto de datos. 
+Después de seleccionar esta opción, el usuario o usuaria puede seleccionar un conjunto de datos existente utilizando el cuadro de diálogo correspondiente.
+
+Si el conjunto de datos no proporciona los valores para todas las variables predictoras, se producirá un error y no se proporcionarán valores predichos.
+
+A diferencia de la opción del menú "Añadir las estadísticas de las observaciones a los datos...", esta opción puede ser usada con un conjunto de datos distinto al que se ha utilizado para construir el modelo, siempre que dicho conjunto de datos proporcione los valores para todas las variables predictoras.
+
+### Ejemplo de uso del menú "Añadir predicciones a un conjunto de datos existente..."
+
+Cargar los datos "Chile" como se describió anteriormente.
+
+Para construir un modelo seleccione del menu de Rcmdr: "Estadisticos" -> "Ajuste de modelos" -> "Regresion lineal..." como "Variable explicada" seleccione income y age como "Variables explicativas" y pulse "Aceptar".
+
+Rcmdr responde con la siguiente instruccion en el cuadro de instrucciones (R Script)
+```{r include = TRUE, results = 'hide'}
+RegModel.1 <- lm(income~age, data=Chile)
+summary(RegModel.1)
+```
+y en la ventana de salida
+```{r include = TRUE}
+RegModel.1 <- lm(income~age, data=Chile)
+summary(RegModel.1)
+```
+
+Obsérvese que el modelo se ha establecido a RegModel.1. Si se quiere predecir los valores para los ingresos (income) para los valores de edad (age) en el conjunto de datos Chile del menu "Modelos" de Rcmdr seleccione: "Predicir usando el modelo activo" -> "Anadir predicciones a un conjunto de datos existente...". En el diálogo seleccione un conjunto de datos compatible con el modelo. En este caso seleccione Chile. Rcmdr responde con la siguiente instruccion en el cuadro de instrucciones (R Script)
+```{r include = TRUE, results = 'hide'}
+Chile$fitted <- predict(RegModel.1, Chile)
+```
+y en la ventana de salida
+```{r include = TRUE}
+Chile$fitted <- predict(RegModel.1, Chile)
+```
+
+Las predicciones para ingreso (income) se han guardado como fitted en el conjunto de datos (Chile). 
+Se pueden ver los valores añadidos usando el boton "Visualizar datos".
+

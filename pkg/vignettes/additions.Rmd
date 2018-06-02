@@ -1,0 +1,236 @@
+---
+title: "Additional options in Rcmdr using RcmdrPlugin.UCA"
+author: "Manuel Munoz-Marquez"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{RcmdrPlugin.UCA}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.width = 6,
+  fig.height = 4
+)
+library(RcmdrPlugin.UCA)
+sigma.test <- TeachingDemos::sigma.test
+```
+# Introduction
+
+The package __RcmdrPlugin.UCA__ adds some options to the Rcmdr menu that are useful for new users in R. Namely:
+
+* Test and confidence interval for variance
+* Randomness test for numerical and dichotomous variables
+* Prediction of values using the active model
+
+In the following sections, each of these options will be described in detail.
+
+# Test and confidence interval for the variance of a normal population
+
+Within the menu "Statistics" -> "Variances", a new entry is provided to calculate confidence intervals and make contrasts on the variance in a normal population.This option uses the `sigma.test` function of the TeachingDemos package.
+
+## Example of using the "Signle-Sample Variance Test..." menu
+
+First we will load the randtest package from which we will load the data. For it:
+
+1. From the Rcmdr menu, choose the option "Tools" -> "Load package(s) ..."
+2. Search in the randtest dialog box and select it
+3. Press accept
+
+In the message window should appear `[x] NOTE: Packages loaded: randtest`.
+If randtest does not appear in the list, you must first install the package.
+
+Next we will load a set of data, for example, "sweetpotato" through the following steps:
+
+1. Choose from the Rcmdr menu: "Data" -> "Packet data sets" -> "Read data set from attached package..."
+2. Press twice on "randtests"
+3. Click on "sweetpotato" and on "Accept".
+
+Rcmdr reply with the following text in the instruction tab (R Script)
+
+```{r, include = TRUE}
+data (sweetpotato, package = "randtests")
+sweetpotato <- as.data.frame (sweetpotato)
+```
+
+In the message window it will appear `[x] NOTE: The data set sweetpotato has 70 rows and 4 columns.` and in the dialog box attached to the label "Data set:" "sweetpotato" will appear.
+
+To build the confidence interval for sigma for the variable "yield", select from the Rcmdr menu: "Statistics" -> "Variances" -> "Single-Sample Variance Test..." select "yield" and "OK". Rcmdr responds with the following instruction in the instruction tab (R Script)
+```{r, include = TRUE, results = 'hide'}
+with(sweetpotato, sigma.test(yield[!is.na(yield)], alternative='two.sided', sigmasq=1.0, conf.level=0.95))
+```
+and in the output tab
+```{r, include = TRUE}
+with(sweetpotato, sigma.test(yield[!is.na(yield)], alternative='two.sided', sigmasq=1.0, conf.level=0.95))
+```
+
+The null hypothesis $\sigma = 1$ has been rejected at a confidence level of 95%, obtaining a confidence interval at that level for $\sigma$ of $(69.41231, 135.93966)$.
+
+If desired, in the previous dialog you can specify:
+
+1. the alternative hypothesis
+2. the value of sigma under the null hypothesis
+3. the level of trust.
+
+# Randomness test
+
+Two options are provided within the "Non-parametric Test" menu to perform the randomness test according to the type of variable.
+
+## Randomness test for a dichotomous variable
+
+Within the menu "Statistics" -> "Non-parametric tests" -> "Randomness test for a factor of two levels...", a new entry is provided to test the randomness of a factor-type variable with two levels. This option uses the `runs.test` function of the tseries package, although to avoid conflicts it has been renamed` twolevelfactor.runs.test`.
+
+### Example of using the menu "Randomness test for a two-level factor..."
+
+First we will load a set of data, for example, "AMSsurvey" using the following steps:
+
+1. Choose from the Rcmdr menu: "Data" -> "Data sets in packages" -> "Read data set from attached package..."
+2. Press twice on "car"
+3. Click on "AMSsurvey" and on "Accept".
+
+Rcmdr reply with the following instruction in the instruction tab (R Script)
+
+```{r, include = TRUE}
+data (AMSsurvey, package = "car")
+```
+
+In the message window it will appear `[x] NOTE: The data set AMSsurvey has 24 rows and 5 columns.` and in the dialog box attached to the label "Data set:" "AMSsurvey" will appear.
+
+To make the randomness test variable "sex", select from the Rcmdr menu: "Statistics" -> "Non-parametric test" -> "Randomness test for a factor with two levels..." select "sex" and "OKAY". Rcmdr responds with the following instruction in the instruction tab (R Script)
+```{r, include = TRUE, results = 'hide'}
+with (AMSsurvey, twolevelfactor.runs.test (sex))
+```
+and in the output tab
+```{r, include = TRUE}
+with (AMSsurvey, twolevelfactor.runs.test (sex))
+```
+
+We rejected the null hypothesis of randomness with a p-value of $`r with(AMSsurvey, twolevelfactor.runs.test (sex))$p.value`$, before proceeding with the study we would have to investigate the cause of this lack of randomness.
+
+## Randomness test for a numerical variable
+
+Within the "Statistics" menu -> "Non-parametric tests" -> "Randomness test for a numeric variable ...", a new entry is provided to test the randomness of a numeric variable. This option uses the `runs.test` function of the randtest package, although to avoid conflicts it has been renamed` numeric.runs.test`.
+
+### Example of using the menu "Randomness test for a numeric variable ..."
+
+First, if we have not already done so, we will load the sweetpotato data set.
+If the data set is loaded but not active, click the button next to the text "Data set:", select sweetpotato and click "OK".
+The text of the button changes to "sweetpotato".
+
+To make the randomness test to the variable "yield", we select from the Rcmdr menu: "Statistics" -> "Non-parametric test" -> "Randomness test for a numeric variable ..." select "yield" and "OK".
+Rcmdr responds with the following instruction in the instruction box (R Script)
+```{r, include = TRUE, results = 'hide'}
+with (sweetpotato, numeric.runs.test (yield))
+```
+and in the output box
+```{r, include = TRUE}
+with (sweetpotato, numeric.runs.test (yield))
+```
+
+The randomness hypothesis is rejected with a p-value of `r with(sweetpotato, numeric.runs.test(yield))$p.value`, before proceeding with the study we would have to investigate the cause of this lack of randomness.
+
+# Make predictions using active model
+
+The menu entry "Predict using active model", in models menu, has two options to predict data using active model depending on how the data for predictor variables will be provided.
+
+## Input data and predict
+
+If you select "Input data and predict", a new data set, as a data.frame, will be created and the editor will be invoked. Then you can entry the values of the predictor variable that you want to use for prediction, the values for non predictor variables are not required. When you close the data editor the predicted values for predicted variable are shown.
+
+### Example of use of "Input data and predict..." menu entry
+
+Load data "Chile" selecting from Rcmdr menu: "Data" -> "Data in packages" -> "Read data set from an attached package..." then double-click on "car", click on "Chile" and on "OK".
+
+Rcmdr reply with the following command in source pane (R Script)
+
+```{r, include = TRUE}
+data(Chile, package="car")
+```
+
+In the message window it will appear `[x] NOTE: The data set Chile has 2700 rows and 8 columns.` and in the dialog box attached to the label "Data set:" "Chile" will appear.
+
+To build a model select from Rcmdr menu: "Statistics" -> "Model fit" -> "Linear Regresion...". As "Response variable" select income and age as "Explanatory variables" and click on "OK". Rcmdr reply with the following command in source pane (R Script)
+```{r include = TRUE, results = 'hide'}
+RegModel.1 <- lm(income~age, data=Chile)
+summary(RegModel.1)
+```
+in the output box
+```{r include = TRUE}
+RegModel.1 <- lm(income~age, data=Chile)
+summary(RegModel.1)
+```
+
+Note that the active model is set to RegModel.1. 
+So if you want to predict a new value for a 35 and 40 age person. 
+Select from Rcmdr menu: "Models" -> "Predict using active model" -> "Input data and predict". 
+In age column input 35 and 40 and then close the editor. 
+Rcmdr reply with the following command in source pane (R Script)
+```{r include=TRUE, echo = FALSE, results='hide'}
+edit <- function(x)
+{
+.data <- Chile[0,]
+.data[1:2,] <- NA
+.data$age <- c(34, 45)
+.data
+}
+```
+```{r include = TRUE, results = 'hide'}
+.data <- edit(Chile[0,])
+.data
+predict(RegModel.1, .data)
+remove(.data)
+```
+and in the output box if 34 and 45 are given as values for age
+```{r include = TRUE}
+.data <- edit(Chile[0,])
+.data
+predict(RegModel.1, .data)
+remove(.data)
+```
+And output the predicted value of income for that age using active model (RegModel.1)
+
+
+
+
+## Add predictions to existing dataset
+
+If you select "Models" -> "Predict using active model" -> "Add predictions to existing dataset..." the predictions are added to the selected data set using the active model and the selected data set for the values of the explanatory variables. 
+After selecting this option, the user can select an existing data set using dialog box.
+
+If the data set does not provides the values for all predicting variables an error will occur and no predicted values will be provided.
+
+Unlike the menu option "Add observation statistics to data...", this option can be used with a different data set than the one used to construct the model, if that dataset provides the values for all the predictor variables.
+
+## Example of use of "Add predictions to existing dataset..." menu entry
+
+Load data "Chile" as in the previous example.
+
+To build a model select from Rcmdr menu: "Statistics" -> "Model fit" -> "Linear Regresion..." as "Response variable" select income and age as "Explanatory variables" and click on "OK". Rcmdr reply with the following command in source pane (R Script)
+```{r include = TRUE, results = 'hide'}
+RegModel.1 <- lm(income~age, data=Chile)
+summary(RegModel.1)
+```
+and in the output box
+```{r include = TRUE}
+RegModel.1 <- lm(income~age, data=Chile)
+summary(RegModel.1)
+```
+
+Note that the active model is set to RegModel.1 So if you want to predict the values for income for age data in Chile dataset. Select from Rcmdr menu: "Models" -> "Predict using active model" -> "Add predictions to existing dataset...". In the dialog select a compatible dataset with the model. In this case select Chile. Rcmdr reply with the following command in source pane (R Script)
+```{r include = TRUE, results = 'hide'}
+Chile$fitted <- predict(RegModel.1, Chile)
+```
+and in the output box
+```{r include = TRUE}
+Chile$fitted <- predict(RegModel.1, Chile)
+```
+
+
+The predicted value of income has been saved as fitted in the selected dataset (Chile). 
+You can see the added values using the button for visualizing the data set.
+
+

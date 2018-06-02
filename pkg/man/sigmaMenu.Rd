@@ -24,7 +24,7 @@
 
   To build a confidence interval for sigma on variable "yield", select from Rcmdr menu: "Statistics" -> "Variances" -> "Single-sample Variance Test..." select "yield" and  "OK". Rcmdr reply with the following command in source pane (R Script)
 
-  \code{with(sweetpotato, sigma.test(yield[!is.na[yield]]))}
+  \code{with(sweetpotato, sigma.test(yield[!is.na(yield)], alternative='two.sided', sigmasq=1.0, conf.level=0.95))}
   }
 
 \author{

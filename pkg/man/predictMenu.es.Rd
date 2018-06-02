@@ -38,30 +38,30 @@
 \details{
   Ejemplo de uso del menú "Introducir datos y predecir".
 
-  Cargar los datos "Chile" eligiendo del menu de Rcmdr: "Datos" ->
+  Cargar los datos "Chile" eligiendo del menú de Rcmdr: "Datos" ->
   "Conjuntos de datos en paquetes" ->
   "Leer conjunto de datos desde paquete adjunto..." pulsar dos veces
-  sobre "car", pulsar sobre "Chile" y sobre "Aceptar". Rcmdr responde con la siguiente instruccion en el cuadro de
+  sobre "car", pulsar sobre "Chile" y sobre "Aceptar". Rcmdr responde con la siguiente instrucción en el cuadro de
   instrucciones (R Script)
 
   \code{data(Chile, package="car")}
 
-  Para construir un modelo seleccione del menu de Rcmdr: "Estadisticos"
+  Para construir un modelo seleccione del menú de Rcmdr: "Estadísticos"
   -> "Ajuste de modelos" -> "Regresion lineal...". Como
   "Variable explicada" seleccione income y age como
   "Variables explicativas" y pulse "Aceptar". Rcmdr responde con la
-  siguiente instruccion en el cuadro de instrucciones (R Script)
+  siguiente instrucción en el cuadro de instrucciones (R Script)
 
   \code{RegModel.1 <- lm(income~age, data=Chile)}
 
   \code{summary(RegModel.1)}
 
   Obsérvese que el modelo se ha establecido a RegModel.1. Si quiere
-  predecir el ingreso (income) para personas de 35 y 40 anos de edad
+  predecir el ingreso (income) para personas de 35 y 40 años de edad
   (age). Del menú de Rcmdr seleccione: "Modelos" ->
   "Predecir usando el modelo activo" ->
   "Introducir datos y predecir". En la columna edad (age) introduzca 35
-  y 40 y cierre el editor. Rcmdr responde con la siguiente instruccion
+  y 40 y cierre el editor. Rcmdr responde con la siguiente instrucción
   en el cuadro de instrucciones (R Script)
 
   \code{.data <- edit(Chile[0,])}
@@ -76,16 +76,16 @@
   
   Ejemplo de uso del menú "Anadir predicciones a un conjunto de datos existente..."
 
-  Cargar los datos "Chile" eligiendo del menu de Rcmdr: "Datos" ->
+  Cargar los datos "Chile" eligiendo del menú de Rcmdr: "Datos" ->
   "Conjuntos de datos en paquetes" ->
   "Leer conjunto de datos desde paquete adjunto..." pulsar dos veces
-  sobre "car", pulsar sobre "Chile" y "Aceptar". Rcmdr responde con la siguiente instruccion en el cuadro de
+  sobre "car", pulsar sobre "Chile" y "Aceptar". Rcmdr responde con la siguiente instrucción en el cuadro de
   instrucciones (R Script)
   
   \code{data(Chile, package="car")}
 
-  Para construir un modelo seleccione del menu de Rcmdr: "Estadisticos"
-  -> "Ajuste de modelos" -> "Regresion lineal..." como
+  Para construir un modelo seleccione del menú de Rcmdr: "Estadísticos"
+  -> "Ajuste de modelos" -> "Regresión lineal..." como
   "Variable explicada" seleccione income y age como
   "Variables explicativas" y pulse "Aceptar".
 
@@ -102,7 +102,7 @@
   "Anadir predicciones a un conjunto de datos existente...". En el
   diálogo seleccione un conjunto de datos compatible con el modelo. En
   este caso seleccione Chile. Rcmdr responde con la siguiente
-  instruccion en el cuadro de instrucciones (R Script)
+  instrucción en el cuadro de instrucciones (R Script)
 
   \code{Chile$fitted <- predict(RegModel.1, Chile)}
 

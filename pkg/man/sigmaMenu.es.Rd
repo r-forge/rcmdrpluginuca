@@ -30,7 +30,7 @@
   "yield" y "OK". Rcmdr responde con la
   siguiente instruccion en el cuadro de instrucciones (R Script)
 
-  \code{with(sweetpotato, sigma.test(yield[!is.na(yield)]))}
+  \code{with(sweetpotato, sigma.test(yield[!is.na(yield)], alternative='two.sided', sigmasq=1.0, conf.level=0.95))}
 }
 
 \author{

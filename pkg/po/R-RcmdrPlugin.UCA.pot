@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RcmdrPlugin.UCA\n"
 "Report-Msgid-Bugs-To: manuel.munoz@uca.es\n"
-"POT-Creation-Date: 2017-05-25 16:39+0200\n"
+"POT-Creation-Date: 2018-06-02 19:52+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,34 +29,34 @@ msgstr ""
 msgid "Add predictions to existing dataset..."
 msgstr ""
 
-#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:64
+#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:63
 msgid "Randomness test for two level factor..."
 msgstr ""
 
-#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:66
+#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:65
 msgid "Randomness test for two level factor"
 msgstr ""
 
-#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:88
+#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:87
 msgid "Randomness test for numeric variable..."
 msgstr ""
 
-#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:90
+#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:89
 msgid "Randomness test for numeric variable"
 msgstr ""
 
-#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:112
+#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:111
 msgid "Single-Sample Variance Test..."
 msgstr ""
 
-#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:115
+#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:114
 msgid "Single-Sample Variance Test"
 msgstr ""
 
-#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:134
+#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:133
 msgid "Population variance"
 msgstr ""
 
-#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:144
-msgid "Null hypothesis: sigma ="
+#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:143
+msgid "Null hypothesis: sigma^2 ="
 msgstr ""
