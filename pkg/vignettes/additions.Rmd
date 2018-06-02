@@ -89,13 +89,13 @@ Within the menu "Statistics" -> "Non-parametric tests" -> "Randomness test for a
 First we will load a set of data, for example, "AMSsurvey" using the following steps:
 
 1. Choose from the Rcmdr menu: "Data" -> "Data sets in packages" -> "Read data set from attached package..."
-2. Press twice on "cardata"
+2. Press twice on "carData"
 3. Click on "AMSsurvey" and on "Accept".
 
 Rcmdr reply with the following instruction in the instruction tab (R Script)
 
 ```{r, include = TRUE}
-data(AMSsurvey, package = "cardata")
+data(AMSsurvey, package = "carData")
 ```
 
 In the message window it will appear `[x] NOTE: The data set AMSsurvey has 24 rows and 5 columns.` and in the dialog box attached to the label "Data set:" "AMSsurvey" will appear.
@@ -143,12 +143,12 @@ If you select "Input data and predict", a new data set, as a data.frame, will be
 
 ### Example of use of "Input data and predict..." menu entry
 
-Load data "Chile" selecting from Rcmdr menu: "Data" -> "Data in packages" -> "Read data set from an attached package..." then double-click on "cardata", click on "Chile" and on "OK".
+Load data "Chile" selecting from Rcmdr menu: "Data" -> "Data in packages" -> "Read data set from an attached package..." then double-click on "carData", click on "Chile" and on "OK".
 
 Rcmdr reply with the following command in source pane (R Script)
 
 ```{r, include = TRUE}
-data(Chile, package="cardata")
+data(Chile, package="carData")
 ```
 
 In the message window it will appear `[x] NOTE: The data set Chile has 2700 rows and 8 columns.` and in the dialog box attached to the label "Data set:" "Chile" will appear.
