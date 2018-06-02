@@ -90,13 +90,13 @@ Dentro del menú "Estadísticos" -> "Test no paramétricos" -> "Test de aleatori
 En primer lugar cargaremos un conjunto de datos, por ejemplo, "AMSsurvey" mediante los pasos siguientes:
 
 1. Elegir del menú de Rcmdr: "Datos" -> "Conjuntos de datos en paquetes" -> "Leer conjunto de datos desde paquete adjunto..."
-2. Pulsar dos veces sobre "car"
+2. Pulsar dos veces sobre "cardata"
 3. Pulsar sobre "AMSsurvey" y sobre "Aceptar".
 
 Rcmdr responde con la siguiente instruccion en el cuadro de instrucciones (R Script)
 
 ```{r, include = TRUE}
-data(AMSsurvey, package="car")
+data(AMSsurvey, package="cardata")
 ```
 
 En la ventana de mensajes aparecerá `[x] NOTA: El conjunto de datos AMSsurvey tiene 24 filas y 5 columnas.` y en el cuadro de diálogo anexo a la etiqueta "Conjunto de datos:" aparecerá "AMSsurvey".
@@ -145,10 +145,10 @@ Si selecciona "Modelos" -> "Predecir usando el modelo activo" -> "Introducir dat
 
 ### Ejemplo de uso del menú "Introducir datos y predecir..."
 
-Cargar los datos "Chile" eligiendo del menu de Rcmdr: "Datos" -> "Conjuntos de datos en paquetes" -> "Leer conjunto de datos desde paquete adjunto..." pulsar dos veces sobre "car", pulsar sobre "Chile" y sobre "Aceptar". Rcmdr responde con la siguiente instruccion en el cuadro de instrucciones (R Script)
+Cargar los datos "Chile" eligiendo del menu de Rcmdr: "Datos" -> "Conjuntos de datos en paquetes" -> "Leer conjunto de datos desde paquete adjunto..." pulsar dos veces sobre "cardata", pulsar sobre "Chile" y sobre "Aceptar". Rcmdr responde con la siguiente instruccion en el cuadro de instrucciones (R Script)
 
 ```{r, include = TRUE}
-data(Chile, package="car")
+data(Chile, package="cardata")
 ```
 
 En la ventana de mensajes aparecerá `[x] NOTA: El conjunto de datos car tiene 2700 filas y 8 columnas.` y en el cuadro de diálogo anexo a la etiqueta "Conjunto de datos:" aparecerá "Chile".
