@@ -18,8 +18,8 @@
 \tabular{ll}{
 Package: \tab RcmdrPlugin.UCA\cr
 Type: \tab Package\cr
-Version: \tab 4.2-3\cr
-Date: \tab 2018-06-03\cr
+Version: \tab 4.2-4\cr
+Date: \tab 2018-06-12\cr
 License: \tab GPL version 3 or newer\cr
 }
 }
