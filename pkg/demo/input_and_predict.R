@@ -3,7 +3,7 @@
 # "Data" -> "Data in packages" -> "Read data set from an attached package..."
 # then double-click on "car", click on "Chile" and on "OK".
 # Rcmdr reply with the following command in source pane (R Script)
-data(Chile, package="car")
+data(Chile, package="carData")
 # To build a model select from Rcmdr menu:
 # "Statistics" -> "Model fit" -> "Linear Regresion..."
 # As "Response variable" select income and age as "Explanatory variables" and click on "OK"

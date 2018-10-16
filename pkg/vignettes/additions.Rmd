@@ -33,7 +33,7 @@ In the following sections, each of these options will be described in detail.
 
 Within the menu "Statistics" -> "Variances", a new entry is provided to calculate confidence intervals and make contrasts on the variance in a normal population.This option uses the `sigma.test` function of the TeachingDemos package.
 
-## Example of using the "Signle-Sample Variance Test..." menu
+## Example of using the "Single-Sample Variance Test..." menu
 
 First we will load the randtest package from which we will load the data. For it:
 
@@ -46,7 +46,7 @@ If randtest does not appear in the list, you must first install the package.
 
 Next we will load a set of data, for example, "sweetpotato" through the following steps:
 
-1. Choose from the Rcmdr menu: "Data" -> "Packet data sets" -> "Read data set from attached package..."
+1. Choose from the Rcmdr menu: "Data" -> "Package data sets" -> "Read data set from attached package..."
 2. Press twice on "randtests"
 3. Click on "sweetpotato" and on "Accept".
 
@@ -82,7 +82,7 @@ Two options are provided within the "Non-parametric Test" menu to perform the ra
 
 ## Randomness test for a dichotomous variable
 
-Within the menu "Statistics" -> "Non-parametric tests" -> "Randomness test for a factor of two levels...", a new entry is provided to test the randomness of a factor-type variable with two levels. This option uses the `runs.test` function of the tseries package, although to avoid conflicts it has been renamed` twolevelfactor.runs.test`.
+Within the menu "Statistics" -> "Non-parametric tests" -> "Randomness test for a factor of two levels...", a new entry is provided to test the randomness of a factor-type variable with two levels. This option uses the `runs.test` function of the tseries package, although to avoid conflicts it has been renamed as `twolevelfactor.runs.test`.
 
 ### Example of using the menu "Randomness test for a two-level factor..."
 
@@ -109,11 +109,11 @@ and in the output tab
 with (AMSsurvey, twolevelfactor.runs.test (sex))
 ```
 
-We rejected the null hypothesis of randomness with a p-value of $`r with(AMSsurvey, twolevelfactor.runs.test (sex))$p.value`$, before proceeding with the study we would have to investigate the cause of this lack of randomness.
+We rejected the null hypothesis of randomness with a p-value of `r with(AMSsurvey, twolevelfactor.runs.test (sex))$p.value`, before proceeding with the study we would have to investigate the cause of this lack of randomness.
 
 ## Randomness test for a numerical variable
 
-Within the "Statistics" menu -> "Non-parametric tests" -> "Randomness test for a numeric variable ...", a new entry is provided to test the randomness of a numeric variable. This option uses the `runs.test` function of the randtest package, although to avoid conflicts it has been renamed` numeric.runs.test`.
+Within the "Statistics" menu -> "Non-parametric tests" -> "Randomness test for a numeric variable ...", a new entry is provided to test the randomness of a numeric variable. This option uses the `runs.test` function of the randtest package, although to avoid conflicts it has been renamed as `numeric.runs.test`.
 
 ### Example of using the menu "Randomness test for a numeric variable ..."
 
@@ -222,15 +222,15 @@ summary(RegModel.1)
 
 Note that the active model is set to RegModel.1 So if you want to predict the values for income for age data in Chile dataset. Select from Rcmdr menu: "Models" -> "Predict using active model" -> "Add predictions to existing dataset...". In the dialog select a compatible dataset with the model. In this case select Chile. Rcmdr reply with the following command in source pane (R Script)
 ```{r include = TRUE, results = 'hide'}
-Chile$fitted <- predict(RegModel.1, Chile)
+Chile$fitted.RegModel.1 <- predict(RegModel.1, Chile)
 ```
 and in the output box
 ```{r include = TRUE}
-Chile$fitted <- predict(RegModel.1, Chile)
+Chile$fitted.RegModel.1 <- predict(RegModel.1, Chile)
 ```
 
 
-The predicted value of income has been saved as fitted in the selected dataset (Chile). 
+The predicted value of income has been saved as fitted.RegModel.1 in the selected dataset (Chile). 
 You can see the added values using the button for visualizing the data set.
 
 
