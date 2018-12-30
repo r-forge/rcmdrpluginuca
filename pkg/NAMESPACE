@@ -1,4 +1,5 @@
 import("Rcmdr")
+import("rmarkdown")
 
 importFrom("randtests", randtest.runs.test = "runs.test")
 importFrom("TeachingDemos", "sigma.test")
