@@ -1,4 +1,4 @@
-\name{simgaMenu.es}
+\name{sigmaMenu.es}
 \title{Test de varianza}
 \alias{Test de varianza (es)}
 \docType{package}
@@ -17,7 +17,7 @@
   Cargar los datos "sweetpotato" eligiendo del menu de Rcmdr: "Datos" ->
   "Conjuntos de datos en paquetes" ->
   "Leer conjunto de datos desde paquete adjunto..." pulsar dos veces
-  sobre "randtests", pulsar sobre "sweetpotato" y sobre "Aceptar". Rcmdr responde con la siguiente instruccion en el cuadro de
+  sobre "randtests", pulsar sobre "sweetpotato" y sobre "Aceptar". Rcmdr responde con la siguiente instrucción en el cuadro de
   instrucciones (R Script)
 
   \code{data(sweetpotato, package="randtests")}
@@ -27,7 +27,7 @@
   Para construir el intervalo de confianza para sigma para la variable "yield", seleccione
   del menú de Rcmdr: "Estadísticos" -> "Varianzas" ->
   "Test de varianza para una muestra..." seleccione
-  "yield" y "OK". Rcmdr responde con la
+  "yield" y "Aceptar". Rcmdr responde con la
   siguiente instruccion en el cuadro de instrucciones (R Script)
 
   \code{with(sweetpotato, sigma.test(yield[!is.na(yield)], alternative='two.sided', sigmasq=1.0, conf.level=0.95))}

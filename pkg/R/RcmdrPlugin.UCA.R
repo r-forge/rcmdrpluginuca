@@ -1,8 +1,8 @@
-# Some Rcmdr useful extensions
+### Some Rcmdr useful extensions
 
-# Note for the next function (last modified: 2013-01-24 by J. Fox): the following function (with contributions from Richard Heiberger and Milan Bouchet-Valat)
-# can be included in any Rcmdr plug-in package to cause the package to load
-# the Rcmdr if it is not already loaded
+### Note for the next function (last modified: 2013-01-24 by J. Fox): the following function (with contributions from Richard Heiberger and Milan Bouchet-Valat)
+### can be included in any Rcmdr plug-in package to cause the package to load
+### the Rcmdr if it is not already loaded
 .onAttach <- function(libname, pkgname) {
     if (!interactive()) return()
     putRcmdr("slider.env", new.env())    
@@ -23,20 +23,44 @@
     }
 }
 
-# Function to input data and predict values using active model
+### Function to input data and predict values using active model
 input2predict <- function() {
-    # To ensure that menu name is included in pot file
+    ## To ensure that menu name is included in pot file
     gettext("Predict using active model", domain="R-RcmdrPlugin.UCA")
     gettext("Input data and predict...", domain="R-RcmdrPlugin.UCA")
     doItAndPrint(paste0(".data <- edit(", ActiveDataSet(), "[0,])"))
     doItAndPrint(".data")
     doItAndPrint(paste0("predict(", ActiveModel(), ", .data)"))
     doItAndPrint("remove(.data)")
-    }
+}
 
-# Funnction to predict values for existing data set
+### Funtion to produce a Pareto char using paretochar function in qicharts2 package
+paretochartMenu <- function() {
+    ## To ensure that menu name is included in pot file
+    gettext("Quality Control", domain="R-RcmdrPlugin.UCA")
+    gettext("Pareto chart", domain="R-RcmdrPlugin.UCA")
+    initializeDialog(title=gettext("Pareto chart", domain="R-RcmdrPlugin.UCA"))
+    variablesBox <- variableListBox(top, Factors(), selectmode="single", initialSelection=NULL, title=gettextRcmdr("Variable (pick one)"))
+    onOK <- function(){
+        x <- getSelection(variablesBox)
+        if (length(x) == 0) {
+            errorCondition(recall=paretochartMenu, message=gettextRcmdr("No variable was selected."))
+            return()
+        }
+        closeDialog()
+        ## Apply test
+        doItAndPrint(paste("with(", ActiveDataSet(), ", paretochart(", x, "))", sep = ""))
+        tkfocus(CommanderWindow())
+    }
+    OKCancelHelp(helpSubject="paretochart", reset = "paretochartMenu", apply = "paretochartMenu")
+    tkgrid(getFrame(variablesBox), sticky="nw")
+    tkgrid(buttonsFrame, sticky="w")
+    dialogSuffix(rows=6, columns=1)
+}
+
+### Function to predict values for existing data set
 predict4dataset <- function() {
-    # To ensure that menu name is included in pot file
+    ## To ensure that menu name is included in pot file
     gettext("Add predictions to existing dataset...", domain="R-RcmdrPlugin.UCA")
     dataSets <- listDataSets()
     .activeDataSet <- ActiveDataSet()
@@ -57,52 +81,52 @@ predict4dataset <- function() {
     dialogSuffix()
 }
 
-# Function to be called by Rcmdr to test for randomness using runs.test from tseries packages
+### Function to be called by Rcmdr to test for randomness using runs.test from tseries packages
 randomnessFTest <- function() {
-  # To ensure that menu name is included in pot file
-  gettext("Randomness test for two level factor...", domain="R-RcmdrPlugin.UCA")
-  # Build dialog
-  initializeDialog(title=gettext("Randomness test for two level factor", domain="R-RcmdrPlugin.UCA"))
-  variablesBox <- variableListBox(top, TwoLevelFactors(), selectmode="single", initialSelection=NULL, title=gettextRcmdr("Variable (pick one)"))
-	onOK <- function(){
-		x <- getSelection(variablesBox)
-		if (length(x) == 0) {
-                    errorCondition(recall=randomnessNTest, message=gettextRcmdr("No variables were selected."))
-                    return()
-                }
-		closeDialog()
-                # Apply test
-                doItAndPrint(paste("with(", ActiveDataSet(), ", twolevelfactor.runs.test(", x, "))", sep = ""))
-		tkfocus(CommanderWindow())
-	}
-	OKCancelHelp(helpSubject="Randomness test", reset = "randomnessFTest", apply = "randomnessFTest")
-	tkgrid(getFrame(variablesBox), sticky="nw")
-	tkgrid(buttonsFrame, sticky="w")
-	dialogSuffix(rows=6, columns=1)
+    ## To ensure that menu name is included in pot file
+    gettext("Randomness test for two level factor...", domain="R-RcmdrPlugin.UCA")
+    ## Build dialog
+    initializeDialog(title=gettext("Randomness test for two level factor", domain="R-RcmdrPlugin.UCA"))
+    variablesBox <- variableListBox(top, TwoLevelFactors(), selectmode="single", initialSelection=NULL, title=gettextRcmdr("Variable (pick one)"))
+    onOK <- function(){
+        x <- getSelection(variablesBox)
+        if (length(x) == 0) {
+            errorCondition(recall=randomnessNTest, message=gettextRcmdr("No variables were selected."))
+            return()
+        }
+        closeDialog()
+        ## Apply test
+        doItAndPrint(paste("with(", ActiveDataSet(), ", twolevelfactor.runs.test(", x, "))", sep = ""))
+        tkfocus(CommanderWindow())
+    }
+    OKCancelHelp(helpSubject="Randomness test", reset = "randomnessFTest", apply = "randomnessFTest")
+    tkgrid(getFrame(variablesBox), sticky="nw")
+    tkgrid(buttonsFrame, sticky="w")
+    dialogSuffix(rows=6, columns=1)
 }
 
-# Function to be called by Rcmdr to test for randomness using runs.test from randtest packages
+### Function to be called by Rcmdr to test for randomness using runs.test from randtest packages
 randomnessNTest <- function() {
-  # To ensure that menu name is included in pot file
-  gettext("Randomness test for numeric variable...", domain="R-RcmdrPlugin.UCA")
-  # Build dialog
-  initializeDialog(title=gettext("Randomness test for numeric variable", domain="R-RcmdrPlugin.UCA"))
-  variablesBox <- variableListBox(top, Numeric(), selectmode="single", initialSelection=NULL, title=gettextRcmdr("Variable (pick one)"))
-	onOK <- function(){
-		x <- getSelection(variablesBox)
-		if (length(x) == 0) {
-                    errorCondition(recall=randomnessNTest, message=gettextRcmdr("No variables were selected."))
-                    return()
-                }
-		closeDialog()
-                # Apply test
-                doItAndPrint(paste("with(", ActiveDataSet(), ", numeric.runs.test(", x, "))", sep = ""))
-		tkfocus(CommanderWindow())
-	}
-	OKCancelHelp(helpSubject="Randomness test", reset = "randomnessNTest", apply = "randomnessNTest")
-	tkgrid(getFrame(variablesBox), sticky="nw")
-	tkgrid(buttonsFrame, sticky="w")
-	dialogSuffix(rows=6, columns=1)
+    ## To ensure that menu name is included in pot file
+    gettext("Randomness test for numeric variable...", domain="R-RcmdrPlugin.UCA")
+    ## Build dialog
+    initializeDialog(title=gettext("Randomness test for numeric variable", domain="R-RcmdrPlugin.UCA"))
+    variablesBox <- variableListBox(top, Numeric(), selectmode="single", initialSelection=NULL, title=gettextRcmdr("Variable (pick one)"))
+    onOK <- function(){
+        x <- getSelection(variablesBox)
+        if (length(x) == 0) {
+            errorCondition(recall=randomnessNTest, message=gettextRcmdr("No variables were selected."))
+            return()
+        }
+        closeDialog()
+        ## Apply test
+        doItAndPrint(paste("with(", ActiveDataSet(), ", numeric.runs.test(", x, "))", sep = ""))
+        tkfocus(CommanderWindow())
+    }
+    OKCancelHelp(helpSubject="Randomness test", reset = "randomnessNTest", apply = "randomnessNTest")
+    tkgrid(getFrame(variablesBox), sticky="nw")
+    tkgrid(buttonsFrame, sticky="w")
+    dialogSuffix(rows=6, columns=1)
 }
 
 sigmaTest <- function() {
@@ -149,7 +173,7 @@ sigmaTest <- function() {
     tkgrid(buttonsFrame, columnspan = 2, sticky = "w")
     tkgrid.configure(confidenceField, sticky = "e")
     dialogSuffix()
-    }
+}
 
 numeric.runs.test <- function(...) randtest.runs.test(...)
 twolevelfactor.runs.test <- function(...) tseries.runs.test(...)

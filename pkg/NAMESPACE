@@ -1,3 +1,5 @@
+#import("pwr")
+import("qicharts2")
 import("Rcmdr")
 import("rmarkdown")
 
@@ -8,9 +10,11 @@ importFrom("tseries", tseries.runs.test = "runs.test")
 
 export("input2predict")
 export("numeric.runs.test")
+export("paretochartMenu")
 export("predict4dataset")
 export("randomnessFTest")
 export("randomnessNTest")
 export("twolevelfactor.runs.test")
+export("SampleSizeZMenu")
 export("sigmaTest")
 
