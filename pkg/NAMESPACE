@@ -15,6 +15,6 @@ export("predict4dataset")
 export("randomnessFTest")
 export("randomnessNTest")
 export("twolevelfactor.runs.test")
-export("SampleSizeZMenu")
+#export("SampleSizeZMenu")
 export("sigmaTest")
 
