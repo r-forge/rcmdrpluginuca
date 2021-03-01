@@ -14,7 +14,7 @@
     item    predictMenu       command           "Add predictions to existing dataset..."    predict4dataset   "activeModelP()"     ""
 #    menu    SampleSizeMenu    topMenu           ""                                          ""                ""                   ""
 #    item    topMenu           cascade           "Sample Size"                               SampleSizeMenu    ""                   ""
-    item    SampleSizeMenu    command           "Normal with known variance"                SampleSizeZMenu   ""                   ""
+#    item    SampleSizeMenu    command           "Normal with known variance"                SampleSizeZMenu   ""                   ""
     menu    QualityControlMenu topMenu		""	     	       			    ""		      ""		   ""
     item    topMenu	      cascade		"Quality Control"  			    QualityControlMenu ""		   ""
     item    QualityControlMenu command		"Pareto chart"				    paretochartMenu    "factorsP()"	   ""

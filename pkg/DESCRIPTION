@@ -1,8 +1,8 @@
 Package: RcmdrPlugin.UCA
 Type: Package
 Title: UCA Rcmdr Plug-in
-Version: 4.3-3
-Date: 2021-02-24
+Version: 4.3-4
+Date: 2021-03-01
 Author: Manuel Munoz-Marquez <manuel.munoz@uca.es>
 Maintainer: Manuel Munoz-Marquez <manuel.munoz@uca.es>
 Depends: qicharts2, randtests, rmarkdown, TeachingDemos, tseries
