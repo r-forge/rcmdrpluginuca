@@ -12,9 +12,9 @@
     item    modelsMenu        cascade           "Predict using active model"  		    predictMenu       "activeModelP()"     ""
     item    predictMenu       command           "Input data and predict..."		    input2predict     "activeModelP()"     ""
     item    predictMenu       command           "Add predictions to existing dataset..."    predict4dataset   "activeModelP()"     ""
-    menu    SampleSizeMenu    topMenu           ""                                          ""                ""                   ""
-    item    topMenu           cascade           "Sample Size"                               SampleSizeMenu    ""                   ""
-    item    SampleSizeMenu    command           "Normal with known variance"                SampleSizeZMenu   ""                   ""
+#    menu    SampleSizeMenu    topMenu           ""                                          ""                ""                   ""
+#    item    topMenu           cascade           "Sample Size"                               SampleSizeMenu    ""                   ""
+#    item    SampleSizeMenu    command           "Normal with known variance"                SampleSizeZMenu   ""                   ""
 
 
 ### Quality control

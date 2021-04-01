@@ -2,7 +2,8 @@ import('IQCC')
 import('qcc')
 #import("pwr")
 import("Rcmdr")
-#import("rmarkdown")
+# The next package is required to build vignettes
+import("rmarkdown")
 
 importFrom("qicharts2", "paretochart")
 importFrom("randtests", randtest.runs.test = "runs.test")
