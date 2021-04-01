@@ -1,4 +1,7 @@
-Version 4.3.-4
+Version 4.4-1
+2021-04-02
+* New options in "Quatility control" menu for p, np, c, u, xbar, R and S charts, first and second phase.
+Version 4.3-4
 2021-03-01
 * Fix a bug that prevented menu loading
 Version 4.3-3

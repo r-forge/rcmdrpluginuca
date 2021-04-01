@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RcmdrPlugin.UCA\n"
 "Report-Msgid-Bugs-To: manuel.munoz@uca.es\n"
-"POT-Creation-Date: 2021-02-23 00:06+0100\n"
-"PO-Revision-Date: 2021-02-23 00:07+0100\n"
+"POT-Creation-Date: 2021-04-01 12:26+0200\n"
+"PO-Revision-Date: 2021-04-01 12:33+0200\n"
 "Last-Translator: Manuel Munoz-Marquez <manuel.munoz@uca.es>\n"
 "Language-Team: manuel.munoz@uca.es\n"
 "Language: es_ES\n"
@@ -18,59 +18,280 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Generator: Poedit 2.4.1\n"
 
-#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:29
+#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:30
 msgid "Predict using active model"
 msgstr "Predecir usando el modelo activo"
 
-#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:30
+#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:31
 msgid "Input data and predict..."
 msgstr "Introducir datos y predecir..."
 
-#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:40
-msgid "Quality Control"
-msgstr "Control de calidad"
-
-#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:41
 #: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:42
-msgid "Pareto chart"
-msgstr "Gráfico de Pareto"
-
-#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:64
 msgid "Add predictions to existing dataset..."
 msgstr "Añadir predicciones a un conjunto de datos existente..."
 
-#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:87
+#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:65
 msgid "Randomness test for two level factor..."
 msgstr "Test de aleatoriedad para un factor de dos niveles..."
 
-#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:89
+#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:67
 msgid "Randomness test for two level factor"
 msgstr "Test de aleatoriedad para un factor de dos niveles"
 
-#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:111
+#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:89
 msgid "Randomness test for numeric variable..."
 msgstr "Test de aleatoriedad para variable numérica..."
 
-#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:113
+#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:91
 msgid "Randomness test for numeric variable"
 msgstr "Test de aleatoriedad para variable numérica"
 
-#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:135
+#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:113
 msgid "Normal mean with known variance"
 msgstr "Media de normal con varianza conocida"
 
-#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:165
+#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:143
 msgid "Single-Sample Variance Test..."
 msgstr "Test de varianza para una muestra..."
 
-#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:168
+#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:146
 msgid "Single-Sample Variance Test"
 msgstr "Test de varianza para una muestra"
 
-#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:187
+#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:165
 msgid "Population variance"
 msgstr "Varianza poblacional"
 
-#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:197
+#: RcmdrPlugin.UCA.dev/R/RcmdrPlugin.UCA.R:175
 msgid "Null hypothesis: sigma^2 ="
 msgstr "Hipótesis nula: sigma^2 ="
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:6
+msgid "Phase I..."
+msgstr "Fase I..."
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:7
+msgid "Phase I (multiple columns)..."
+msgstr "Fase I (columnas múltiples)..."
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:8
+msgid "Phase II (multiple columns)..."
+msgstr "Fase II (columnas múltiples)..."
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:14
+msgid "Sample size"
+msgstr "Tamaño de muestra"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:19
+msgid "No data variable was selected"
+msgstr "No se ha seleccionado ninguna variable para datos"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:23
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:78
+msgid "Select at least two variables (Phase I)"
+msgstr "Seleccione al menos dos variables (Fase I)"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:29
+msgid "No sample size variable was selected"
+msgstr "No se ha seleccionado variable para tamaño de muestra"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:44
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:123
+msgid " Chart for "
+msgstr " Gráfico de "
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:63
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:148
+msgid "Phase I"
+msgstr "Fase I"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:64
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:149
+msgid "Phase II"
+msgstr "Fase II"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:66
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:151
+msgid "Sample size (Phase I)"
+msgstr "Tamaño de muestra (Fase I)"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:69
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:154
+msgid "Sample size (Phase II)"
+msgstr "Tamaño de muestra (Fase II)"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:74
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:163
+msgid "No data variable was selected (Phase I)"
+msgstr "No se ha seleccionado ninguna variable para datos (Fase I)"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:84
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:168
+msgid "No sample size variable was selected (Phase I)"
+msgstr "No se ha seleccionado variable para tamaño de muestra (Fase I)"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:90
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:173
+msgid "No data variable was selected (Phase II)"
+msgstr "No se ha seleccionado ninguna variable para datos (Fase II)"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:94
+msgid "Select at least two variables (Phase II)"
+msgstr "Selecciona el menos dos variables (Fase II)"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:100
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:178
+msgid "No sample size variable was selected (Phase II)"
+msgstr "No se ha seleccionado variable para tamaño de muestra (Fase II)"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:183
+msgid "No value for center has been provided"
+msgstr "No se ha seleccionado valor para centro"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:214
+msgid "Center"
+msgstr "Centro"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:233
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:245
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:257
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:388
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:401
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:413
+msgid "Counts"
+msgstr "Conteos"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:234
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:246
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:258
+msgid "c-chart (rate)..."
+msgstr "Gráfico c (tasa)..."
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:236
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:248
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:260
+msgid "c-chart (rate)"
+msgstr "Gráfico c (tasa)"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:237
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:249
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:261
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:392
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:405
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:417
+msgid "Nonconformities"
+msgstr "No conformidades"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:269
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:325
+msgid "Attributes"
+msgstr "Atributos"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:270
+msgid "np-chart (count)"
+msgstr "Gráfico np (conteos)"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:271
+msgid "np-chart (Phase I)..."
+msgstr "Gráfico np (Fase I)..."
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:273
+msgid "np-chart (Phase I)"
+msgstr "Gráfico np (Fase I)..."
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:274
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:283
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:293
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:330
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:339
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:348
+msgid "Nonconforming units"
+msgstr "Unidades no conformes"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:282
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:338
+msgid "Phase II from data..."
+msgstr "Fase II desde datos..."
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:292
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:347
+msgid "Phase II from parameters..."
+msgstr "Fase II desde parámetros..."
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:300
+msgid "Quality Control"
+msgstr "Control de calidad"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:301
+msgid "Pareto chart"
+msgstr "Gráfico de Pareto"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:326
+msgid "p-chart (proportion)"
+msgstr "Gráfico p (proporción)"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:327
+msgid "p-chart (Phase I)..."
+msgstr "Gráfico p (Fase I)..."
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:329
+msgid "p-chart (Phase I)"
+msgstr "Gráfico p (Fase I)"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:355
+msgid "R Chart Phase I (multiple columns)"
+msgstr "Gráfico R Fase I (columnas múltiples)"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:356
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:364
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:372
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:380
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:435
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:443
+msgid "Measurements (pick two variables or more)"
+msgstr "Medidas (elija dos o más variables)"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:363
+msgid "R Chart Phase II (multiple columns)"
+msgstr "Gráfico R Fase II (columnas múltiples)"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:371
+msgid "S Chart Phase I (multiple columns)"
+msgstr "Gráfico S Fase I (columnas múltiples)"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:379
+msgid "S Chart Phase II (multiple columns)"
+msgstr "Gráfico S Fase II (columnas múltiples)"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:389
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:402
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:414
+msgid "u-chart (average rate)..."
+msgstr "Gráfico u (tasa media)..."
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:391
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:404
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:416
+msgid "u-chart (average rate)"
+msgstr "Gráfico u (tasa media)"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:423
+msgid "Continuous"
+msgstr "Continuos"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:424
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:426
+msgid "One-at-time data"
+msgstr "Un dato cada vez"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:427
+msgid "Measurements"
+msgstr "Medidas"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:434
+msgid "xbar Chart Phase I (multiple columns)"
+msgstr "Gráfico xbar Fase I (columnas múltiples)"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:442
+msgid "xbar Chart Phase II (multiple columns)"
+msgstr "Gráfico xbar Fase II (columnas múltiples)"

@@ -23,6 +23,7 @@
     }
 }
 
+
 ### Function to input data and predict values using active model
 input2predict <- function() {
     ## To ensure that menu name is included in pot file
@@ -34,29 +35,6 @@ input2predict <- function() {
     doItAndPrint("remove(.data)")
 }
 
-### Funtion to produce a Pareto char using paretochar function in qicharts2 package
-paretochartMenu <- function() {
-    ## To ensure that menu name is included in pot file
-    gettext("Quality Control", domain="R-RcmdrPlugin.UCA")
-    gettext("Pareto chart", domain="R-RcmdrPlugin.UCA")
-    initializeDialog(title=gettext("Pareto chart", domain="R-RcmdrPlugin.UCA"))
-    variablesBox <- variableListBox(top, Factors(), selectmode="single", initialSelection=NULL, title=gettextRcmdr("Variable (pick one)"))
-    onOK <- function(){
-        x <- getSelection(variablesBox)
-        if (length(x) == 0) {
-            errorCondition(recall=paretochartMenu, message=gettextRcmdr("No variable was selected."))
-            return()
-        }
-        closeDialog()
-        ## Apply test
-        doItAndPrint(paste("with(", ActiveDataSet(), ", paretochart(", x, "))", sep = ""))
-        tkfocus(CommanderWindow())
-    }
-    OKCancelHelp(helpSubject="paretochart", reset = "paretochartMenu", apply = "paretochartMenu")
-    tkgrid(getFrame(variablesBox), sticky="nw")
-    tkgrid(buttonsFrame, sticky="w")
-    dialogSuffix(rows=6, columns=1)
-}
 
 ### Function to predict values for existing data set
 predict4dataset <- function() {
@@ -129,6 +107,36 @@ randomnessNTest <- function() {
     dialogSuffix(rows=6, columns=1)
 }
 
+SampleSizeZMenu <- function() {
+    ## Initialize dialog
+    dialogName <- "SampleSizeZMenu"
+    dialogTitle <- gettext("Normal mean with known variance", domain="R-RcmdrPlugin.UCA")
+    defaults <- list(difference = "")
+    dialog.values <- getDialog(dialogName, defaults=defaults)
+    initializeDialog(title=dialogTitle)
+    ## Define functions to handle buttons
+    onOK <- function(){
+        ##difference <- tclvalue(differenceVariable)
+        closeDialog()
+        tkfocus(CommanderWindow())
+        ##difference <- tclvalue(difference)
+        ##inputDialog(dialogName, list(difference = difference))
+        doItAndPrint("-10:0")
+        doItAndPrint("1:10")
+    }
+    OKCancelHelp(helpSubject="pwr.norm.test", reset=dialogName, apply=dialogName)
+    ## Define tk objects
+    entryFrame <- tkframe(top)
+    differenceFrame <- tkframe(entryFrame)
+    differenceVariable <- tclVar(dialog.values$difference)
+    differenceField <- ttkentry(differenceFrame, width="6", textvariable = differenceVariable)
+    ##tkgrid(entryFrame, sticky="w")
+    ##tkgrid(labelRcmdr(differenceFrame, text = gettext("Difference to detect =", domain="R-RcmdrPlugin.UCA")), differenceField, sticky="w")
+    tkgrid(buttonsFrame, sticky="w")
+    ##dialogSuffix(columns=3)
+    dialogSuffix()
+}
+
 sigmaTest <- function() {
     ## This function is developed from singleSampleTTest in Rcmdr and use function sigma.test in package TeachingDemos
     ## To ensure that menu name is included in pot file
@@ -177,3 +185,22 @@ sigmaTest <- function() {
 
 numeric.runs.test <- function(...) randtest.runs.test(...)
 twolevelfactor.runs.test <- function(...) tseries.runs.test(...)
+
+subset2Box <- function (window = top, subset.expression = NULL, model = FALSE) 
+{
+    tmp <- substitute({
+        on.exit(remove(list = objects(pattern = "^\\.\\.", all.names = TRUE)))
+        subset2Variable <- if (!is.null(subset.expression)) tclVar(gettextRcmdr(subset.expression)) else if (model) {
+                                                                                                        if (currentModel && currentFields$subset != "") tclVar(currentFields$subset) else tclVar(gettextRcmdr("<all valid cases>"))
+                                                                                                    } else tclVar(gettextRcmdr("<all valid cases>"))
+        subset2Frame <- tkframe(window)
+        subset2Entry <- ttkentry(subset2Frame, width = "20", textvariable = subset2Variable)
+        subset2Scroll <- ttkscrollbar(subset2Frame, orient = "horizontal", command = function(...) tkxview(subset2Entry, ...))
+        tkconfigure(subset2Entry, xscrollcommand = function(...) tkset(subset2Scroll, ...))
+        tkgrid(labelRcmdr(subset2Frame, text = gettextRcmdr("Subset expression"), fg = getRcmdr("title.color"), font = "RcmdrTitleFont"), sticky = "w")
+        tkgrid(subset2Entry, sticky = "ew")
+        tkgrid(subset2Scroll, sticky = "ew")
+        tkgrid.columnconfigure(subset2Frame, 0, weight = 1)
+    })
+    eval(tmp, parent.frame())
+}

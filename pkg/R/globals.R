@@ -1,1 +1,1 @@
-if (getRversion() >= '2.15.1') globalVariables(c('alternativeFrame', 'alternativeVariable', 'buttonsFrame', 'top'))
+if (getRversion() >= '2.15.1') globalVariables(c('alternativeFrame', 'alternativeVariable', 'buttonsFrame', 'subsetFrame', 'subsetVariable', 'subset2Frame', 'subset2Variable', 'top', 'types.multicolum'))

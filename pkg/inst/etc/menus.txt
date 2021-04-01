@@ -1,7 +1,7 @@
 # Some Rcmdr menus for the RcmdrPlugin.UCA package
 # When the plug-in is loaded, these menus are merged with the standard Rcmdr menus
 
-# last modified: May 2017 by M. Munoz-Marquez
+# last modified: March 2021 by M. Munoz-Marquez
 
 #   type    menu/item         operation/parent  label                                       command/menu      activation           install?
     item    variancesMenu     command           "Single-Sample Variance Test..."            sigmaTest         "numericP()"	   ""
@@ -12,9 +12,67 @@
     item    modelsMenu        cascade           "Predict using active model"  		    predictMenu       "activeModelP()"     ""
     item    predictMenu       command           "Input data and predict..."		    input2predict     "activeModelP()"     ""
     item    predictMenu       command           "Add predictions to existing dataset..."    predict4dataset   "activeModelP()"     ""
-#    menu    SampleSizeMenu    topMenu           ""                                          ""                ""                   ""
-#    item    topMenu           cascade           "Sample Size"                               SampleSizeMenu    ""                   ""
-#    item    SampleSizeMenu    command           "Normal with known variance"                SampleSizeZMenu   ""                   ""
-    menu    QualityControlMenu topMenu		""	     	       			    ""		      ""		   ""
-    item    topMenu	      cascade		"Quality Control"  			    QualityControlMenu ""		   ""
-    item    QualityControlMenu command		"Pareto chart"				    paretochartMenu    "factorsP()"	   ""
+    menu    SampleSizeMenu    topMenu           ""                                          ""                ""                   ""
+    item    topMenu           cascade           "Sample Size"                               SampleSizeMenu    ""                   ""
+    item    SampleSizeMenu    command           "Normal with known variance"                SampleSizeZMenu   ""                   ""
+
+
+### Quality control
+    menu    QCMenu	      topMenu		""	     	       			    ""		      ""		   ""
+    item    topMenu	      cascade		"Quality Control"  			    QCMenu	      ""		   ""
+    item    QCMenu	      command		"Pareto chart"				    paretochartMenu    "factorsP()"	   ""
+
+# Attributes - Binomial models   
+    menu    QCAMenu           QCMenu		""					    ""		       ""		   ""
+    item    QCMenu	      cascade		"Attributes"				    QCAMenu	       "numericP()"	   ""
+
+    menu    pchartMenu	      QCAMenu		""					    ""		       ""		   ""
+    item    QCAMenu	      cascade		"p-chart (proportion)"			    pchartMenu	       ""		   ""
+    item    pchartMenu	      command		"Phase I..."				    pchart1Menu	       "numericP()"	   ""
+    item    pchartMenu	      command		"Phase II from data..."	    	    	    pchart12Menu       "numericP()"	   ""
+    item    pchartMenu	      command		"Phase II from parameters..."	    	    pchart2Menu	       "numericP()"	   ""
+
+    menu    npchartMenu	      QCAMenu		""					    ""		       ""		   ""
+    item    QCAMenu	      cascade		"np-chart (count)"			    npchartMenu	       ""		   ""
+    item    npchartMenu	      command		"Phase I..."				    npchart1Menu       "numericP()"	   ""
+    item    npchartMenu	      command		"Phase II from data..."	  		    npchart12Menu      "numericP()"	   ""
+    item    npchartMenu	      command		"Phase II from parameters..."	    	    npchart2Menu       "numericP()"	   ""
+
+# Counts - Poisson models
+    menu    QCCMenu           QCMenu		""					    ""		       ""		   ""
+    item    QCMenu	      cascade		"Counts"				    QCCMenu	       "numericP()"	   ""
+
+    menu    uchartMenu	      QCCMenu		""					    ""		       ""		   ""
+    item    QCCMenu	      cascade		"u-chart (average rate)"		    uchartMenu	       ""		   ""
+    item    uchartMenu	      command		"Phase I..."	  			    uchart1Menu	       "numericP()"	   ""
+    item    uchartMenu	      command		"Phase II from data..."	  		    uchart12Menu       "numericP()"	   ""
+    item    uchartMenu	      command		"Phase II from parameters..."		    uchart2Menu	       "numericP()"	   ""
+
+    menu    cchartMenu	      QCCMenu		""					    ""		       ""		   ""
+    item    QCCMenu	      cascade		"c-chart (rate)"			    cchartMenu	       ""		   ""
+    item    cchartMenu	      command		"Phase I..."	  			    cchart1Menu	       "numericP()"	   ""
+    item    cchartMenu	      command		"Phase II from data..."			    cchart12Menu       "numericP()"	   ""
+    item    cchartMenu	      command		"Phase II from parameters..."		    cchart2Menu	       "numericP()"	   ""
+
+# Variable
+    menu    QCVMenu           QCMenu		""					    ""		       ""		   ""
+    item    QCMenu	      cascade		"Continuous"				    QCVMenu	       "numericP()"	   ""
+
+#    menu    qcxbarMenu	      QCVMenu		""					    ""		       ""		   ""
+#    item    QCVMenu	      cascade		"One-at-time data"			    qcxbarMenu	       ""		   ""
+#    item    qcxbarMenu	      command		"Phase I..." 				    xbarone1Menu       "numericP()"	   ""
+ 
+    menu    qcmeansMenu	      QCVMenu		""					    ""		       ""		   ""
+    item    QCVMenu	      cascade		"Means"					    qcmeansMenu	       ""		   ""
+    item    qcmeansMenu	      command		"Phase I (multiple columns)..." 	    xbar1mcMenu	       "numericP()"	   ""
+    item    qcmeansMenu	      command		"Phase II (multiple columns)..." 	    xbar12mcMenu       "numericP()"	   ""
+
+    menu    qcRMenu	      QCVMenu		""					    ""		       ""		   ""
+    item    QCVMenu	      cascade		"Range"					    qcRMenu	       ""		   ""
+    item    qcRMenu	      command		"Phase I (multiple columns)..." 	    R1mcMenu	       "numericP()"	   ""
+    item    qcRMenu	      command		"Phase II (multiple columns)..." 	    R12mcMenu	       "numericP()"	   ""
+
+    menu    qcSMenu	      QCVMenu		""					    ""		       ""		   ""
+    item    QCVMenu	      cascade		"Standard deviation"			    qcSMenu	       ""		   ""
+    item    qcSMenu	      command		"Phase I (multiple columns)..." 	    S1mcMenu	       "numericP()"	   ""
+    item    qcSMenu	      command		"Phase II (multiple columns)..." 	    S12mcMenu	       "numericP()"	   ""
