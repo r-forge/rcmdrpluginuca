@@ -19,7 +19,7 @@ gettext("Phase II (multiple columns)...", domain="R-RcmdrPlugin.UCA")
             errorCondition(recall=recall, message=gettext("No data variable was selected", domain="R-RcmdrPlugin.UCA"))
             return()
         }
-        if (length(x1) == 1 && type %in% types.multicolum) {
+        if (length(x1) == 1 && type %in% types.multicolumn) {
             errorCondition(recall=recall, message=gettext("Select at least two variables (Phase I)", domain="R-RcmdrPlugin.UCA"))
             return()
         }
@@ -74,7 +74,7 @@ gettext("Phase II (multiple columns)...", domain="R-RcmdrPlugin.UCA")
             errorCondition(recall = recall, message=gettext("No data variable was selected (Phase I)", domain="R-RcmdrPlugin.UCA"))
             return()
         }
-        if (length(x1) == 1 && type %in% types.multicolum) {
+        if (length(x1) == 1 && type %in% types.multicolumn) {
             errorCondition(recall=recall, message=gettext("Select at least two variables (Phase I)", domain="R-RcmdrPlugin.UCA"))
             return()
         }
@@ -90,7 +90,7 @@ gettext("Phase II (multiple columns)...", domain="R-RcmdrPlugin.UCA")
             errorCondition(recall = recall, message=gettext("No data variable was selected (Phase II)", domain="R-RcmdrPlugin.UCA"))
             return()
         }
-        if (length(x2) == 1 && type %in% types.multicolum) {
+        if (length(x2) == 1 && type %in% types.multicolumn) {
             errorCondition(recall=recall, message=gettext("Select at least two variables (Phase II)", domain="R-RcmdrPlugin.UCA"))
             return()
         }
