@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RcmdrPlugin.UCA\n"
 "Report-Msgid-Bugs-To: manuel.munoz@uca.es\n"
-"POT-Creation-Date: 2021-04-01 12:26+0200\n"
-"PO-Revision-Date: 2021-04-01 12:33+0200\n"
+"POT-Creation-Date: 2021-10-21 20:57+0200\n"
+"PO-Revision-Date: 2021-10-21 20:59+0200\n"
 "Last-Translator: Manuel Munoz-Marquez <manuel.munoz@uca.es>\n"
 "Language-Team: manuel.munoz@uca.es\n"
 "Language: es_ES\n"
@@ -67,6 +67,7 @@ msgid "Null hypothesis: sigma^2 ="
 msgstr "Hipótesis nula: sigma^2 ="
 
 #: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:6
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:327
 msgid "Phase I..."
 msgstr "Fase I..."
 
@@ -78,145 +79,200 @@ msgstr "Fase I (columnas múltiples)..."
 msgid "Phase II (multiple columns)..."
 msgstr "Fase II (columnas múltiples)..."
 
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:14
-msgid "Sample size"
-msgstr "Tamaño de muestra"
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:9
+msgid "Phase II from data (multiple columns)..."
+msgstr "Fase II desde datos (columnas múltiples)..."
 
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:19
-msgid "No data variable was selected"
-msgstr "No se ha seleccionado ninguna variable para datos"
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:10
+msgid "Phase II from parameters (multiple columns)..."
+msgstr "Fase II desde parámetros (columnas múltiples)..."
 
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:23
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:78
-msgid "Select at least two variables (Phase I)"
-msgstr "Seleccione al menos dos variables (Fase I)"
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:58
+msgid "No valid numeric value has been provided for the center parameter"
+msgstr "No se ha proporcionado un valor numérico para el parámetro centro"
 
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:29
-msgid "No sample size variable was selected"
-msgstr "No se ha seleccionado variable para tamaño de muestra"
-
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:44
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:123
-msgid " Chart for "
-msgstr " Gráfico de "
-
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:63
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:148
-msgid "Phase I"
-msgstr "Fase I"
-
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:64
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:149
-msgid "Phase II"
-msgstr "Fase II"
-
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:66
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:151
-msgid "Sample size (Phase I)"
-msgstr "Tamaño de muestra (Fase I)"
-
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:69
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:154
-msgid "Sample size (Phase II)"
-msgstr "Tamaño de muestra (Fase II)"
-
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:74
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:163
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:68
 msgid "No data variable was selected (Phase I)"
 msgstr "No se ha seleccionado ninguna variable para datos (Fase I)"
 
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:84
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:168
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:72
+msgid "Select at least two variables (Phase I)"
+msgstr "Seleccione al menos dos variables (Fase I)"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:78
 msgid "No sample size variable was selected (Phase I)"
 msgstr "No se ha seleccionado variable para tamaño de muestra (Fase I)"
 
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:90
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:173
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:87
 msgid "No data variable was selected (Phase II)"
 msgstr "No se ha seleccionado ninguna variable para datos (Fase II)"
 
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:94
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:91
 msgid "Select at least two variables (Phase II)"
-msgstr "Selecciona el menos dos variables (Fase II)"
+msgstr "Seleccione al menos dos variables (Fase II)"
 
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:100
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:178
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:97
 msgid "No sample size variable was selected (Phase II)"
 msgstr "No se ha seleccionado variable para tamaño de muestra (Fase II)"
 
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:183
-msgid "No value for center has been provided"
-msgstr "No se ha seleccionado valor para centro"
-
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:214
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:177
 msgid "Center"
 msgstr "Centro"
 
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:233
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:245
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:257
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:388
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:401
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:413
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:181
+msgid "Standard Deviation"
+msgstr "Desviación Típica"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:201
+msgid "Plot all data"
+msgstr "Dibujar todos los datos"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:202
+msgid "Renumber 2nd phase data"
+msgstr "Renumerar los datos de 2ª fase"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:213
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:227
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:243
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:427
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:441
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:457
 msgid "Counts"
 msgstr "Conteos"
 
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:234
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:246
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:258
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:214
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:228
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:244
 msgid "c-chart (rate)..."
 msgstr "Gráfico c (tasa)..."
 
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:236
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:248
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:260
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:216
 msgid "c-chart (rate)"
 msgstr "Gráfico c (tasa)"
 
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:237
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:249
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:261
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:392
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:405
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:417
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:217
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:231
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:247
+msgid "c-chart\\nfor"
+msgstr "Gráfico c\\nde"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:218
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:432
 msgid "Nonconformities"
 msgstr "No conformidades"
 
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:269
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:219
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:433
+msgid "Sizes"
+msgstr "Tamaños"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:230
+msgid "c-chart (rate) from data"
+msgstr "Gráfico c (tasa) desde datos"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:232
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:248
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:446
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:462
+msgid "Nonconformities (Phase I)"
+msgstr "No conformidades (Fase I)"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:233
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:249
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:447
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:463
+msgid "Sizes (Phase I)"
+msgstr "Tamaños (Fase I)"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:234
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:250
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:448
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:464
+msgid "Nonconformities (Phase II)"
+msgstr "No conformidades (Fase II)"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:235
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:251
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:449
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:465
+msgid "Sizes (Phase II)"
+msgstr "Tamaños (Fase II)"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:246
+msgid "c-chart (rate) from parameter"
+msgstr "Gráfico c (tasa) desde parámetros"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:259
 #: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:325
 msgid "Attributes"
 msgstr "Atributos"
 
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:270
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:260
 msgid "np-chart (count)"
 msgstr "Gráfico np (conteos)"
 
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:271
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:261
 msgid "np-chart (Phase I)..."
 msgstr "Gráfico np (Fase I)..."
 
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:273
-msgid "np-chart (Phase I)"
-msgstr "Gráfico np (Fase I)..."
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:263
+msgid "np-chart"
+msgstr "Gráfico np"
 
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:274
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:283
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:293
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:330
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:339
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:348
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:264
+msgid "np-chart\\nfor"
+msgstr "Gráfico np\\nde"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:265
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:331
 msgid "Nonconforming units"
 msgstr "Unidades no conformes"
 
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:282
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:338
-msgid "Phase II from data..."
-msgstr "Fase II desde datos..."
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:266
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:332
+msgid "Sample size"
+msgstr "Tamaño de muestra"
 
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:274
+msgid "np-chart phase II from data"
+msgstr "Gráfico np fase II desde datos"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:275
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:289
+msgid "np-chart phase II\\nfor"
+msgstr "Gráfico np fase II\\nde"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:276
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:290
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:343
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:357
+msgid "Nonconforming units (Phase I)"
+msgstr "No conformidades (Fase I)"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:277
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:291
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:344
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:358
+msgid "Sample size (Phase I)"
+msgstr "Tamaño de muestra (Fase I)"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:278
 #: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:292
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:347
-msgid "Phase II from parameters..."
-msgstr "Fase II desde parámetros..."
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:345
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:359
+msgid "Nonconforming units (Phase II)"
+msgstr "No conformidades (Fase II)"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:279
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:293
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:346
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:360
+msgid "Sample size (Phase II)"
+msgstr "Tamaño de muestra (Fase II)"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:288
+msgid "np-chart phase II from parameter"
+msgstr "Gráfico no fase II desde parámetros"
 
 #: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:300
 msgid "Quality Control"
@@ -230,68 +286,194 @@ msgstr "Gráfico de Pareto"
 msgid "p-chart (proportion)"
 msgstr "Gráfico p (proporción)"
 
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:327
-msgid "p-chart (Phase I)..."
-msgstr "Gráfico p (Fase I)..."
-
 #: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:329
-msgid "p-chart (Phase I)"
-msgstr "Gráfico p (Fase I)"
+msgid "p-chart"
+msgstr "Gráfico p"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:330
+msgid "p-chart\\nfor"
+msgstr " Gráfico p\\nde "
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:339
+msgid "Phase II from data..."
+msgstr "Fase II desde datos..."
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:341
+msgid "p-chart phase II from data"
+msgstr "Gráfico p fase II desde datos"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:342
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:356
+msgid "p-chart phase II\\nfor"
+msgstr "Gráfico p fase II\\nde"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:353
+msgid "Phase II from parameter..."
+msgstr "Fase II desde parámetro..."
 
 #: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:355
-msgid "R Chart Phase I (multiple columns)"
-msgstr "Gráfico R Fase I (columnas múltiples)"
+msgid "p-chart phase II from parameter"
+msgstr "Gráfico p fase II desde parámetro"
 
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:356
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:364
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:372
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:380
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:435
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:443
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:366
+msgid "Range"
+msgstr "Rangos"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:368
+msgid "R-chart phase I (multiple columns)"
+msgstr "Gráfico R fase I (columnas múltiples)"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:369
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:378
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:388
+msgid "R-chart\\nfor"
+msgstr " Gráfico R\\nde "
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:370
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:399
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:484
 msgid "Measurements (pick two variables or more)"
 msgstr "Medidas (elija dos o más variables)"
 
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:363
-msgid "R Chart Phase II (multiple columns)"
-msgstr "Gráfico R Fase II (columnas múltiples)"
-
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:371
-msgid "S Chart Phase I (multiple columns)"
-msgstr "Gráfico S Fase I (columnas múltiples)"
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:377
+msgid "R-chart phase II from data (multiple columns)"
+msgstr "Gráfico R fase II desde datos (columnas múltiples)"
 
 #: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:379
-msgid "S Chart Phase II (multiple columns)"
-msgstr "Gráfico S Fase II (columnas múltiples)"
+msgid "Measurements phase I from data (pick two variables or more)"
+msgstr "Medidas fase I desde datos (elija dos o más variables)"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:380
+msgid "Measurements phase II from data (pick two variables or more)"
+msgstr "Medidas fase II desde datos (elija dos o más variables)"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:387
+msgid "R-chart phase II from parameters (multiple columns)"
+msgstr "Gráfico R fase II desde parámetros (columnas múltiples)"
 
 #: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:389
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:402
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:414
+msgid "Measurements phase I from parameters (pick two variables or more)"
+msgstr "Medidas fase I desde parámetros (elija dos o más variables)"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:390
+msgid "Measurements phase II from parameters (pick two variables or more)"
+msgstr "Medidas fase II desde parámetros (elija dos o más variables)"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:397
+msgid "S-chart (multiple columns)"
+msgstr "Gráfico S (columnas múltiples)"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:398
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:407
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:417
+msgid "S-chart\\nfor"
+msgstr " Gráfico S\\nde "
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:406
+msgid "S-chart phase II from data (multiple columns)"
+msgstr "Gráfico S fase II desde datos (columnas múltiples)"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:408
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:418
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:493
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:503
+msgid "Measurements phase I (pick two variables or more)"
+msgstr "Medidas fase I (elija dos o más variables)"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:409
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:419
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:494
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:504
+msgid "Measurements phase II (pick two variables or more)"
+msgstr "Medidas fase II (elija dos o más variables)"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:416
+msgid "S-chart phase II from parameters (multiple columns)"
+msgstr "Gráfico S fase II desde parámetros (columnas múltiples)"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:428
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:442
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:458
 msgid "u-chart (average rate)..."
 msgstr "Gráfico u (tasa media)..."
 
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:391
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:404
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:416
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:430
 msgid "u-chart (average rate)"
 msgstr "Gráfico u (tasa media)"
 
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:423
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:431
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:445
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:461
+msgid "u-chart\\nfor"
+msgstr " Gráfico u\\nde "
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:444
+msgid "u-chart phase II from data"
+msgstr "Gráfico u fase II desde datos"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:460
+msgid "u-chart phase II from parameter"
+msgstr "Gráfico u fase II desde parámetros"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:471
 msgid "Continuous"
 msgstr "Continuos"
 
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:424
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:426
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:472
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:474
 msgid "One-at-time data"
 msgstr "Un dato cada vez"
 
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:427
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:475
 msgid "Measurements"
 msgstr "Medidas"
 
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:434
-msgid "xbar Chart Phase I (multiple columns)"
-msgstr "Gráfico xbar Fase I (columnas múltiples)"
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:482
+msgid "xbar-chart (multiple columns)"
+msgstr "Gráfico xbar (columnas múltiples)"
 
-#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:442
-msgid "xbar Chart Phase II (multiple columns)"
-msgstr "Gráfico xbar Fase II (columnas múltiples)"
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:483
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:492
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:502
+msgid "xbar-chart\\nfor"
+msgstr "Gráfico xbar\\npara"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:491
+msgid "xbar-chart phase II from data (multiple columns)"
+msgstr "Gráfico xbar fase II desde datos (columnas múltiples)"
+
+#: RcmdrPlugin.UCA.dev/R/qualitycontrol.R:501
+msgid "xbar-chart phase II from parameters (multiple columns)"
+msgstr "Gráfico xbar fase II desde parámetros (columnas múltiples)"
+
+#~ msgid "Phase II (multiple columns) from data..."
+#~ msgstr "Fase II (columnas múltiples) desde datos..."
+
+#~ msgid "Phase II (multiple columns) from parameters..."
+#~ msgstr "Fase II (columnas múltiples) desde parámetros..."
+
+#, fuzzy
+#~| msgid "Measurements (pick two variables or more)"
+#~ msgid "Measurements pahse I (pick two variables or more)"
+#~ msgstr "Medidas (elija dos o más variables)"
+
+#~ msgid "No data variable was selected"
+#~ msgstr "No se ha seleccionado ninguna variable para datos"
+
+#~ msgid "No sample size variable was selected"
+#~ msgstr "No se ha seleccionado variable para tamaño de muestra"
+
+#~ msgid "Phase I"
+#~ msgstr "Fase I"
+
+#~ msgid "Phase II"
+#~ msgstr "Fase II"
+
+#~ msgid " phase II chart for "
+#~ msgstr " Gráfico de fase II de"
+
+#~ msgid "No value for center has been provided"
+#~ msgstr "No se ha seleccionado valor para centro"
+
+#~ msgid "p-chart (Phase I)..."
+#~ msgstr "Gráfico p (Fase I)..."

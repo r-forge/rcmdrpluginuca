@@ -30,14 +30,14 @@
     menu    pchartMenu	      QCAMenu		""					    ""		       ""		   ""
     item    QCAMenu	      cascade		"p-chart (proportion)"			    pchartMenu	       ""		   ""
     item    pchartMenu	      command		"Phase I..."				    pchart1Menu	       "numericP()"	   ""
-    item    pchartMenu	      command		"Phase II from data..."	    	    	    pchart12Menu       "numericP()"	   ""
-    item    pchartMenu	      command		"Phase II from parameters..."	    	    pchart2Menu	       "numericP()"	   ""
+    item    pchartMenu	      command		"Phase II from data..."	    	    	    pchart2Menu       "numericP()"	   ""
+    item    pchartMenu	      command		"Phase II from parameter..."	    	    pchartpMenu	       "numericP()"	   ""
 
     menu    npchartMenu	      QCAMenu		""					    ""		       ""		   ""
     item    QCAMenu	      cascade		"np-chart (count)"			    npchartMenu	       ""		   ""
     item    npchartMenu	      command		"Phase I..."				    npchart1Menu       "numericP()"	   ""
-    item    npchartMenu	      command		"Phase II from data..."	  		    npchart12Menu      "numericP()"	   ""
-    item    npchartMenu	      command		"Phase II from parameters..."	    	    npchart2Menu       "numericP()"	   ""
+    item    npchartMenu	      command		"Phase II from data..."	  		    npchart2Menu      "numericP()"	   ""
+    item    npchartMenu	      command		"Phase II from parameter..."	    	    npchartpMenu       "numericP()"	   ""
 
 # Counts - Poisson models
     menu    QCCMenu           QCMenu		""					    ""		       ""		   ""
@@ -46,14 +46,14 @@
     menu    uchartMenu	      QCCMenu		""					    ""		       ""		   ""
     item    QCCMenu	      cascade		"u-chart (average rate)"		    uchartMenu	       ""		   ""
     item    uchartMenu	      command		"Phase I..."	  			    uchart1Menu	       "numericP()"	   ""
-    item    uchartMenu	      command		"Phase II from data..."	  		    uchart12Menu       "numericP()"	   ""
-    item    uchartMenu	      command		"Phase II from parameters..."		    uchart2Menu	       "numericP()"	   ""
+    item    uchartMenu	      command		"Phase II from data..."	  		    uchart2Menu       "numericP()"	   ""
+    item    uchartMenu	      command		"Phase II from parameter..."		    uchartpMenu	       "numericP()"	   ""
 
     menu    cchartMenu	      QCCMenu		""					    ""		       ""		   ""
     item    QCCMenu	      cascade		"c-chart (rate)"			    cchartMenu	       ""		   ""
     item    cchartMenu	      command		"Phase I..."	  			    cchart1Menu	       "numericP()"	   ""
-    item    cchartMenu	      command		"Phase II from data..."			    cchart12Menu       "numericP()"	   ""
-    item    cchartMenu	      command		"Phase II from parameters..."		    cchart2Menu	       "numericP()"	   ""
+    item    cchartMenu	      command		"Phase II from data..."			    cchart2Menu       "numericP()"	   ""
+    item    cchartMenu	      command		"Phase II from parameter..."		    cchartpMenu	       "numericP()"	   ""
 
 # Variable
     menu    QCVMenu           QCMenu		""					    ""		       ""		   ""
@@ -66,14 +66,17 @@
     menu    qcmeansMenu	      QCVMenu		""					    ""		       ""		   ""
     item    QCVMenu	      cascade		"Means"					    qcmeansMenu	       ""		   ""
     item    qcmeansMenu	      command		"Phase I (multiple columns)..." 	    xbar1mcMenu	       "numericP()"	   ""
-    item    qcmeansMenu	      command		"Phase II (multiple columns)..." 	    xbar12mcMenu       "numericP()"	   ""
+    item    qcmeansMenu	      command		"Phase II from data (multiple columns)..."  xbar2mcMenu       "numericP()"	   ""
+    item    qcmeansMenu	      command		"Phase II from parameters (multiple columns)..."	       xbarpmcMenu       "numericP()"	   ""
 
     menu    qcRMenu	      QCVMenu		""					    ""		       ""		   ""
     item    QCVMenu	      cascade		"Range"					    qcRMenu	       ""		   ""
     item    qcRMenu	      command		"Phase I (multiple columns)..." 	    R1mcMenu	       "numericP()"	   ""
-    item    qcRMenu	      command		"Phase II (multiple columns)..." 	    R12mcMenu	       "numericP()"	   ""
+    item    qcRMenu	      command		"Phase II from data (multiple columns)..."  R2mcMenu	       "numericP()"	   ""
+    item    qcRMenu	      command		"Phase II from parameters (multiple columns)..."	       RpmcMenu	       "numericP()"	   ""
 
     menu    qcSMenu	      QCVMenu		""					    ""		       ""		   ""
     item    QCVMenu	      cascade		"Standard deviation"			    qcSMenu	       ""		   ""
     item    qcSMenu	      command		"Phase I (multiple columns)..." 	    S1mcMenu	       "numericP()"	   ""
-    item    qcSMenu	      command		"Phase II (multiple columns)..." 	    S12mcMenu	       "numericP()"	   ""
+    item    qcSMenu	      command		"Phase II from data (multiple columns)..." 	    S2mcMenu	       "numericP()"	   ""
+    item    qcSMenu	      command		"Phase II from parameters (multiple columns)..."    SpmcMenu	       "numericP()"	   ""
