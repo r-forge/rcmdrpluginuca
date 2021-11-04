@@ -1,5 +1,5 @@
 \name{qccMenu.es}
-\title{Opcioned de menú para hacer gráficos de control de calidad}
+\title{Opciones de menú para hacer gráficos de control de calidad}
 \alias{Gráficos de control de calidad (es)}
 \docType{package}
 \encoding{UTF-8}
