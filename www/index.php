@@ -46,16 +46,20 @@ This customization includes: test for randomness, confidence interval and test f
 
 <p>All the customizations provides by this package will be propose to be part of the Rcmdr package. All the customization included in the Rcmdr package will be dropped from here.</p>
 
+<center><img width=400 src="https://knuth.uca.es/images/RcmdrPlugin.UCA_quality_control.png"></center>
+
 <p>More information in <a href="http://<?php echo $domain; ?>/projects/<?php echo $group_name; ?>/"><strong>r-forge project summary page</strong></a> or in <a href="http://knuth.uca.es/moodle/course/view.php?id=60&lang=en">project page</a>.</p>
 
 <h1>[ES] ¡Bienvenido al proyecto RcmdrPlugin.UCA!</h1>
 
 <p>Algunas extensiones a Rcmdr (R Commander) para la ense&ntilde;anza de un primer curso universitario en estad&iacute;stica hechas por el proyecto R-UCA y usadas en la Universidad de C&aacute;diz (UCA).
-Estas extensiones incluyen: test de aleatoriedad, intervalo de confianza y test de hip&oacute;tesis para sigma en una poblaci&oacute;n normal y realizaci&oacute;n de predicciones usando el modelo activo./p>
+Estas extensiones incluyen: test de aleatoriedad, intervalo de confianza y test de hip&oacute;tesis para sigma en una poblaci&oacute;n normal y realizaci&oacute;n de predicciones usando el modelo activo.</p>
 
 <p>Todas las adaptaciones serán propuestas para su incorporación a Rcmdr. Las adaptaciones que se incorporen al paquete Rcmdr se suprimirán de este paquete.</p>
 
 <p>M&aacute;s informaci&oacute;n en la <a href="http://<?php echo $domain; ?>/projects/<?php echo $group_name; ?>/"><strong>p&aacute;gina r-forge resumen del proyecto</strong></a> o en la <a href="http://knuth.uca.es/moodle/course/view.php?id=60&lang=es">p&aacute;gina del proyecto</a>.</p>
+
+<center><img width=400 src="https://knuth.uca.es/images/RcmdrPlugin.UCA_control_calidad.png"></center>
 
 </body>
 </html>
