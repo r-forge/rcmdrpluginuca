@@ -5,6 +5,7 @@
 
 #   type    menu/item         operation/parent  label                                       command/menu      activation           install?
     item    variancesMenu     command           "Single-Sample Variance Test..."            sigmaTest         "numericP()"	   ""
+    item    nonparametricMenu command           "Kolmogorov-Smirnov test for two samples..."   ks2samplesTest   "numericP(n = 2)" ""
     item    nonparametricMenu command           "Randomness test for two level factor..."   randomnessFTest   "twoLevelFactorsP()" ""
     item    nonparametricMenu command           "Randomness test for numeric variable..."   randomnessNTest   "numericP()"         ""
     item    modelsMenu        separator         ""                                          modelsGraphsMenu  ""                   ""

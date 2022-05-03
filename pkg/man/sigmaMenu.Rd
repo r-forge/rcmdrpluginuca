@@ -4,7 +4,7 @@
 \docType{package}
 \encoding{UTF-8}
 \description{
-  Within the "Statistics" -> Variances" menu, a new entry is provided for calculate
+  Within the "Statistics" -> "Variances" menu, a new entry is provided for calculate
   confidence intervals and make contrasts on variance in a normal
   population. This option uses the function \code{sigma.test} of the
   package \code{TeachingDemos}. For more information see \code{\link[TeachingDemos]{sigma.test}}.

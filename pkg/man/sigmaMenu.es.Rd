@@ -4,7 +4,7 @@
 \docType{package}
 \encoding{UTF-8}
 \description{
-  Dentro del menú "Estadísticos" -> Varianzas", se proporcionan una nueva entrada para
+  Dentro del menú "Estadísticos" -> "Varianzas", se proporcionan una nueva entrada para
   calcular intervalos de confianza y hacer contrastes sobre la varianza
   en una población normal. Esta opción usa la
   función \code{sigma.test} del paquete \code{TeachingDemos}. Para más

@@ -7,6 +7,7 @@
 \alias{cchart2Menu}
 \alias{cchartpMenu}
 \alias{input2predict}
+\alias{ks2samplesTest}
 \alias{npchart1Menu}
 \alias{npchart2Menu}
 \alias{npchartpMenu}

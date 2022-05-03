@@ -35,6 +35,40 @@ input2predict <- function() {
     doItAndPrint("remove(.data)")
 }
 
+### Kolmogorov-Smirnov for two samples
+ks2samplesTest <- function() {
+    ## To ensure that menu name is included in pot file
+    gettext("Kolmogorov-Smirnov test for two samples...", domain="R-RcmdrPlugin.UCA")
+    ## Build dialog
+    initializeDialog(title=gettext("Kolmogorov-Smirnov test for two samples", domain="R-RcmdrPlugin.UCA"))
+    variablesBox1 <- variableListBox(top, Numeric(), selectmode="single", initialSelection=NULL, title=gettextRcmdr("Variable (pick one)"))
+    variablesBox2 <- variableListBox(top, Numeric(), selectmode="single", initialSelection=NULL, title=gettextRcmdr("Variable (pick another one)"))
+    onOK <- function(){
+        x <- getSelection(variablesBox1)
+        if (length(x) == 0) {
+            errorCondition(recall=ks2samplesTest, message=gettext("No variable were selected for fist one.", domain="R-RcmdrPlugin.UCA"))
+            return()
+        }
+        y <- getSelection(variablesBox2)
+        if (length(y) == 0) {
+            errorCondition(recall=ks2samplesTest, message=gettext("No variable were selected for second one.", domain="R-RcmdrPlugin.UCA"))
+            return()
+        }
+        if (x == y) {
+            errorCondition(recall=ks2samplesTest, message=gettext("First variable and second one are the same.", domain="R-RcmdrPlugin.UCA"))
+            return()
+            }
+        closeDialog()
+        ## Apply test
+        doItAndPrint(paste("with(", ActiveDataSet(), ", ks.test(", x, ", ", y, "))", sep = ""))
+        tkfocus(CommanderWindow())
+    }
+    OKCancelHelp(helpSubject="Kolmogorov-Smirnov test", reset = "ks2samplesTest", apply = "ks2samplesTest")
+    tkgrid(getFrame(variablesBox1), sticky="w", row = 1)
+    tkgrid(getFrame(variablesBox2), sticky="w", row = 1, column = 1)
+    tkgrid(buttonsFrame, sticky="w", columnspan = 2)
+    dialogSuffix()
+    }
 
 ### Function to predict values for existing data set
 predict4dataset <- function() {
@@ -69,7 +103,7 @@ randomnessFTest <- function() {
     onOK <- function(){
         x <- getSelection(variablesBox)
         if (length(x) == 0) {
-            errorCondition(recall=randomnessNTest, message=gettextRcmdr("No variables were selected."))
+            errorCondition(recall=randomnessNTest, message=gettextRcmdr("No variable were selected."))
             return()
         }
         closeDialog()

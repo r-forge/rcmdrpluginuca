@@ -41,6 +41,7 @@ export("xbarpmcMenu")
 export("xbarone1Menu")
 
 ### Statistics
+export("ks2samplesTest")
 export("randomnessFTest")
 export("randomnessNTest")
 export("twolevelfactor.runs.test")

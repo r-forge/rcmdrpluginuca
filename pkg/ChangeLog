@@ -1,6 +1,9 @@
+Version 5.1-1
+2022-05-03
+* New "Kolmogorov-Smirnov test for two samples..." option in "Non parametric test" menu.
 Version 4.5-1
 2021-10-22
-Dialog windows of p charts have been relayout and new options have been included
+* Dialog windows of p charts have been relayout and new options have been included
 Version 4.4-3
 2021-04-02
 * New options in "Quatility control" menu for p, np, c, u, xbar, R and S charts, first and second phase.
