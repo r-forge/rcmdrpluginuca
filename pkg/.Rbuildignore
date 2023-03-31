@@ -1,0 +1,5 @@
+^makefile$
+^RcmdrPlugin.UCA\.log
+^RcmdrPlugin.UCA\.Rcheck$
+^doc$
+^Meta$

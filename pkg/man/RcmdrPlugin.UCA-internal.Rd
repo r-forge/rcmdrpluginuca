@@ -6,8 +6,12 @@
 \alias{cchart1Menu}
 \alias{cchart2Menu}
 \alias{cchartpMenu}
+\alias{Binaries}
+\alias{BinariesP}
+\alias{Dicotomics}
+\alias{DicotomicsP}
+\alias{DIMenu}
 \alias{input2predict}
-\alias{ks2samplesTest}
 \alias{npchart1Menu}
 \alias{npchart2Menu}
 \alias{npchartpMenu}

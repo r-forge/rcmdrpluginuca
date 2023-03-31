@@ -1,3 +1,6 @@
+Version 6.1-1
+2023-03-30
+* New option "Psychometric..." in main menu. Inside this menu there is an option "Item analysis..." and inside this the option "Difficulty index..."
 Version 5.1-1
 2022-05-03
 * New "Kolmogorov-Smirnov test for two samples..." option in "Non parametric test" menu.

@@ -40,8 +40,16 @@ export("xbar2mcMenu")
 export("xbarpmcMenu")
 export("xbarone1Menu")
 
+### Psycometry
+#export("isBinary")
+export("Binaries")
+export("BinariesP")
+export("Dicotomics")
+export("DicotomicsP")
+export("difficultyindex")
+export("DIMenu")
+
 ### Statistics
-export("ks2samplesTest")
 export("randomnessFTest")
 export("randomnessNTest")
 export("twolevelfactor.runs.test")
