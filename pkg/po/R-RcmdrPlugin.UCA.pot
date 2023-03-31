@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: RcmdrPlugin.UCA 6.1-1\n"
-"POT-Creation-Date: 2023-03-31 09:13\n"
+"Project-Id-Version: RcmdrPlugin.UCA 6.2-1\n"
+"POT-Creation-Date: 2023-04-01 00:50\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -61,6 +61,12 @@ msgstr ""
 msgid "Null hypothesis: sigma^2 ="
 msgstr ""
 
+msgid "noptions is not an integer or is not at least 2"
+msgstr ""
+
+msgid "corrected is not TRUE neither FALSE"
+msgstr ""
+
 msgid "Psychometry"
 msgstr ""
 
@@ -70,13 +76,28 @@ msgstr ""
 msgid "Difficulty index..."
 msgstr ""
 
+msgid "Corrected difficulty index..."
+msgstr ""
+
+msgid "Corrected_difficulty_index"
+msgstr ""
+
+msgid "Corrected difficulty index"
+msgstr ""
+
+msgid "Difficulty_index"
+msgstr ""
+
 msgid "Difficulty index"
+msgstr ""
+
+msgid "The number of options per question is not an integer or is not at least 2"
 msgstr ""
 
 msgid "for success"
 msgstr ""
 
-msgid "Difficulty_index"
+msgid "Number of options per question:"
 msgstr ""
 
 msgid "Phase I..."

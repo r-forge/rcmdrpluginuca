@@ -1,5 +1,5 @@
 package := RcmdrPlugin.UCA
-version := 6.1-1
+version := 6.2-1
 R := $(wildcard R/*.R)
 Rd := $(wildcard man/*.Rd)
 Rmd := $(wildcard vignettes/*.Rmd)
@@ -17,7 +17,7 @@ $(package).log: makefile ~/R_LIBS/$(package)
 	echo "library(RcmdrPlugin.UCA)" >.Rprofile
 	echo "data(Chile)" >>.Rprofile
 	echo "activeDataSet('Chile')" >>.Rprofile
-	echo "DIMenu()" >>.Rprofile
+	## echo "CDIMenu()" >>.Rprofile
 	R --interactive --no-save
 	rm .Rprofile
 	reset
@@ -26,7 +26,7 @@ $(package).Rcheck: $(package)_$(version).tar.gz
 ## Final version
 $(package)_$(version).tar.gz: $(R) $(Rd) $(Rmd) $(html) ChangeLog DESCRIPTION inst/etc/menus.txt inst/po/es/LC_MESSAGES/R-$(package).mo NAMESPACE po/R-$(package)-es.po po/R-$(package).pot
 ## Development version
-## $(package)_$(version).tar.gz: $(R) inst/etc/menus.txt NAMESPACE
+##$(package)_$(version).tar.gz: $(R) inst/etc/menus.txt NAMESPACE
 	R -e "library('roxygen2'); roxygenize('.')"
 	R CMD build --no-build-vignettes .
 	R CMD INSTALL $(package)_$(version).tar.gz

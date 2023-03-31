@@ -1,3 +1,6 @@
+Version 6.2-1
+2023-04-01
+* New option "Corrected difficulty index" at "Psychometric..." -> "Item analysis..."
 Version 6.1-1
 2023-03-30
 * New option "Psychometric..." in main menu. Inside this menu there is an option "Item analysis..." and inside this the option "Difficulty index..."

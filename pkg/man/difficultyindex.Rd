@@ -2,21 +2,24 @@
 % Please edit documentation in R/psychometry.R
 \name{difficultyindex}
 \alias{difficultyindex}
+\alias{Corrected_difficulty_index}
 \alias{difficulty_index}
 \title{Difficulty index}
 \usage{
-difficultyindex(x, success)
+difficultyindex(x, success, noptions = NA)
 }
 \arguments{
 \item{x}{a vector that records if the answers are correct or wrong.}
 
 \item{success}{the (only) value taken as correct answer.}
+
+\item{noptions}{is the number of options in each question. It is used to calculate the corrected difficulty index. It must be integer and at least 2. If it is not an integer it will be rounded. When it is not provided, the uncorrected difficulty index is calculated.}
 }
 \value{
-The computed difficulty index.
+Difficulty index or corrected difficulty index.
 }
 \description{
-Difficulty index definition for binary variables and two level factors.
+Difficulty index, and corrected difficulty index, for binary variables and two level factors.
 }
 \details{
 Computes the difficulty index for binary variables or two level factor.

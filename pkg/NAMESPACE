@@ -41,9 +41,10 @@ export("xbarpmcMenu")
 export("xbarone1Menu")
 
 ### Psycometry
-#export("isBinary")
+# export("isBinary")
 export("Binaries")
 export("BinariesP")
+export("CDIMenu")
 export("Dicotomics")
 export("DicotomicsP")
 export("difficultyindex")

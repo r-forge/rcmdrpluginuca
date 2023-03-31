@@ -3,17 +3,20 @@
 \name{indicedificultad}
 \alias{indicedificultad}
 \alias{Índice_de_dificultad}
+\alias{Índice_de_dificultad_corregido}
 \title{Índice de dificultad}
 \arguments{
-\item{x:}{un vector que indica si las respuestas son correctas o incorrectas.}
+\item{x}{un vector que indica si las respuestas son correctas o incorrectas.}
 
-\item{success:}{el (único) valor corisderado como correcto.}
+\item{success}{el (único) valor corisderado como correcto.}
+
+\item{noptions}{es el número de opciones en cada pregunta. Se usa para calcular el índice de dificultad corregido. Debe ser entero y al menos 2. Cuando no se proporciona se calcula el índice dificultad no corregido.}
 }
 \value{
-El índice de dificultad calculado.
+El índice de dificultad o el índice de dificultad corregido.
 }
 \description{
-Definición del índice de dificultad para variables binarias y factores de dos niveles.
+Índice de dificultad, e índice de dificultad corregido, para variables binarias y factores con dos niveles.
 }
 \details{
 Calcula el índice de dificultad para variables binarias o factor de dos niveles.

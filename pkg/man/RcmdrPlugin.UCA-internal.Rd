@@ -3,11 +3,12 @@
   R-UCA project and used in teaching statistics at University of Cadiz
   (UCA).}
 
+\alias{Binaries}
+\alias{BinariesP}
 \alias{cchart1Menu}
 \alias{cchart2Menu}
 \alias{cchartpMenu}
-\alias{Binaries}
-\alias{BinariesP}
+\alias{CDIMenu}
 \alias{Dicotomics}
 \alias{DicotomicsP}
 \alias{DIMenu}
