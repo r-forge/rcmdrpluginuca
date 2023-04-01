@@ -3,15 +3,16 @@
 \name{difficultyindex}
 \alias{difficultyindex}
 \alias{Corrected_difficulty_index}
-\alias{difficulty_index}
+\alias{Difficulty_index}
+\alias{Score_difficulty_index}
 \title{Difficulty index}
 \usage{
-difficultyindex(x, success, noptions = NA)
+difficultyindex(x, success = NULL, noptions = NULL)
 }
 \arguments{
-\item{x}{a vector that records if the answers are correct or wrong.}
+\item{x}{a vector that records if the answers are correct or wrong. It can also be a vector of scores with 0 being the lowest score.}
 
-\item{success}{the (only) value taken as correct answer.}
+\item{success}{the (only) value taken as correct answer. In the case of scores, this value is always taken as the maximum, regardless of the value supplied for this parameter.}
 
 \item{noptions}{is the number of options in each question. It is used to calculate the corrected difficulty index. It must be integer and at least 2. If it is not an integer it will be rounded. When it is not provided, the uncorrected difficulty index is calculated.}
 }
@@ -22,7 +23,10 @@ Difficulty index or corrected difficulty index.
 Difficulty index, and corrected difficulty index, for binary variables and two level factors.
 }
 \details{
-Computes the difficulty index for binary variables or two level factor.
+Computes the difficulty index for binary variables, discrete numeric variable, or two level factor.
+For binary variables, 1 is taken as correct.
+For factor type variables, the last level is taken as correct.
+If the variable is discrete, they are considered to represent scores starting at 0.
 It can also be applied to any numeric or factor variable taking into account that any value that differs from the given as success will be considered as failure.
 This includes NA values.
 }

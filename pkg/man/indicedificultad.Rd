@@ -4,11 +4,12 @@
 \alias{indicedificultad}
 \alias{Índice_de_dificultad}
 \alias{Índice_de_dificultad_corregido}
+\alias{Índice_de_dificultad_de_puntuaciones}
 \title{Índice de dificultad}
 \arguments{
-\item{x}{un vector que indica si las respuestas son correctas o incorrectas.}
+\item{x}{un vector que indica si las respuestas son correctas o incorrectas. También puede ser un vector de puntuaciones siendo 0 la puntuación más baja.}
 
-\item{success}{el (único) valor corisderado como correcto.}
+\item{success}{el (único) valor corisderado como correcto. En el caso de puntuaciones, este valos siempre se toma como el máximo, independientemente del valor suministrado para éste parámetro.}
 
 \item{noptions}{es el número de opciones en cada pregunta. Se usa para calcular el índice de dificultad corregido. Debe ser entero y al menos 2. Cuando no se proporciona se calcula el índice dificultad no corregido.}
 }
@@ -19,7 +20,10 @@ El índice de dificultad o el índice de dificultad corregido.
 Índice de dificultad, e índice de dificultad corregido, para variables binarias y factores con dos niveles.
 }
 \details{
-Calcula el índice de dificultad para variables binarias o factor de dos niveles.
+Calcula el índice de dificultad para variables binarias, variables numéricas discretas o factor con dos niveles.
+Para variables binarias se toma 1 como correcta.
+Para variables de tipo factor, se toma como correcto el último nivel.
+Si la variable es discreta, se considera que representan puntuaciones que comienzan en 0.
 También se puede aplicar a cualquier variable numérica o factorial teniendo en cuenta que cualquier valor que difiera del dado como éxito será considerado como fracaso.
 Esto incluye valores NA.
 }

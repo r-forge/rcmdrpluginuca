@@ -17,7 +17,9 @@ $(package).log: makefile ~/R_LIBS/$(package)
 	echo "library(RcmdrPlugin.UCA)" >.Rprofile
 	echo "data(Chile)" >>.Rprofile
 	echo "activeDataSet('Chile')" >>.Rprofile
-	## echo "CDIMenu()" >>.Rprofile
+	echo "Chile\$$discrete <- as.numeric(Chile\$$vote) - 1" >>.Rprofile
+	echo "SDIMenu()" >>.Rprofile
+	cat .Rprofile
 	R --interactive --no-save
 	rm .Rprofile
 	reset
@@ -26,7 +28,7 @@ $(package).Rcheck: $(package)_$(version).tar.gz
 ## Final version
 $(package)_$(version).tar.gz: $(R) $(Rd) $(Rmd) $(html) ChangeLog DESCRIPTION inst/etc/menus.txt inst/po/es/LC_MESSAGES/R-$(package).mo NAMESPACE po/R-$(package)-es.po po/R-$(package).pot
 ## Development version
-##$(package)_$(version).tar.gz: $(R) inst/etc/menus.txt NAMESPACE
+### $(package)_$(version).tar.gz: $(R) inst/etc/menus.txt NAMESPACE
 	R -e "library('roxygen2'); roxygenize('.')"
 	R CMD build --no-build-vignettes .
 	R CMD INSTALL $(package)_$(version).tar.gz

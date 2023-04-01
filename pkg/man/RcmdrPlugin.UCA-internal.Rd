@@ -30,6 +30,7 @@
 \alias{S2mcMenu}
 \alias{SpmcMenu}
 \alias{SampleSizeZMenu}
+\alias{SDIMenu}
 \alias{sigma.test}
 \alias{sigmaTest}
 \alias{twolevelfactor.runs.test}

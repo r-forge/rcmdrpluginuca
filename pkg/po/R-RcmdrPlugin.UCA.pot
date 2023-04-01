@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: RcmdrPlugin.UCA 6.2-1\n"
-"POT-Creation-Date: 2023-04-01 00:50\n"
+"Project-Id-Version: RcmdrPlugin.UCA 6.3-1\n"
+"POT-Creation-Date: 2023-04-01 11:18\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -67,16 +67,28 @@ msgstr ""
 msgid "corrected is not TRUE neither FALSE"
 msgstr ""
 
-msgid "Psychometry"
+msgid "discrete is not TRUE neither FALSE"
 msgstr ""
 
-msgid "Item analysis..."
+msgid "Corrected difficulty index..."
 msgstr ""
 
 msgid "Difficulty index..."
 msgstr ""
 
-msgid "Corrected difficulty index..."
+msgid "Item analysis..."
+msgstr ""
+
+msgid "Psychometry"
+msgstr ""
+
+msgid "Score difficulty index..."
+msgstr ""
+
+msgid "Score_difficulty_index"
+msgstr ""
+
+msgid "Score difficulty index"
 msgstr ""
 
 msgid "Corrected_difficulty_index"
