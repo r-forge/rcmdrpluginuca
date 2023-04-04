@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RcmdrPlugin.UCA\n"
 "Report-Msgid-Bugs-To: manuel.munoz@uca.es\n"
-"POT-Creation-Date: 2023-04-01 11:18\n"
-"PO-Revision-Date: 2023-04-01 11:18+0200\n"
+"POT-Creation-Date: 2023-04-05 00:24\n"
+"PO-Revision-Date: 2023-04-05 00:27+0200\n"
 "Last-Translator: Manuel Munoz-Marquez <manuel.munoz@uca.es>\n"
 "Language-Team: manuel.munoz@uca.es\n"
 "Language: es_ES\n"
@@ -119,6 +119,21 @@ msgstr "para éxito"
 
 msgid "Number of options per question:"
 msgstr "Número de opciones por pregunta:"
+
+msgid "Test score..."
+msgstr "Puntuación del test..."
+
+msgid "Test score"
+msgstr "Puntuación del test"
+
+msgid "Question scores (pick two or more)"
+msgstr "Puntuaciones del test (elija dos o más)"
+
+msgid "You must select two or more variables."
+msgstr "Debe seleccionar al menos dos variables."
+
+msgid "TestScore"
+msgstr "PuntuacionTest"
 
 msgid "Phase I..."
 msgstr "Fase I..."

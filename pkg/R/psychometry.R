@@ -72,7 +72,7 @@ CDIMenu <- function() DIMenu_(corrected = TRUE)
 DIMenu <- function() DIMenu_(corrected = FALSE)
 #' @export
 SDIMenu <- function() DIMenu_(discrete = TRUE)
-                                        ## Low level function for menus
+## Low level function for menus
 DIMenu_ <- function(corrected = FALSE, discrete = FALSE)
 {
     ## Check input parameters
@@ -150,4 +150,43 @@ DIMenu_ <- function(corrected = FALSE, discrete = FALSE)
     }
     tkgrid(buttonsFrame, sticky="w", columnspan = 8)
     dialogSuffix(rows=3, columns = 8)
+}
+
+TestScoreMenu <- function() {
+    gettext("Test score...")
+    initializeDialog(title = gettext("Test score"))
+    variablesBox <- variableListBox(top, DiscreteNumeric(), selectmode="multiple", initialSelection=NULL, title = gettext("Question scores (pick two or more)"))
+    variablesFrame <- tkframe(top)
+    nameVar <- tclVar()
+    nameEntry <- ttkentry(variablesFrame, width="20", textvariable = nameVar)
+    onOK <- function() {
+        scores <- getSelection(variablesBox)
+        name <- tclvalue(nameVar)
+        if (length(scores) < 2) {
+            errorCondition(recall = TestScoreMenu, message = gettext("You must select two or more variables."))
+            return()
+        }
+        if (!is.valid.name(name)) {
+            errorCondition(recall = TestScoreMenu, message = paste(name, gettextRcmdr("is not a valid name.")))
+            return()
+        }
+        closeDialog()
+        if (is.element(name, Variables())) {
+            if ("no" == tclvalue(checkReplace(name, gettext("TestScore")))) {
+                TestScoreMenu()
+                return()
+            }
+        }
+        command <- paste0(ActiveDataSet(), "$", name, " <- with(", ActiveDataSet(), ", ", paste0(scores, collapse = " + "), ")")
+        doItAndPrint(command)
+        activeDataSet(ActiveDataSet(), flushModel = FALSE, flushDialogMemory = FALSE)
+        ## activeDataSetP()
+        tkfocus(CommanderWindow())
+        }
+    OKCancelHelp(helpSubject = "Test_score", reset = "TestScoreMenu", apply = "TestScoreMenu")
+    tkgrid(getFrame(variablesBox), sticky="nw")
+    tkgrid(tklabel(variablesFrame, text=gettextRcmdr("New variable name")), nameEntry, sticky = "w")
+    tkgrid(variablesFrame, sticky = "w")
+    tkgrid(buttonsFrame, sticky = "w", columnspan = 8)
+    dialogSuffix(columns = 8)
 }

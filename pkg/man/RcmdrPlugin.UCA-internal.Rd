@@ -33,6 +33,7 @@
 \alias{SDIMenu}
 \alias{sigma.test}
 \alias{sigmaTest}
+\alias{TestScoreMenu}
 \alias{twolevelfactor.runs.test}
 \alias{uchart1Menu}
 \alias{uchart2Menu}

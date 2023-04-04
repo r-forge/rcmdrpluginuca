@@ -50,6 +50,7 @@ export("DicotomicsP")
 export("difficultyindex")
 export("DIMenu")
 export("SDIMenu")
+export("TestScoreMenu")
 
 ### Statistics
 export("randomnessFTest")
