@@ -1,5 +1,5 @@
 package := RcmdrPlugin.UCA
-version := 6.4-1
+version := 6.5-1
 R := $(wildcard R/*.R)
 Rd := $(wildcard man/*.Rd)
 Rmd := $(wildcard vignettes/*.Rmd)
@@ -7,7 +7,25 @@ html := $(patsubst vignettes/%.Rmd,inst/doc/%.html,$(Rmd))
 
 0: $(package).log
 	@echo Test done
-
+check: $(package).Rcheck
+	@echo Check done
+dev: dev.log
+	make dev.log
+dev.log: makefile $(R)
+	date > dev.log
+	echo "library('devtools')" >.Rprofile
+	echo "library('RcmdrPlugin.UCA')" >>.Rprofile
+	echo "source('R/menu.R')" >>.Rprofile
+	echo "source('R/psychometry.R')" >>.Rprofile
+	echo "set.seed(1)" >>.Rprofile
+	echo "d <- data.frame(b1 = rbinom(10, 1, .3), b2 = rbinom(10, 1, .3), p1 = rbinom(10, 5, .3), p2 = rbinom(10, 5, .3))" >>.Rprofile
+	echo "d\$$bTotal <- d\$$b1 + d\$$b2" >>.Rprofile
+	echo "d\$$dTotal <- d\$$p1 + d\$$p2" >>.Rprofile
+	echo "activeDataSet('d')" >>.Rprofile
+	echo "NIAMenu()" >>.Rprofile
+	R --interactive --no-save
+	rm .Rprofile
+	reset
 inst/doc/%.html: $(R) $(Rmd)
 	make vignettes
 inst/po/es/LC_MESSAGES/R-$(package).mo: po/R-$(package)-es.po
@@ -21,7 +39,6 @@ $(package).log: makefile ~/R_LIBS/$(package)
 	echo "Chile\$$discreteb <- as.numeric(Chile\$$vote) - 1" >>.Rprofile
 	echo "activeDataSet('Chile')" >>.Rprofile
 	echo "TestScoreMenu()" >>.Rprofile
-	cat .Rprofile
 	R --interactive --no-save
 	rm .Rprofile
 	reset

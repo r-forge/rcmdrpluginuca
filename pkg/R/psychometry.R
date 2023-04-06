@@ -1,5 +1,6 @@
 ### Psychometry extensions
 
+
 #' @name difficultyindex
 #' @aliases Corrected_difficulty_index
 #' @aliases difficultyindex
@@ -39,6 +40,7 @@ difficultyindex <- function(x, success = NULL, noptions = NULL) {
     di
 }
 
+
 #' @rdname indicedificultad
 #' @name indicedificultad
 #' @aliases Índice_de_dificultad
@@ -65,6 +67,7 @@ difficultyindex <- function(x, success = NULL, noptions = NULL) {
 #' @return
 #' El índice de dificultad o el índice de dificultad corregido.
 NULL
+
 
 #' @export
 CDIMenu <- function() DIMenu_(corrected = TRUE)
@@ -152,6 +155,32 @@ DIMenu_ <- function(corrected = FALSE, discrete = FALSE)
     dialogSuffix(rows=3, columns = 8)
 }
 
+
+#' @export
+NIAMenu <- function() {
+   ## Setup dialog element list
+    elements = list(
+        'QScores' = list(type = 'variableListBox', title = gettext('Question scores (pick two or more)'), selectmode = 'multiple', min = 2, error = gettext('You must select two or more variables as question scores.')),
+        'TScores' = list(type = 'variableListBox', title = gettext('Test score (pick one)'), selectmode = 'single', max = 1, error = gettext('You must select one variables as test score.'))
+    )
+    ## Setup onokcommand function
+    onokcommand <- function(elements) {
+        paste0('item.exam(x = ',
+               ActiveDataSet(),
+               '[ , c(',
+               paste0(paste0('\'', elements[[1]]$variableListBoxSelected, '\''), collapse = ', '),
+               ')], y = ',
+               ActiveDataSet(),
+               '$',
+               elements[[2]]$variableListBoxSelected,
+               ', discrim = TRUE)'
+               )
+    }
+    ## Call menu-dialog function
+    .Menu(dialogtitle = gettext('Numerical item analysis'), elements = elements, help = gettext('Numerical_item_analysis'), recall = NIAMenu, reset = "NIAMenu", apply = "NIAMenu", onokcommand = onokcommand)
+}
+
+#' @export
 TestScoreMenu <- function() {
     gettext("Test score...")
     initializeDialog(title = gettext("Test score"))
@@ -182,7 +211,7 @@ TestScoreMenu <- function() {
         activeDataSet(ActiveDataSet(), flushModel = FALSE, flushDialogMemory = FALSE)
         ## activeDataSetP()
         tkfocus(CommanderWindow())
-        }
+    }
     OKCancelHelp(helpSubject = "Test_score", reset = "TestScoreMenu", apply = "TestScoreMenu")
     tkgrid(getFrame(variablesBox), sticky="nw")
     tkgrid(tklabel(variablesFrame, text=gettextRcmdr("New variable name")), nameEntry, sticky = "w")

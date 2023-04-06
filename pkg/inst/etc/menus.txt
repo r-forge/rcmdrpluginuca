@@ -87,6 +87,7 @@
 # Item analysis
     menu    ItemMenu          PsychMenu         ""                                          ""                 ""                  ""
     item    PsychMenu	      cascade		"Item analysis..."                          ItemMenu           ""                  ""
+    item    ItemMenu          command           "Numerical summaries..."                    NIAMenu            "discreteNumericP()" ""
     item    ItemMenu          command           "Difficulty index..."                       DIMenu             "DicotomicsP()"     ""
     item    ItemMenu          command           "Corrected difficulty index..."             CDIMenu            "DicotomicsP()"     ""
-    item    ItemMenu          command           "Score difficulty index..."                 SDIMenu            "discreteNumericP()" ""
+    item    ItemMenu          command           "Score difficulty index..."                 SDIMenu            "discreteNumericP()" "packageAvailable('psychometric')"
