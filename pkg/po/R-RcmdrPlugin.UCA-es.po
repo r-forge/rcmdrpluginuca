@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RcmdrPlugin.UCA\n"
 "Report-Msgid-Bugs-To: manuel.munoz@uca.es\n"
-"POT-Creation-Date: 2023-04-06 10:22\n"
-"PO-Revision-Date: 2023-04-06 10:22+0200\n"
+"POT-Creation-Date: 2023-04-06 12:23\n"
+"PO-Revision-Date: 2023-04-06 12:39+0200\n"
 "Last-Translator: Manuel Munoz-Marquez <manuel.munoz@uca.es>\n"
 "Language-Team: manuel.munoz@uca.es\n"
 "Language: es_ES\n"
@@ -81,6 +81,18 @@ msgstr "el parámetro onokcommand no es una función"
 msgid "noptions is not an integer or is not at least 2"
 msgstr "noptions no es un entero al menos 2"
 
+msgid "Question scores (pick two or more)"
+msgstr "Puntuaciones del test (elija dos o más)"
+
+msgid "You must select two or more variables as question scores."
+msgstr "Debe seleccionar al menos dos variables como puntuaciones de preguntas."
+
+msgid "Cronbach's Coefficient Alpha"
+msgstr "Coeficiente alpha de Cronbach"
+
+msgid "Cronbach's_Coefficient_Alpha"
+msgstr "Coeficiente alpha de Cronbach"
+
 msgid "corrected is not TRUE neither FALSE"
 msgstr "corrected no es TRUE ni FALSE"
 
@@ -128,12 +140,6 @@ msgstr "para éxito"
 
 msgid "Number of options per question:"
 msgstr "Número de opciones por pregunta:"
-
-msgid "Question scores (pick two or more)"
-msgstr "Puntuaciones del test (elija dos o más)"
-
-msgid "You must select two or more variables as question scores."
-msgstr "Debe seleccionar al menos dos variables como puntuaciones de preguntas."
 
 msgid "Test score (pick one)"
 msgstr "Puntuaciones del test (elija una)"

@@ -1,5 +1,5 @@
 package := RcmdrPlugin.UCA
-version := 6.5-1
+version := 6.6-1
 R := $(wildcard R/*.R)
 Rd := $(wildcard man/*.Rd)
 Rmd := $(wildcard vignettes/*.Rmd)
@@ -22,7 +22,7 @@ dev.log: makefile $(R)
 	echo "d\$$bTotal <- d\$$b1 + d\$$b2" >>.Rprofile
 	echo "d\$$dTotal <- d\$$p1 + d\$$p2" >>.Rprofile
 	echo "activeDataSet('d')" >>.Rprofile
-	echo "NIAMenu()" >>.Rprofile
+	echo "AlphaMenu()" >>.Rprofile
 	R --interactive --no-save
 	rm .Rprofile
 	reset
@@ -38,7 +38,7 @@ $(package).log: makefile ~/R_LIBS/$(package)
 	echo "Chile\$$discretea <- as.numeric(Chile\$$vote) - 1" >>.Rprofile
 	echo "Chile\$$discreteb <- as.numeric(Chile\$$vote) - 1" >>.Rprofile
 	echo "activeDataSet('Chile')" >>.Rprofile
-	echo "TestScoreMenu()" >>.Rprofile
+	echo "AlphaMenu()" >>.Rprofile
 	R --interactive --no-save
 	rm .Rprofile
 	reset

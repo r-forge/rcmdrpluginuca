@@ -5,6 +5,7 @@ import('Rcmdr')
 # The next package is required to build vignettes
 import('rmarkdown')
 
+importFrom('psychometric', 'alpha')
 importFrom('psychometric', 'item.exam')
 importFrom('qicharts2', 'paretochart')
 importFrom('randtests', randtest.runs.test = 'runs.test')
@@ -42,7 +43,8 @@ export('xbarpmcMenu')
 export('xbarone1Menu')
 
 ### Psycometry
-# export('isBinary')
+## export('isBinary')
+export('AlphaMenu')
 export('Binaries')
 export('BinariesP')
 export('CDIMenu')

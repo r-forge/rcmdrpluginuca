@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: RcmdrPlugin.UCA 6.5-1\n"
-"POT-Creation-Date: 2023-04-06 10:22\n"
+"POT-Creation-Date: 2023-04-06 12:23\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -73,6 +73,18 @@ msgstr ""
 msgid "noptions is not an integer or is not at least 2"
 msgstr ""
 
+msgid "Question scores (pick two or more)"
+msgstr ""
+
+msgid "You must select two or more variables as question scores."
+msgstr ""
+
+msgid "Cronbach's Coefficient Alpha"
+msgstr ""
+
+msgid "Cronbach's_Coefficient_Alpha"
+msgstr ""
+
 msgid "corrected is not TRUE neither FALSE"
 msgstr ""
 
@@ -119,12 +131,6 @@ msgid "for success"
 msgstr ""
 
 msgid "Number of options per question:"
-msgstr ""
-
-msgid "Question scores (pick two or more)"
-msgstr ""
-
-msgid "You must select two or more variables as question scores."
 msgstr ""
 
 msgid "Test score (pick one)"

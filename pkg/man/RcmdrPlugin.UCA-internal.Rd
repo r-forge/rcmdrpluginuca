@@ -3,6 +3,7 @@
   R-UCA project and used in teaching statistics at University of Cadiz
   (UCA).}
 
+\alias{AlphaMenu}
 \alias{Binaries}
 \alias{BinariesP}
 \alias{cchart1Menu}

@@ -68,6 +68,25 @@ difficultyindex <- function(x, success = NULL, noptions = NULL) {
 #' El índice de dificultad o el índice de dificultad corregido.
 NULL
 
+#' @export
+AlphaMenu <- function() {
+   ## Setup dialog element list
+    elements = list(
+        'Alpha' = list(type = 'variableListBox', title = gettext('Question scores (pick two or more)'), selectmode = 'multiple', min = 2, error = gettext('You must select two or more variables as question scores.'))
+    )
+    ## Setup onokcommand function
+    onokcommand <- function(elements) {
+        paste0('alpha(x = ',
+               ActiveDataSet(),
+               '[ , c(',
+               paste0(paste0('\'', elements[[1]]$variableListBoxSelected, '\''), collapse = ', '),
+               ')]) # ',
+               gettext('Cronbach\'s Coefficient Alpha')
+               )
+    }
+    ## Call menu-dialog function
+    .Menu(dialogtitle = gettext('Cronbach\'s Coefficient Alpha'), elements = elements, help = gettext('Cronbach\'s_Coefficient_Alpha'), recall = AlphaMenu, reset = "AlphaMenu", apply = "AlphaMenu", onokcommand = onokcommand)
+}
 
 #' @export
 CDIMenu <- function() DIMenu_(corrected = TRUE)
@@ -154,6 +173,8 @@ DIMenu_ <- function(corrected = FALSE, discrete = FALSE)
     tkgrid(buttonsFrame, sticky="w", columnspan = 8)
     dialogSuffix(rows=3, columns = 8)
 }
+
+
 
 
 #' @export

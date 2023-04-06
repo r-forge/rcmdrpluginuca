@@ -1,16 +1,18 @@
+Version 6.6-1
+* New option "Cronbach\'s Coefficient Alpha..." at "Psychometry" -> "Item analysis..."
 Version 6.5-1
-* New option "Numerical summaries" at "Psychometric..." -> "Item analysis..."
+* New option "Numerical summaries..." at "Psychometry" -> "Item analysis..."
 Version 6.4-1
-* New option "Test Score" at "Psychometric..." -> "Item analysis..."
+* New option "Test Score" at "Psychometry" -> "Item analysis..."
 Version 6.3-1
 2023-04-01
-* New option "Score difficulty index" at "Psychometric..." -> "Item analysis..."
+* New option "Score difficulty index..." at "Psychometry" -> "Item analysis..."
 Version 6.2-1
 2023-04-01
-* New option "Corrected difficulty index" at "Psychometric..." -> "Item analysis..."
+* New option "Corrected difficulty index..." at "Psychometry" -> "Item analysis..."
 Version 6.1-1
 2023-03-30
-* New option "Psychometric..." in main menu. Inside this menu there is an option "Item analysis..." and inside this the option "Difficulty index..."
+* New option "Psychometry" in main menu. Inside this menu there is an option "Item analysis..." and inside this the option "Difficulty index..."
 Version 5.1-1
 2022-05-03
 * New "Kolmogorov-Smirnov test for two samples..." option in "Non parametric test" menu.
