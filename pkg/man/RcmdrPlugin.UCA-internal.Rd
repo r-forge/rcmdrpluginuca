@@ -3,16 +3,13 @@
   R-UCA project and used in teaching statistics at University of Cadiz
   (UCA).}
 
-\alias{AlphaMenu}
 \alias{Binaries}
 \alias{BinariesP}
 \alias{cchart1Menu}
 \alias{cchart2Menu}
 \alias{cchartpMenu}
-\alias{CDIMenu}
 \alias{Dicotomics}
 \alias{DicotomicsP}
-\alias{DIMenu}
 \alias{input2predict}
 \alias{NIAMenu}
 \alias{npchart1Menu}
@@ -23,6 +20,16 @@
 \alias{pchart2Menu}
 \alias{pchartpMenu}
 \alias{predict4dataset}
+\alias{PsyAlphaCIMenu}
+\alias{PsyAlphaMenu}
+\alias{PsyCDIMenu}
+\alias{PsyDIMenu}
+\alias{PsyGuttmanMenu}
+\alias{PsySaturationMenu}
+\alias{PsySBMenu}
+\alias{PsySBReliabilityMenu}
+\alias{PsySBSizeMenu}
+\alias{PsyScoreMenu}
 \alias{R1mcMenu}
 \alias{R2mcMenu}
 \alias{RpmcMenu}
@@ -35,7 +42,6 @@
 \alias{SDIMenu}
 \alias{sigma.test}
 \alias{sigmaTest}
-\alias{TestScoreMenu}
 \alias{twolevelfactor.runs.test}
 \alias{uchart1Menu}
 \alias{uchart2Menu}

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: RcmdrPlugin.UCA 6.5-1\n"
-"POT-Creation-Date: 2023-04-06 12:23\n"
+"Project-Id-Version: RcmdrPlugin.UCA 6.8-1\n"
+"POT-Creation-Date: 2023-04-07 21:19\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -61,28 +61,22 @@ msgstr ""
 msgid "Null hypothesis: sigma^2 ="
 msgstr ""
 
-msgid "Element type"
+msgid "Var type, vartype, not provided"
+msgstr ""
+
+msgid "Var type"
 msgstr ""
 
 msgid "not yet implemented."
+msgstr ""
+
+msgid "Element type"
 msgstr ""
 
 msgid "onokcommand parameter is not a function"
 msgstr ""
 
 msgid "noptions is not an integer or is not at least 2"
-msgstr ""
-
-msgid "Question scores (pick two or more)"
-msgstr ""
-
-msgid "You must select two or more variables as question scores."
-msgstr ""
-
-msgid "Cronbach's Coefficient Alpha"
-msgstr ""
-
-msgid "Cronbach's_Coefficient_Alpha"
 msgstr ""
 
 msgid "corrected is not TRUE neither FALSE"
@@ -133,6 +127,12 @@ msgstr ""
 msgid "Number of options per question:"
 msgstr ""
 
+msgid "Question scores (pick two or more)"
+msgstr ""
+
+msgid "You must select two or more variables as question scores."
+msgstr ""
+
 msgid "Test score (pick one)"
 msgstr ""
 
@@ -143,6 +143,153 @@ msgid "Numerical item analysis"
 msgstr ""
 
 msgid "Numerical_item_analysis"
+msgstr ""
+
+msgid "Not yet implemented"
+msgstr ""
+
+msgid "Answers (pick one or more)"
+msgstr ""
+
+msgid "You must select one or more variables as answers."
+msgstr ""
+
+msgid "Answer key (pick one)"
+msgstr ""
+
+msgid "You must select one variables as answer key."
+msgstr ""
+
+msgid "Cronbach's coefficient alpha..."
+msgstr ""
+
+msgid "Cronbach's coefficient alpha"
+msgstr ""
+
+msgid "Cronbach's_coefficient_alpha"
+msgstr ""
+
+msgid "Guttman's coefficient..."
+msgstr ""
+
+msgid "Guttman's coefficient"
+msgstr ""
+
+msgid "Guttman's_coefficient"
+msgstr ""
+
+msgid "alpha"
+msgstr ""
+
+msgid "You must provide a number for alpha."
+msgstr ""
+
+msgid "Number of items"
+msgstr ""
+
+msgid "You must provide a number, at least 1, as number of items."
+msgstr ""
+
+msgid "Sample size"
+msgstr ""
+
+msgid "You must provide a number, at least as 1, as sample size."
+msgstr ""
+
+msgid "Confidence level"
+msgstr ""
+
+msgid "You must provide a number in (0, 1) as conficende level."
+msgstr ""
+
+msgid "Confidence interval for coefficient alpha..."
+msgstr ""
+
+msgid "Confidence interval for coefficient alpha"
+msgstr ""
+
+msgid "Confidence_interval_for_coefficient_alpha"
+msgstr ""
+
+msgid "Saturation (McDonald's omega)..."
+msgstr ""
+
+msgid "Question scores (pick three or more)"
+msgstr ""
+
+msgid "You must select three or more variables as question scores."
+msgstr ""
+
+msgid "Number of factors"
+msgstr ""
+
+msgid "Saturation (McDonald's omega)"
+msgstr ""
+
+msgid "Saturation_McDonald_omega"
+msgstr ""
+
+msgid "Reliability of scores..."
+msgstr ""
+
+msgid "Spearman-Brown coefficient..."
+msgstr ""
+
+msgid "First test scores (pick one)"
+msgstr ""
+
+msgid "You must select one variable as first test scores."
+msgstr ""
+
+msgid "Second test scores (pick one)"
+msgstr ""
+
+msgid "You must select one variable as second test scores."
+msgstr ""
+
+msgid "Spearman-Brown coefficient"
+msgstr ""
+
+msgid "Spearman-Brown_coefficient"
+msgstr ""
+
+msgid "Spearman-Browm formula for reliability..."
+msgstr ""
+
+msgid "Original reliability"
+msgstr ""
+
+msgid "You must provide a number for reliability."
+msgstr ""
+
+msgid "Resize factor"
+msgstr ""
+
+msgid "You must provide a number for resize factor."
+msgstr ""
+
+msgid "New reliability"
+msgstr ""
+
+msgid "Spearman-Browm formula for reliability"
+msgstr ""
+
+msgid "Spearman-Brown_reliability"
+msgstr ""
+
+msgid "Spearman-Browm formula for size..."
+msgstr ""
+
+msgid "You must provide a number for original reliability."
+msgstr ""
+
+msgid "You must provide a number for new reliability."
+msgstr ""
+
+msgid "Spearman-Browm formula for size"
+msgstr ""
+
+msgid "Spearman-Brown_size"
 msgstr ""
 
 msgid "Test score..."
@@ -266,9 +413,6 @@ msgid "np-chart\\nfor"
 msgstr ""
 
 msgid "Nonconforming units"
-msgstr ""
-
-msgid "Sample size"
 msgstr ""
 
 msgid "np-chart phase II from data"

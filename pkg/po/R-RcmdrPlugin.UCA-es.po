@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RcmdrPlugin.UCA\n"
 "Report-Msgid-Bugs-To: manuel.munoz@uca.es\n"
-"POT-Creation-Date: 2023-04-06 12:23\n"
-"PO-Revision-Date: 2023-04-06 12:39+0200\n"
+"POT-Creation-Date: 2023-04-07 21:19\n"
+"PO-Revision-Date: 2023-04-07 21:19+0200\n"
 "Last-Translator: Manuel Munoz-Marquez <manuel.munoz@uca.es>\n"
 "Language-Team: manuel.munoz@uca.es\n"
 "Language: es_ES\n"
@@ -69,29 +69,23 @@ msgstr "Varianza poblacional"
 msgid "Null hypothesis: sigma^2 ="
 msgstr "Hipótesis nula: sigma^2 ="
 
-msgid "Element type"
-msgstr "Tipo de elemento"
+msgid "Var type, vartype, not provided"
+msgstr "Tipo de variable, vartype, no especificado"
+
+msgid "Var type"
+msgstr "Tipo de variable"
 
 msgid "not yet implemented."
 msgstr "no implementada aún."
+
+msgid "Element type"
+msgstr "Tipo de elemento"
 
 msgid "onokcommand parameter is not a function"
 msgstr "el parámetro onokcommand no es una función"
 
 msgid "noptions is not an integer or is not at least 2"
 msgstr "noptions no es un entero al menos 2"
-
-msgid "Question scores (pick two or more)"
-msgstr "Puntuaciones del test (elija dos o más)"
-
-msgid "You must select two or more variables as question scores."
-msgstr "Debe seleccionar al menos dos variables como puntuaciones de preguntas."
-
-msgid "Cronbach's Coefficient Alpha"
-msgstr "Coeficiente alpha de Cronbach"
-
-msgid "Cronbach's_Coefficient_Alpha"
-msgstr "Coeficiente alpha de Cronbach"
 
 msgid "corrected is not TRUE neither FALSE"
 msgstr "corrected no es TRUE ni FALSE"
@@ -141,6 +135,12 @@ msgstr "para éxito"
 msgid "Number of options per question:"
 msgstr "Número de opciones por pregunta:"
 
+msgid "Question scores (pick two or more)"
+msgstr "Puntuaciones de las preguntas (elija dos o más)"
+
+msgid "You must select two or more variables as question scores."
+msgstr "Debe seleccionar al menos dos variables como puntuaciones de preguntas."
+
 msgid "Test score (pick one)"
 msgstr "Puntuaciones del test (elija una)"
 
@@ -152,6 +152,153 @@ msgstr "Análisis numérico de ítems"
 
 msgid "Numerical_item_analysis"
 msgstr "Análisis_numérico_de_ítems"
+
+msgid "Not yet implemented"
+msgstr "No implementada aún."
+
+msgid "Answers (pick one or more)"
+msgstr "Respuestas (elija una o más)"
+
+msgid "You must select one or more variables as answers."
+msgstr "Debe seleccionar una o más variables como respuestas."
+
+msgid "Answer key (pick one)"
+msgstr "Respuesta correcta (elija una)"
+
+msgid "You must select one variables as answer key."
+msgstr "Debe seleccionar una variable respuesta correcta."
+
+msgid "Cronbach's coefficient alpha..."
+msgstr "Coeficiente alpha de Cronbach..."
+
+msgid "Cronbach's coefficient alpha"
+msgstr "Coeficiente alpha de Cronbach"
+
+msgid "Cronbach's_coefficient_alpha"
+msgstr "Coeficiente_alpha_de_Cronbach"
+
+msgid "Guttman's coefficient..."
+msgstr "Coeficiente Guttman..."
+
+msgid "Guttman's coefficient"
+msgstr "Coeficiente Guttman"
+
+msgid "Guttman's_coefficient"
+msgstr "Coeficiente_Guttman"
+
+msgid "alpha"
+msgstr "alpha"
+
+msgid "You must provide a number for alpha."
+msgstr "Debe proporcionar un número como alpha."
+
+msgid "Number of items"
+msgstr "Número de ítems"
+
+msgid "You must provide a number, at least 1, as number of items."
+msgstr "Debe proporcionar un número, al menos 1, como número de ítems."
+
+msgid "Sample size"
+msgstr "Tamaño de muestra"
+
+msgid "You must provide a number, at least as 1, as sample size."
+msgstr "Debe proporcionar un número, al menos 1, como tamaño de la muestra."
+
+msgid "Confidence level"
+msgstr "Nivel de confianza"
+
+msgid "You must provide a number in (0, 1) as conficende level."
+msgstr "Debe proporcionar un número en (0, 1) como nivel de confianza."
+
+msgid "Confidence interval for coefficient alpha..."
+msgstr "Intervalo de confianza para el coeficiente alpha..."
+
+msgid "Confidence interval for coefficient alpha"
+msgstr "Intervalo de confianza para el coeficiente alpha"
+
+msgid "Confidence_interval_for_coefficient_alpha"
+msgstr "Intervalo_de_confianza_para_el_coeficiente_alpha"
+
+msgid "Saturation (McDonald's omega)..."
+msgstr "Saturación (omega de McDonald)..."
+
+msgid "Question scores (pick three or more)"
+msgstr "Puntuaciones de las preguntas (elija tres o más)"
+
+msgid "You must select three or more variables as question scores."
+msgstr "Debe seleccionar al menos tres variables como puntuaciones de preguntas."
+
+msgid "Number of factors"
+msgstr "Número de factores"
+
+msgid "Saturation (McDonald's omega)"
+msgstr "Saturación (omega de McDonald)"
+
+msgid "Saturation_McDonald_omega"
+msgstr "Saturación_omega_McDonald"
+
+msgid "Reliability of scores..."
+msgstr "Fiabilidad de puntuaciones..."
+
+msgid "Spearman-Brown coefficient..."
+msgstr "Coeficiente Spearman-Brown..."
+
+msgid "First test scores (pick one)"
+msgstr "Puntuaciones del primer test (elija una)"
+
+msgid "You must select one variable as first test scores."
+msgstr "Debe seleccionar una variable como puntuación del primer test."
+
+msgid "Second test scores (pick one)"
+msgstr "Puntuaciones del segundo test (elija una)"
+
+msgid "You must select one variable as second test scores."
+msgstr "Debe seleccionar una variable como puntuación del segundo test."
+
+msgid "Spearman-Brown coefficient"
+msgstr "Coeficiente Spearman-Brown"
+
+msgid "Spearman-Brown_coefficient"
+msgstr "Coeficiente_Spearman-Brown"
+
+msgid "Spearman-Browm formula for reliability..."
+msgstr "Fórmula Spearman-Browm para la fiabilidad..."
+
+msgid "Original reliability"
+msgstr "Fiabilidad original"
+
+msgid "You must provide a number for reliability."
+msgstr "Debe proporcionar un número como fiabilidad."
+
+msgid "Resize factor"
+msgstr "Factor de redimensión"
+
+msgid "You must provide a number for resize factor."
+msgstr "Debe proporcionar un número factor de tamaño."
+
+msgid "New reliability"
+msgstr "Nueva fiabilidad"
+
+msgid "Spearman-Browm formula for reliability"
+msgstr "Fórmula Spearman-Browm para la fiabilidad"
+
+msgid "Spearman-Brown_reliability"
+msgstr "Spearman-Brown_fiabilidad"
+
+msgid "Spearman-Browm formula for size..."
+msgstr "Fórmula Spearman-Browm para el tamaño..."
+
+msgid "You must provide a number for original reliability."
+msgstr "Debe proporcionar un número como fiabilidad original."
+
+msgid "You must provide a number for new reliability."
+msgstr "Debe proporcionar un número como nueva fiabilidad."
+
+msgid "Spearman-Browm formula for size"
+msgstr "Fórmula Spearman-Browm para el tamaño"
+
+msgid "Spearman-Brown_size"
+msgstr "Spearman-Brown_tamaño"
 
 msgid "Test score..."
 msgstr "Puntuación del test..."
@@ -276,9 +423,6 @@ msgstr "Gráfico np\\nde"
 msgid "Nonconforming units"
 msgstr "Unidades no conformes"
 
-msgid "Sample size"
-msgstr "Tamaño de muestra"
-
 msgid "np-chart phase II from data"
 msgstr "Gráfico np fase II desde datos"
 
@@ -313,7 +457,7 @@ msgid "p-chart"
 msgstr "Gráfico p"
 
 msgid "p-chart\\nfor"
-msgstr " Gráfico p\\nde "
+msgstr "p-chart\\nde"
 
 msgid "Phase II from data..."
 msgstr "Fase II desde datos..."

@@ -1,5 +1,5 @@
 package := RcmdrPlugin.UCA
-version := 6.6-1
+version := 6.8-1
 R := $(wildcard R/*.R)
 Rd := $(wildcard man/*.Rd)
 Rmd := $(wildcard vignettes/*.Rmd)
@@ -22,7 +22,7 @@ dev.log: makefile $(R)
 	echo "d\$$bTotal <- d\$$b1 + d\$$b2" >>.Rprofile
 	echo "d\$$dTotal <- d\$$p1 + d\$$p2" >>.Rprofile
 	echo "activeDataSet('d')" >>.Rprofile
-	echo "AlphaMenu()" >>.Rprofile
+	echo "PsyAlphaCIMenu()" >>.Rprofile
 	R --interactive --no-save
 	rm .Rprofile
 	reset
@@ -35,10 +35,13 @@ $(package).log: makefile ~/R_LIBS/$(package)
 	echo "library(RcmdrPlugin.UCA)" >.Rprofile
 	echo "data(Chile)" >>.Rprofile
 	echo "activeDataSet('Chile')" >>.Rprofile
-	echo "Chile\$$discretea <- as.numeric(Chile\$$vote) - 1" >>.Rprofile
-	echo "Chile\$$discreteb <- as.numeric(Chile\$$vote) - 1" >>.Rprofile
+	echo "set.seed(1)" >>.Rprofile
+	echo "Chile\$$p1 <- rbinom(nrow(Chile), 5, .1)" >>.Rprofile
+	echo "Chile\$$p2 <- rbinom(nrow(Chile), 5, .2)" >>.Rprofile
+	echo "Chile\$$p3 <- rbinom(nrow(Chile), 5, .3)" >>.Rprofile
+	echo "Chile\$$p4 <- rbinom(nrow(Chile), 5, .4)" >>.Rprofile
+	echo "Chile\$$p5 <- rbinom(nrow(Chile), 5, .5)" >>.Rprofile
 	echo "activeDataSet('Chile')" >>.Rprofile
-	echo "AlphaMenu()" >>.Rprofile
 	R --interactive --no-save
 	rm .Rprofile
 	reset

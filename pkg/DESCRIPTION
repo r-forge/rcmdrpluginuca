@@ -1,12 +1,12 @@
 Package: RcmdrPlugin.UCA
 Type: Package
 Title: UCA Rcmdr Plug-in
-Version: 6.6-1
-Date: 2023-04-06
+Version: 6.8-1
+Date: 2023-04-07
 Encoding: UTF-8
 Author: Manuel Munoz-Marquez <manuel.munoz@uca.es>, Fernando Fernández Palacín <fernando.fernandez@uca.es> and Rocío Gómez Molinero <rocio.gomez@uca.es>
 Maintainer: Manuel Munoz-Marquez <manuel.munoz@uca.es>
-Depends: IQCC, psychometric (>= 2.3), qcc, qicharts2, randtests, rmarkdown, TeachingDemos, tseries
+Depends: IQCC, psych (>= 2.3.3), psychometric (>= 2.3), qcc, qicharts2, randtests, rmarkdown, splithalfr (>= 2.2.0), TeachingDemos, tseries
 Suggests: car, carData, knitr
 VignetteBuilder: knitr
 Imports: Rcmdr (>= 1.6)

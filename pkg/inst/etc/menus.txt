@@ -79,16 +79,32 @@
     item    qcSMenu	      command		"Phase II from data (multiple columns)..." 	    S2mcMenu   "numericP()"	   ""
     item    qcSMenu	      command		"Phase II from parameters (multiple columns)..."    SpmcMenu   "numericP()"	   ""
 
-### Psychometry
-    menu    PsychMenu         topMenu           ""                                          ""                 ""                  ""
-    item    topMenu           cascade           "Psychometry"                               PsychMenu          ""                  ""
-    item    PsychMenu         command           "Test score..."                             TestScoreMenu      ""                  ""
+### Psychometry: Main menu
+    menu    PsyMainMenu       topMenu           ""                                          ""                 ""                  ""
+    item    topMenu           cascade           "Psychometry"                               PsyMainMenu        ""                  ""
 
-# Item analysis
-    menu    ItemMenu          PsychMenu         ""                                          ""                 ""                  ""
-    item    PsychMenu	      cascade		"Item analysis..."                          ItemMenu           ""                  ""
-    item    ItemMenu          command           "Numerical summaries..."                    NIAMenu            "discreteNumericP()" ""
-    item    ItemMenu          command           "Difficulty index..."                       DIMenu             "DicotomicsP()"     ""
-    item    ItemMenu          command           "Corrected difficulty index..."             CDIMenu            "DicotomicsP()"     ""
-    item    ItemMenu          command           "Score difficulty index..."                 SDIMenu            "discreteNumericP()" "packageAvailable('psychometric')"
-    item    ItemMenu          command           "Cronbach's Coefficient Alpha..."           AlphaMenu          "discreteNumericP()" "packageAvailable('psychometric')"
+# Psychometry: Data transformation
+    menu    PsyDataMenu       PsyMainMenu       ""                                          ""                 ""                  ""
+    item    PsyMainMenu	      cascade		"Data..."                                   PsyDataMenu        ""                  ""
+    item    PsyDataMenu       command           "Test score..."                             PsyScoreMenu       ""                  ""
+    # item    PsyDataMenu       command           "Answers to score..."                       PsyA2SMenu         ""                  ""
+
+# Psychometry: Item analysis
+    menu    PsyItemMenu       PsyMainMenu       ""                                          ""                 ""                  ""
+    item    PsyMainMenu	      cascade		"Item analysis..."                          PsyItemMenu        ""                  ""
+    item    PsyItemMenu       command           "Numerical summaries..."                    NIAMenu            "discreteNumericP()" ""
+    item    PsyItemMenu       command           "Difficulty index..."                       PsyDIMenu          "DicotomicsP()"     ""
+    item    PsyItemMenu       command           "Corrected difficulty index..."             PsyCDIMenu         "DicotomicsP()"     ""
+    item    PsyItemMenu       command           "Score difficulty index..."                 SDIMenu            "discreteNumericP()" "packageAvailable('psychometric')"
+    item    PsyItemMenu       command           "Cronbach's coefficient alpha..."           PsyAlphaMenu       "discreteNumericP()" "packageAvailable('psychometric')"
+    item    PsyItemMenu       command           "Confidence interval for coefficient alpha..." PsyAlphaCIMenu  "discreteNumericP()" "packageAvailable('psychometric')"
+    # item    PsyItemMenu       command           "Distractor analysis..."           PsyDisMenu         "discreteNumericP()" "packageAvailable('CTT')"
+
+# Psychometry: Reliability of scores
+    menu    PsyRSMenu         PsyMainMenu       ""                                          ""                 ""                  ""
+    item    PsyMainMenu	      cascade		"Reliability of scores..."                  PsyRSMenu          ""                  ""
+    item    PsyRSMenu         command           "Spearman-Browm coefficient..."             PsySBMenu          "discreteNumericP()" "packageAvailable('splithalfr')"
+    item    PsyRSMenu         command           "Spearman-Browm formula for size..."        PsySBSizeMenu      "discreteNumericP()" "packageAvailable('splithalfr')"
+    item    PsyRSMenu         command           "Spearman-Browm formula for reliability..." PsySBReliabilityMenu "discreteNumericP()" "packageAvailable('splithalfr')"
+    item    PsyRSMenu         command           "Guttman's coefficient..."                  PsyGuttmanMenu      "discreteNumericP()" "packageAvailable('psych')"
+    item    PsyRSMenu         command           "Saturation (McDonald's omega)..."          PsySaturationMenu   "discreteNumericP()" "packageAvailable('psych')"

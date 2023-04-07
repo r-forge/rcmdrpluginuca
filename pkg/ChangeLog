@@ -1,8 +1,24 @@
+Version 6.8-1
+2023-04-07
+* New option "Guttman's coefficient..." at "Psychometry" -> "Realibity scores..."
+* New option "Saturation (McDonald's omega)..." at "Psychometry" -> "Realibity scores..."
+Version 6.7-2
+2023-04-07
+* New menu "Realibility scores..." at "Psychometry"
+* New option "Spearman-Brown coefficient..." at "Psychometry" -> "Realibity scores..."
+* New option "Spearman-Browm formula for size..." at "Psychometry" -> "Realibity scores..."
+* New option "Spearman-Browm formula for reliability..." at "Psychometry" -> "Realibity scores..."
+Version 6.7-1
+2023-04-06
+* New tkentry type in auxiliary menu function
 Version 6.6-1
-* New option "Cronbach\'s Coefficient Alpha..." at "Psychometry" -> "Item analysis..."
+2023-04-06
+* New option "Cronbach\'s coefficient alpha..." at "Psychometry" -> "Item analysis..."
 Version 6.5-1
+2023-04-06
 * New option "Numerical summaries..." at "Psychometry" -> "Item analysis..."
 Version 6.4-1
+2023-04-05
 * New option "Test Score" at "Psychometry" -> "Item analysis..."
 Version 6.3-1
 2023-04-01

@@ -1,6 +1,5 @@
 ### Psychometry extensions
 
-
 #' @name difficultyindex
 #' @aliases Corrected_difficulty_index
 #' @aliases difficultyindex
@@ -68,30 +67,11 @@ difficultyindex <- function(x, success = NULL, noptions = NULL) {
 #' El índice de dificultad o el índice de dificultad corregido.
 NULL
 
-#' @export
-AlphaMenu <- function() {
-   ## Setup dialog element list
-    elements = list(
-        'Alpha' = list(type = 'variableListBox', title = gettext('Question scores (pick two or more)'), selectmode = 'multiple', min = 2, error = gettext('You must select two or more variables as question scores.'))
-    )
-    ## Setup onokcommand function
-    onokcommand <- function(elements) {
-        paste0('alpha(x = ',
-               ActiveDataSet(),
-               '[ , c(',
-               paste0(paste0('\'', elements[[1]]$variableListBoxSelected, '\''), collapse = ', '),
-               ')]) # ',
-               gettext('Cronbach\'s Coefficient Alpha')
-               )
-    }
-    ## Call menu-dialog function
-    .Menu(dialogtitle = gettext('Cronbach\'s Coefficient Alpha'), elements = elements, help = gettext('Cronbach\'s_Coefficient_Alpha'), recall = AlphaMenu, reset = "AlphaMenu", apply = "AlphaMenu", onokcommand = onokcommand)
-}
 
 #' @export
-CDIMenu <- function() DIMenu_(corrected = TRUE)
+PsyCDIMenu <- function() DIMenu_(corrected = TRUE)
 #' @export
-DIMenu <- function() DIMenu_(corrected = FALSE)
+PsyDIMenu <- function() DIMenu_(corrected = FALSE)
 #' @export
 SDIMenu <- function() DIMenu_(discrete = TRUE)
 ## Low level function for menus
@@ -117,13 +97,13 @@ DIMenu_ <- function(corrected = FALSE, discrete = FALSE)
         variables <- Dicotomics()
         if (corrected) {
             help <- gettext("Corrected_difficulty_index")
-            menu <- "CDIMenu"
-            recall <- CDIMenu
+            menu <- "PsyCDIMenu"
+            recall <- PsyCDIMenu
             title <- gettext("Corrected difficulty index")
         } else {
             help <- gettext("Difficulty_index")
-            menu <- "DIMenu"
-            recall <- DIMenu
+            menu <- "PsyDIMenu"
+            recall <- PsyDIMenu
             title <- gettext("Difficulty index")
         }
     }
@@ -179,10 +159,10 @@ DIMenu_ <- function(corrected = FALSE, discrete = FALSE)
 
 #' @export
 NIAMenu <- function() {
-   ## Setup dialog element list
+    ## Setup dialog element list
     elements = list(
         'QScores' = list(type = 'variableListBox', title = gettext('Question scores (pick two or more)'), selectmode = 'multiple', min = 2, error = gettext('You must select two or more variables as question scores.')),
-        'TScores' = list(type = 'variableListBox', title = gettext('Test score (pick one)'), selectmode = 'single', max = 1, error = gettext('You must select one variables as test score.'))
+        'TScore' = list(type = 'variableListBox', title = gettext('Test score (pick one)'), selectmode = 'single', max = 1, error = gettext('You must select one variables as test score.'))
     )
     ## Setup onokcommand function
     onokcommand <- function(elements) {
@@ -201,8 +181,226 @@ NIAMenu <- function() {
     .Menu(dialogtitle = gettext('Numerical item analysis'), elements = elements, help = gettext('Numerical_item_analysis'), recall = NIAMenu, reset = "NIAMenu", apply = "NIAMenu", onokcommand = onokcommand)
 }
 
+
 #' @export
-TestScoreMenu <- function() {
+PsyA2SMenu <- function() {
+    stop('Not yet implemented')
+    ## Setup dialog element list
+    elements <- list(
+        'Answers' = list(type = 'variableListBox', title = gettext('Answers (pick one or more)'), selectmode = 'multiple',  error = gettext('You must select one or more variables as answers.')),
+        'Score' = list(type = 'variableListBox', title = gettext('Answer key (pick one)'), selectmode = 'single', max = 1, error = gettext('You must select one variables as answer key.'))
+    )
+    ## Setup onokcommand function
+    onokcommand <- function(elements) {
+        paste0('item.exam(x = ',
+               ActiveDataSet(),
+               '[ , c(',
+               paste0(paste0('\'', elements[[1]]$variableListBoxSelected, '\''), collapse = ', '),
+               ')], y = ',
+               ActiveDataSet(),
+               '$',
+               elements[[2]]$variableListBoxSelected,
+               ', discrim = TRUE)'
+               )
+    }
+    ## Call menu-dialog function
+    .Menu(dialogtitle = gettext('Numerical item analysis'), elements = elements, help = gettext('Numerical_item_analysis'), recall = NIAMenu, reset = "NIAMenu", apply = "NIAMenu", onokcommand = onokcommand)
+}
+
+
+#' @export
+PsyAlphaMenu <- function() {
+    gettext('Cronbach\'s coefficient alpha...')
+    ## Setup dialog element list
+    elements = list(
+        'Alpha' = list(type = 'variableListBox', title = gettext('Question scores (pick two or more)'), selectmode = 'multiple', min = 2, error = gettext('You must select two or more variables as question scores.'))
+    )
+    ## Setup onokcommand function
+    onokcommand <- function(elements) {
+        paste0('alpha(x = ',
+               ActiveDataSet(),
+               '[ , c(',
+               paste0(paste0('\'', elements[[1]]$variableListBoxSelected, '\''), collapse = ', '),
+               ')]) # ',
+               gettext('Cronbach\'s coefficient alpha')
+               )
+    }
+    ## Call menu-dialog function
+    .Menu(dialogtitle = gettext('Cronbach\'s coefficient alpha'), elements = elements, help = gettext('Cronbach\'s_coefficient_alpha'), recall = PsyAlphaMenu, reset = "PsyAlphaMenu", apply = "PsyAlphaMenu", onokcommand = onokcommand)
+}
+
+
+#' @export
+PsyGuttmanMenu <- function() {
+    gettext('Guttman\'s coefficient...')
+    ## Setup dialog element list
+    elements = list(
+        'Alpha' = list(type = 'variableListBox', title = gettext('Question scores (pick two or more)'), selectmode = 'multiple', min = 2, error = gettext('You must select two or more variables as question scores.'))
+    )
+    ## Setup onokcommand function
+    onokcommand <- function(elements) {
+        paste0('splitHalf(r = ',
+               ActiveDataSet(),
+               '[ , c(',
+               paste0(paste0('\'', elements[[1]]$variableListBoxSelected, '\''), collapse = ', '),
+               ')]) # ',
+               gettext('Guttman\'s coefficient')
+               )
+    }
+    ## Call menu-dialog function
+    .Menu(dialogtitle = gettext('Guttman\'s coefficient'), elements = elements, help = gettext('Guttman\'s_coefficient'), recall = PsyGuttmanMenu, reset = "PsyGuttmanMenu", apply = "PsyGuttmanMenu", onokcommand = onokcommand)
+}
+
+
+#' @export
+PsyAlphaCIMenu <- function() {
+    ## Setup dialog element list
+    elements <- list(
+        alpha = list(type = 'entry', title = gettext('alpha'), vartype = 'numeric', error = gettext('You must provide a number for alpha.')),
+        k = list(type = 'entry', title = gettext('Number of items'), vartype = 'numeric', min = 1, error = gettext('You must provide a number, at least 1, as number of items.')),
+        N = list(type = 'entry', title = gettext('Sample size'), vartype = 'numeric', min = 1, error = gettext('You must provide a number, at least as 1, as sample size.')),
+        level = list(type = 'entry', title = gettext('Confidence level'), vartype = 'numeric', min = 0, max = 1, default = .9, error = gettext('You must provide a number in (0, 1) as conficende level.'))
+    )
+    ## Setup onokcommand function
+    onokcommand <- function(elements) {
+        paste0('alpha.CI(alpha =',
+               elements[[1]]$VarNumeric,
+               ', k =',
+               elements[[2]]$VarNumeric,
+               ', N = ',
+               elements[[3]]$VarNumeric,
+               ', level = ',
+               elements[[4]]$VarNumeric,
+               ')')
+    }
+    ## Call menu-dialog function
+    gettext('Confidence interval for coefficient alpha...')
+    .Menu(dialogtitle = gettext('Confidence interval for coefficient alpha'), elements = elements, help = gettext('Confidence_interval_for_coefficient_alpha'), recall = PsyAlphaCIMenu, reset = 'PsyAlphaCIMenu', apply = 'PsyAlphaCIMenu', onokcommand = onokcommand)
+}
+
+
+#' @export
+PsySaturationMenu <- function() {
+    gettext('Saturation (McDonald\'s omega)...')
+    ## Setup dialog element list
+    elements = list(
+        'omega' = list(type = 'variableListBox', title = gettext('Question scores (pick three or more)'), selectmode = 'multiple', min = 3, error = gettext('You must select three or more variables as question scores.')),
+        'nfactors' = list(type = 'entry', title = gettext('Number of factors'), vartype = 'integer', min = 3, error = 'You must provide a number, at least 3, as number of factors')
+    )
+    ## Setup onokcommand function
+    onokcommand <- function(elements) {
+        nfactors <- min(elements[[2]]$VarInteger, length(elements[[1]]$variableListBoxSelected))
+        paste0('omega(m = ',
+               ActiveDataSet(),
+               '[ , c(',
+               paste0(paste0('\'', elements[[1]]$variableListBoxSelected, '\''), collapse = ', '),
+               ')], nfactors = ',
+               nfactors,
+               ') # ',
+               gettext('Saturation (McDonald\'s omega)')
+               )
+    }
+    ## Call menu-dialog function
+    .Menu(dialogtitle = gettext('Saturation (McDonald\'s omega)'), elements = elements, help = gettext('Saturation_McDonald_omega'), recall = PsySaturationMenu, reset = "PsySaturationMenu", apply = "PsySaturationMenu", onokcommand = onokcommand)
+}
+
+
+
+#' @export
+PsySBMenu <-function() {
+    gettext('Reliability of scores...')
+    gettext('Spearman-Brown coefficient...')
+    ## Setup dialog element list
+    elements = list(
+        'Test1' = list(type = 'variableListBox', title = gettext('First test scores (pick one)'), selectmode = 'single', max = 1, error = gettext('You must select one variable as first test scores.')),
+        'Test2' = list(type = 'variableListBox', title = gettext('Second test scores (pick one)'), selectmode = 'single', max = 1, error = gettext('You must select one variable as second test scores.'))
+    )
+    ## Setup onokcommand function
+    onokcommand <- function(elements) {
+        paste0('with(',
+               ActiveDataSet(),
+               ', spearman_brown(x = ',
+               elements[[1]]$variableListBoxSelected,
+               ', y = ',
+               elements[[2]]$variableListBoxSelected,
+               '))'
+               )
+    }
+    ## Call menu-dialog function
+    .Menu(dialogtitle = gettext('Spearman-Brown coefficient'), elements = elements, help = gettext('Spearman-Brown_coefficient'), recall = PsySBMenu, reset = "PsySBMenu", apply = "PsySBMenu", onokcommand = onokcommand) 
+}
+
+
+#' @export
+PsySBReliabilityMenu <-function() {
+    gettext('Spearman-Browm formula for reliability...')
+    ## Setup dialog element list
+    elements = list(
+        'Reliability' = list(type = 'entry', title = gettext('Original reliability'), vartype = 'numeric', error = gettext('You must provide a number for reliability.')),
+        'Resize' = list(type = 'entry', title = gettext('Resize factor'), vartype = 'numeric', error = gettext('You must provide a number for resize factor.'))
+    )
+    ## Setup onokcommand function
+    ## CTT package version
+    onokcommand.ctt <- function(elements) {
+        paste0('spearman.brown(r.xx = ',
+               elements[[1]]$VarNumeric,
+               ', input = ',
+               elements[[2]]$VarNumeric,
+               ', n.or.r = "n") # ',
+               gettext('New reliability')
+               )
+    }
+    ## psychometric package version
+    onokcommand.psy <- function(elements) {
+        paste0('SBrel(rxx = ',
+               elements[[1]]$VarNumeric,
+               ', Nlength = ',
+               elements[[2]]$VarNumeric,
+               ') # ',
+               gettext('New reliability')
+               )
+    }
+    ## Call menu-dialog function
+    .Menu(dialogtitle = gettext('Spearman-Browm formula for reliability'), elements = elements, help = gettext('Spearman-Brown_reliability'), recall = PsySBReliabilityMenu, reset = "PsySBReliabilityMenu", apply = "PsySBReliabilityMenu", onokcommand = onokcommand.psy) 
+}
+
+
+#' @export
+PsySBSizeMenu <-function() {
+    gettext('Spearman-Browm formula for size...')
+    ## Setup dialog element list
+    elements = list(
+        'Reliability' = list(type = 'entry', title = gettext('Original reliability'), vartype = 'numeric', error = gettext('You must provide a number for original reliability.')),
+        'NewReliability' = list(type = 'entry', title = gettext('New reliability'), vartype = 'numeric', error = gettext('You must provide a number for new reliability.'))
+    )
+    ## Setup onokcommand function
+    ## CTT package version
+    onokcommand.ctt <- function(elements) {
+        paste0('spearman.brown(r.xx = ',
+               elements[[1]]$VarNumeric,
+               ', input = ',
+               elements[[2]]$VarNumeric,
+               ', n.or.r = "r") # ',
+               gettext('Resize factor')
+               )
+    }
+    ## psychometric package version
+    onokcommand.psy <- function(elements) {
+        paste0('SBlength(rxx = ',
+               elements[[1]]$VarNumeric,
+               ', rxxp = ',
+               elements[[2]]$VarNumeric,
+               ') # ',
+               gettext('Resize factor')
+               )
+    }
+    ## Call menu-dialog function
+    .Menu(dialogtitle = gettext('Spearman-Browm formula for size'), elements = elements, help = gettext('Spearman-Brown_size'), recall = PsySBSizeMenu, reset = "PsySBSizeMenu", apply = "PsySBSizeMenu", onokcommand = onokcommand.psy) 
+}
+
+
+#' @export
+PsyScoreMenu <- function() {
     gettext("Test score...")
     initializeDialog(title = gettext("Test score"))
     variablesBox <- variableListBox(top, DiscreteNumeric(), selectmode="multiple", initialSelection=NULL, title = gettext("Question scores (pick two or more)"))
@@ -213,17 +411,17 @@ TestScoreMenu <- function() {
         scores <- getSelection(variablesBox)
         name <- tclvalue(nameVar)
         if (length(scores) < 2) {
-            errorCondition(recall = TestScoreMenu, message = gettext("You must select two or more variables."))
+            errorCondition(recall = PsyScoreMenu, message = gettext("You must select two or more variables."))
             return()
         }
         if (!is.valid.name(name)) {
-            errorCondition(recall = TestScoreMenu, message = paste(name, gettextRcmdr("is not a valid name.")))
+            errorCondition(recall = PsyScoreMenu, message = paste(name, gettextRcmdr("is not a valid name.")))
             return()
         }
         closeDialog()
         if (is.element(name, Variables())) {
             if ("no" == tclvalue(checkReplace(name, gettext("TestScore")))) {
-                TestScoreMenu()
+                PsyScoreMenu()
                 return()
             }
         }
@@ -233,7 +431,7 @@ TestScoreMenu <- function() {
         ## activeDataSetP()
         tkfocus(CommanderWindow())
     }
-    OKCancelHelp(helpSubject = "Test_score", reset = "TestScoreMenu", apply = "TestScoreMenu")
+    OKCancelHelp(helpSubject = "Test_score", reset = "PsyScoreMenu", apply = "PsyScoreMenu")
     tkgrid(getFrame(variablesBox), sticky="nw")
     tkgrid(tklabel(variablesFrame, text=gettextRcmdr("New variable name")), nameEntry, sticky = "w")
     tkgrid(variablesFrame, sticky = "w")
