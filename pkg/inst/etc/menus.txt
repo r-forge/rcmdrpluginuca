@@ -96,6 +96,7 @@
     item    PsyItemMenu       command           "Difficulty index..."                       PsyDIMenu          "DicotomicsP()"     ""
     item    PsyItemMenu       command           "Corrected difficulty index..."             PsyCDIMenu         "DicotomicsP()"     ""
     item    PsyItemMenu       command           "Score difficulty index..."                 SDIMenu            "discreteNumericP()" "packageAvailable('psychometric')"
+    item    PsyItemMenu	      command		"Biserial correlations..."		    PsyBSCMenu	       "DicotomicsP()"     "packageAvailable('psych')"
     item    PsyItemMenu       command           "Cronbach's coefficient alpha..."           PsyAlphaMenu       "discreteNumericP()" "packageAvailable('psychometric')"
     item    PsyItemMenu       command           "Confidence interval for coefficient alpha..." PsyAlphaCIMenu  "discreteNumericP()" "packageAvailable('psychometric')"
     # item    PsyItemMenu       command           "Distractor analysis..."           PsyDisMenu         "discreteNumericP()" "packageAvailable('CTT')"

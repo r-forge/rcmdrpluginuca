@@ -231,6 +231,32 @@ PsyAlphaMenu <- function() {
 
 
 #' @export
+PsyBSCMenu <- function() {
+    gettext('Biserial correlations...')
+    ## Setup dialog element list
+    elements = list(
+        'QScores' = list(type = 'variableListBox', title = gettext('Question scores (pick one or more)'), selectmode = 'multiple', error = gettext('You must select one or more variables as question score.')),
+        'TScore' = list(type = 'variableListBox', title = gettext('Test score (pick one)'), selectmode = 'single', max = 1, error = gettext('You must select one variables as test score.'))
+    )
+    ## Setup onokcommand function
+    onokcommand <- function(elements) {
+        paste0('biserial(x = ',
+               ActiveDataSet(),
+               '$',
+               elements[[2]]$variableListBoxSelected,
+               ', y = ',
+               ActiveDataSet(),
+               '[ , c(',
+               paste0(paste0('\'', elements[[1]]$variableListBoxSelected, '\''), collapse = ', '),
+               ')])'
+               )
+    }
+    ## Call menu-dialog function
+    .Menu(dialogtitle = gettext('Biserial correlations'), elements = elements, help = gettext('Biserial_correlations'), recall = PsyBSCMenu, reset = "PsyBSCMenu", apply = "PsyBSCMenu", onokcommand = onokcommand)
+}
+
+
+#' @export
 PsyGuttmanMenu <- function() {
     gettext('Guttman\'s coefficient...')
     ## Setup dialog element list

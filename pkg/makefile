@@ -1,5 +1,5 @@
 package := RcmdrPlugin.UCA
-version := 6.8-1
+version := 6.9-1
 R := $(wildcard R/*.R)
 Rd := $(wildcard man/*.Rd)
 Rmd := $(wildcard vignettes/*.Rmd)
@@ -18,11 +18,11 @@ dev.log: makefile $(R)
 	echo "source('R/menu.R')" >>.Rprofile
 	echo "source('R/psychometry.R')" >>.Rprofile
 	echo "set.seed(1)" >>.Rprofile
-	echo "d <- data.frame(b1 = rbinom(10, 1, .3), b2 = rbinom(10, 1, .3), p1 = rbinom(10, 5, .3), p2 = rbinom(10, 5, .3))" >>.Rprofile
-	echo "d\$$bTotal <- d\$$b1 + d\$$b2" >>.Rprofile
-	echo "d\$$dTotal <- d\$$p1 + d\$$p2" >>.Rprofile
+	echo "d <- data.frame(bi1 = rbinom(10, 2, .3), bi2 = rbinom(10, 3, .3), bi3 = rbinom(10, 4, .3), bi4 = rbinom(10, 1, .3), be1 = rbinom(10, 1, .3), be2 = rbinom(10, 1, .3), be3 = rbinom(10, 1, .3), be4 = rbinom(10, 1, .3))" >>.Rprofile
+	echo "d\$$biTotal <- d\$$bi1 + d\$$bi2 + d\$$bi3 + d\$$bi4" >>.Rprofile
+	echo "d\$$beTotal <- d\$$be1 + d\$$be2 + d\$$be3 + d\$$be4" >>.Rprofile
 	echo "activeDataSet('d')" >>.Rprofile
-	echo "PsyAlphaCIMenu()" >>.Rprofile
+	echo "PsyBSCMenu()" >>.Rprofile
 	R --interactive --no-save
 	rm .Rprofile
 	reset
@@ -36,12 +36,10 @@ $(package).log: makefile ~/R_LIBS/$(package)
 	echo "data(Chile)" >>.Rprofile
 	echo "activeDataSet('Chile')" >>.Rprofile
 	echo "set.seed(1)" >>.Rprofile
-	echo "Chile\$$p1 <- rbinom(nrow(Chile), 5, .1)" >>.Rprofile
-	echo "Chile\$$p2 <- rbinom(nrow(Chile), 5, .2)" >>.Rprofile
-	echo "Chile\$$p3 <- rbinom(nrow(Chile), 5, .3)" >>.Rprofile
-	echo "Chile\$$p4 <- rbinom(nrow(Chile), 5, .4)" >>.Rprofile
-	echo "Chile\$$p5 <- rbinom(nrow(Chile), 5, .5)" >>.Rprofile
-	echo "activeDataSet('Chile')" >>.Rprofile
+	echo "d <- data.frame(bi1 = rbinom(10, 2, .3), bi2 = rbinom(10, 3, .3), bi3 = rbinom(10, 4, .3), bi4 = rbinom(10, 5, .3), be1 = rbinom(10, 1, .3), be2 = rbinom(10, 1, .3), be3 = rbinom(10, 1, .3), be4 = rbinom(10, 1, .3))" >>.Rprofile
+	echo "d\$$biTotal <- d\$$bi1 + d\$$bi2 + d\$$bi3 + d\$$bi4" >>.Rprofile
+	echo "d\$$beTotal <- d\$$be1 + d\$$be2 + d\$$be3 + d\$$be4" >>.Rprofile
+	echo "activeDataSet('d')" >>.Rprofile
 	R --interactive --no-save
 	rm .Rprofile
 	reset

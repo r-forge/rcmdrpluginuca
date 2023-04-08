@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: RcmdrPlugin.UCA 6.8-1\n"
-"POT-Creation-Date: 2023-04-07 21:19\n"
+"Project-Id-Version: RcmdrPlugin.UCA 6.9-1\n"
+"POT-Creation-Date: 2023-04-08 11:56\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -167,6 +167,21 @@ msgid "Cronbach's coefficient alpha"
 msgstr ""
 
 msgid "Cronbach's_coefficient_alpha"
+msgstr ""
+
+msgid "Biserial correlations..."
+msgstr ""
+
+msgid "Question scores (pick one or more)"
+msgstr ""
+
+msgid "You must select one or more variables as question score."
+msgstr ""
+
+msgid "Biserial correlations"
+msgstr ""
+
+msgid "Biserial_correlations"
 msgstr ""
 
 msgid "Guttman's coefficient..."

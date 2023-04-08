@@ -22,6 +22,7 @@
 \alias{predict4dataset}
 \alias{PsyAlphaCIMenu}
 \alias{PsyAlphaMenu}
+\alias{PsyBSCMenu}
 \alias{PsyCDIMenu}
 \alias{PsyDIMenu}
 \alias{PsyGuttmanMenu}
