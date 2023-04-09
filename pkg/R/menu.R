@@ -6,7 +6,7 @@
     ## Main loop to create elements
     for(i in 1:length(elements)) {
         switch(elements[[i]]$type,
-               variableListBox = {
+               variablelist = {
                    ## Check min parameter 
                    suppressWarnings(elements[[i]]$min <- as.numeric(elements[[i]]$min))
                    if (!length(elements[[i]]$min) || is.na(elements[[i]]$min) || (elements[[i]]$min < 1)) elements[[i]]$min <- 1
@@ -29,7 +29,7 @@
                    if (elements[[i]]$min > elements[[i]]$max) elements[[i]]$max <- elements[[i]]$min
                    ## Check var type
                    if (is.null(elements[[i]]$vartype)) stop(gettext('Var type, vartype, not provided'))
-                   if (!(elements[[i]]$vartype %in% c('integer', 'numeric', 'text'))) stop(gettext('Var type'), elements[[i]]$vartype, gettext('not yet implemented.'))
+                   if (!(elements[[i]]$vartype %in% c('integer', 'numeric', 'text', 'varname'))) stop(gettext('Var type'), elements[[i]]$vartype, gettext('not yet implemented.'))
                    ## Create element
                    elements[[i]]$tclVar <- tclVar('')
                    if (!is.null(elements[[i]]$default)) tclvalue(elements[[i]]$tclVar) <- elements[[i]]$default
@@ -43,13 +43,13 @@
         ## Main loop to read data from elements
         for(i in 1:length(elements)) {
             switch(elements[[i]]$type,
-                   variableListBox = {
-                       elements[[i]]$variableListBoxSelected <- getSelection(elements[[i]]$variableListBox)
-                       if (length(elements[[i]]$variableListBoxSelected) < elements[[i]]$min) {
+                   variablelist = {
+                       elements[[i]]$variablelist <- getSelection(elements[[i]]$variableListBox)
+                       if (length(elements[[i]]$variablelist) < elements[[i]]$min) {
                            errorCondition(recall = recall, message = elements[[i]]$error)
                            return()
                        }
-                       if (length(elements[[i]]$variableListBoxSelected) > elements[[i]]$max) {
+                       if (length(elements[[i]]$variablelist) > elements[[i]]$max) {
                            errorCondition(recall = recall, message = elements[[i]]$error)
                            return()
                        }
@@ -62,10 +62,10 @@
                                       errorCondition(recall = recall, message = elements[[i]]$error)
                                       return()
                                   }
-                                  elements[[i]]$VarInteger <- value
+                                  elements[[i]]$integer <- value
                               },
                               text = {
-                                  elements[[i]]$VarText <- tclvalue(elements[[i]]$tclVar)
+                                  elements[[i]]$text <- tclvalue(elements[[i]]$tclVar)
                               },
                               numeric = {
                                   suppressWarnings(value <- as.numeric(tclvalue(elements[[i]]$tclVar)))
@@ -73,9 +73,18 @@
                                       errorCondition(recall = recall, message = elements[[i]]$error)
                                       return()
                                   }
-                                  elements[[i]]$VarNumeric <- value
+                                  elements[[i]]$numeric <- value
                               },
-                              stop(gettext('Var type'), elements[[i]]$vartype, gettext('not yet implemented.'))
+                              varname = {
+                                  varname <- tclvalue(elements[[i]]$tclVar)
+                                  ## Check varname as variable name
+                                  if (!is.valid.name(varname)) {
+                                      errorCondition(recall = recall, message = elements[[i]]$error)
+                                      return()
+                                  }
+                                  elements[[i]]$varname <- varname
+                              },
+                              stop(gettext('Variable type'), elements[[i]]$vartype, gettext('not yet implemented.'))
                               )
                    }
                    )
@@ -85,10 +94,22 @@
         command <- onokcommand(elements)
         ## Note closeDialog must be called after onokcommand
         closeDialog()
+        ## Destroy main frame
         tkdestroy(top)
+        ## Check for duplicated variable names, this must be done after closeDialog
+        for(i in 1:length(elements)) {
+            if ((elements[[i]]$type == 'entry') && (elements[[i]]$vartype == 'varname') && is.element(elements[[i]]$varname, Variables()) && ('no' == tclvalue(checkReplace(elements[[i]]$varname)))) {
+                ## Do nothing, just recall and return
+                recall()
+                return()
+            }
+        }
+        ## Focus on Commander window
         tkfocus(CommanderWindow())
         ## Do command
         doItAndPrint(command)
+        ## Refresh active data set
+        activeDataSet(ActiveDataSet(), flushModel = FALSE, flushDialogMemory = FALSE)
     }
 
     ## Create button panel
@@ -96,7 +117,7 @@
     ## Show elements
     for(i in 1:length(elements)) {
         switch(elements[[i]]$type,
-               variableListBox = {
+               variablelist = {
                    tkgrid(getFrame(elements[[i]]$variableListBox), sticky = 'w', row = 1, column = i - 1)
                },
                entry = {

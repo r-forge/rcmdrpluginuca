@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: RcmdrPlugin.UCA 6.9-1\n"
-"POT-Creation-Date: 2023-04-08 11:56\n"
+"Project-Id-Version: RcmdrPlugin.UCA 6.9-2\n"
+"POT-Creation-Date: 2023-04-09 19:07\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -9,6 +9,30 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+msgid "Data..."
+msgstr ""
+
+msgid "Test score..."
+msgstr ""
+
+msgid "Question scores (pick two or more)"
+msgstr ""
+
+msgid "You must select two or more variables as question score."
+msgstr ""
+
+msgid "New variable name"
+msgstr ""
+
+msgid "You must provide a valid name for new variable."
+msgstr ""
+
+msgid "Test score"
+msgstr ""
+
+msgid "Test_score"
+msgstr ""
 
 msgid "Predict using active model"
 msgstr ""
@@ -73,6 +97,9 @@ msgstr ""
 msgid "Element type"
 msgstr ""
 
+msgid "Variable type"
+msgstr ""
+
 msgid "onokcommand parameter is not a function"
 msgstr ""
 
@@ -125,9 +152,6 @@ msgid "for success"
 msgstr ""
 
 msgid "Number of options per question:"
-msgstr ""
-
-msgid "Question scores (pick two or more)"
 msgstr ""
 
 msgid "You must select two or more variables as question scores."
@@ -305,18 +329,6 @@ msgid "Spearman-Browm formula for size"
 msgstr ""
 
 msgid "Spearman-Brown_size"
-msgstr ""
-
-msgid "Test score..."
-msgstr ""
-
-msgid "Test score"
-msgstr ""
-
-msgid "You must select two or more variables."
-msgstr ""
-
-msgid "TestScore"
 msgstr ""
 
 msgid "Phase I..."

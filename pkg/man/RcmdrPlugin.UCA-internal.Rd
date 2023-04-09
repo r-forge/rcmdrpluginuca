@@ -30,7 +30,6 @@
 \alias{PsySBMenu}
 \alias{PsySBReliabilityMenu}
 \alias{PsySBSizeMenu}
-\alias{PsyScoreMenu}
 \alias{R1mcMenu}
 \alias{R2mcMenu}
 \alias{RpmcMenu}

@@ -1,5 +1,5 @@
 package := RcmdrPlugin.UCA
-version := 6.9-1
+version := 6.9-2
 R := $(wildcard R/*.R)
 Rd := $(wildcard man/*.Rd)
 Rmd := $(wildcard vignettes/*.Rmd)
@@ -22,9 +22,14 @@ dev.log: makefile $(R)
 	echo "d\$$biTotal <- d\$$bi1 + d\$$bi2 + d\$$bi3 + d\$$bi4" >>.Rprofile
 	echo "d\$$beTotal <- d\$$be1 + d\$$be2 + d\$$be3 + d\$$be4" >>.Rprofile
 	echo "activeDataSet('d')" >>.Rprofile
-	echo "PsyBSCMenu()" >>.Rprofile
+	echo "PsyScoreMenu()" >>.Rprofile
+	echo "LANGUAGE=en" >.Renviron
+	echo "R_LIBS_USER=\"~/R_LIBS/\"" >>.Renviron
+	R --interactive --no-save
+	echo "R_LIBS_USER=\"~/R_LIBS/\"" >.Renviron
 	R --interactive --no-save
 	rm .Rprofile
+	rm .Renviron
 	reset
 inst/doc/%.html: $(R) $(Rmd)
 	make vignettes
@@ -40,8 +45,13 @@ $(package).log: makefile ~/R_LIBS/$(package)
 	echo "d\$$biTotal <- d\$$bi1 + d\$$bi2 + d\$$bi3 + d\$$bi4" >>.Rprofile
 	echo "d\$$beTotal <- d\$$be1 + d\$$be2 + d\$$be3 + d\$$be4" >>.Rprofile
 	echo "activeDataSet('d')" >>.Rprofile
+	echo "LANGUAGE=en" >.Renviron
+	echo "R_LIBS_USER=\"~/R_LIBS/\"" >>.Renviron
+	R --interactive --no-save
+	echo "R_LIBS_USER=\"~/R_LIBS/\"" >.Renviron
 	R --interactive --no-save
 	rm .Rprofile
+	rm .Renviron
 	reset
 $(package).Rcheck: $(package)_$(version).tar.gz
 	R CMD check --as-cran $(package)_$(version).tar.gz

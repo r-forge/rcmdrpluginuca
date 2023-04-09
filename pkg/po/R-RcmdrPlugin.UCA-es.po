@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RcmdrPlugin.UCA\n"
 "Report-Msgid-Bugs-To: manuel.munoz@uca.es\n"
-"POT-Creation-Date: 2023-04-08 11:56\n"
-"PO-Revision-Date: 2023-04-08 11:56+0200\n"
+"POT-Creation-Date: 2023-04-09 19:07\n"
+"PO-Revision-Date: 2023-04-09 19:07+0200\n"
 "Last-Translator: Manuel Munoz-Marquez <manuel.munoz@uca.es>\n"
 "Language-Team: manuel.munoz@uca.es\n"
 "Language: es_ES\n"
@@ -17,6 +17,30 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Generator: Poedit 3.0.1\n"
+
+msgid "Data..."
+msgstr "Datos..."
+
+msgid "Test score..."
+msgstr "Puntuación del test..."
+
+msgid "Question scores (pick two or more)"
+msgstr "Puntuaciones de las preguntas (elija dos o más)"
+
+msgid "You must select two or more variables as question score."
+msgstr "Debe seleccionar dos o más variables como puntuaciones de preguntas."
+
+msgid "New variable name"
+msgstr "Nombre de la nueva variable"
+
+msgid "You must provide a valid name for new variable."
+msgstr "Debe proporcionar un nombre válido para la nueva variable."
+
+msgid "Test score"
+msgstr "Puntuación del test"
+
+msgid "Test_score"
+msgstr "Puntuación_del_test"
 
 msgid "Predict using active model"
 msgstr "Predecir usando el modelo activo"
@@ -81,6 +105,9 @@ msgstr "no implementada aún."
 msgid "Element type"
 msgstr "Tipo de elemento"
 
+msgid "Variable type"
+msgstr "Tipo de variable"
+
 msgid "onokcommand parameter is not a function"
 msgstr "el parámetro onokcommand no es una función"
 
@@ -135,9 +162,6 @@ msgstr "para éxito"
 msgid "Number of options per question:"
 msgstr "Número de opciones por pregunta:"
 
-msgid "Question scores (pick two or more)"
-msgstr "Puntuaciones de las preguntas (elija dos o más)"
-
 msgid "You must select two or more variables as question scores."
 msgstr "Debe seleccionar al menos dos variables como puntuaciones de preguntas."
 
@@ -154,7 +178,7 @@ msgid "Numerical_item_analysis"
 msgstr "Análisis_numérico_de_ítems"
 
 msgid "Not yet implemented"
-msgstr "No implementada aún."
+msgstr "No implementada aún"
 
 msgid "Answers (pick one or more)"
 msgstr "Respuestas (elija una o más)"
@@ -314,18 +338,6 @@ msgstr "Fórmula Spearman-Browm para el tamaño"
 
 msgid "Spearman-Brown_size"
 msgstr "Spearman-Brown_tamaño"
-
-msgid "Test score..."
-msgstr "Puntuación del test..."
-
-msgid "Test score"
-msgstr "Puntuación del test"
-
-msgid "You must select two or more variables."
-msgstr "Debe seleccionar al menos dos variables."
-
-msgid "TestScore"
-msgstr "PuntuacionTest"
 
 msgid "Phase I..."
 msgstr "Fase I..."
@@ -496,7 +508,7 @@ msgid "R-chart phase I (multiple columns)"
 msgstr "Gráfico R fase I (columnas múltiples)"
 
 msgid "R-chart\\nfor"
-msgstr " Gráfico R\\nde "
+msgstr "Gráfico R\\nde "
 
 msgid "Measurements (pick two variables or more)"
 msgstr "Medidas (elija dos o más variables)"
@@ -523,7 +535,7 @@ msgid "S-chart (multiple columns)"
 msgstr "Gráfico S (columnas múltiples)"
 
 msgid "S-chart\\nfor"
-msgstr " Gráfico S\\nde "
+msgstr "Gráfico S\\nde "
 
 msgid "S-chart phase II from data (multiple columns)"
 msgstr "Gráfico S fase II desde datos (columnas múltiples)"
@@ -544,7 +556,7 @@ msgid "u-chart (average rate)"
 msgstr "Gráfico u (tasa media)"
 
 msgid "u-chart\\nfor"
-msgstr " Gráfico u\\nde "
+msgstr "Gráfico u\\nde "
 
 msgid "u-chart phase II from data"
 msgstr "Gráfico u fase II desde datos"
@@ -572,6 +584,12 @@ msgstr "Gráfico xbar fase II desde datos (columnas múltiples)"
 
 msgid "xbar-chart phase II from parameters (multiple columns)"
 msgstr "Gráfico xbar fase II desde parámetros (columnas múltiples)"
+
+#~ msgid "You must select two or more variables."
+#~ msgstr "Debe seleccionar al menos dos variables."
+
+#~ msgid "TestScore"
+#~ msgstr "PuntuacionTest"
 
 #~ msgid "Phase II (multiple columns) from data..."
 #~ msgstr "Fase II (columnas múltiples) desde datos..."

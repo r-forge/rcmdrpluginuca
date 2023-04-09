@@ -161,19 +161,19 @@ DIMenu_ <- function(corrected = FALSE, discrete = FALSE)
 NIAMenu <- function() {
     ## Setup dialog element list
     elements = list(
-        'QScores' = list(type = 'variableListBox', title = gettext('Question scores (pick two or more)'), selectmode = 'multiple', min = 2, error = gettext('You must select two or more variables as question scores.')),
-        'TScore' = list(type = 'variableListBox', title = gettext('Test score (pick one)'), selectmode = 'single', max = 1, error = gettext('You must select one variables as test score.'))
+        'QScores' = list(type = 'variablelist', title = gettext('Question scores (pick two or more)'), variables = DiscreteNumeric, selectmode = 'multiple', min = 2, error = gettext('You must select two or more variables as question scores.')),
+        'TScore' = list(type = 'variablelist', title = gettext('Test score (pick one)'), variables = DiscreteNumeric, selectmode = 'single', max = 1, error = gettext('You must select one variables as test score.'))
     )
     ## Setup onokcommand function
     onokcommand <- function(elements) {
         paste0('item.exam(x = ',
                ActiveDataSet(),
                '[ , c(',
-               paste0(paste0('\'', elements[[1]]$variableListBoxSelected, '\''), collapse = ', '),
+               paste0(paste0('\'', elements[[1]]$variablelist, '\''), collapse = ', '),
                ')], y = ',
                ActiveDataSet(),
                '$',
-               elements[[2]]$variableListBoxSelected,
+               elements[[2]]$variablelist,
                ', discrim = TRUE)'
                )
     }
@@ -187,19 +187,19 @@ PsyA2SMenu <- function() {
     stop('Not yet implemented')
     ## Setup dialog element list
     elements <- list(
-        'Answers' = list(type = 'variableListBox', title = gettext('Answers (pick one or more)'), selectmode = 'multiple',  error = gettext('You must select one or more variables as answers.')),
-        'Score' = list(type = 'variableListBox', title = gettext('Answer key (pick one)'), selectmode = 'single', max = 1, error = gettext('You must select one variables as answer key.'))
+        'Answers' = list(type = 'variablelist', title = gettext('Answers (pick one or more)'), variables = DiscreteNumeric, selectmode = 'multiple',  error = gettext('You must select one or more variables as answers.')),
+        'Score' = list(type = 'variablelist', title = gettext('Answer key (pick one)'), variables = DiscreteNumeric, selectmode = 'single', max = 1, error = gettext('You must select one variables as answer key.'))
     )
     ## Setup onokcommand function
     onokcommand <- function(elements) {
         paste0('item.exam(x = ',
                ActiveDataSet(),
                '[ , c(',
-               paste0(paste0('\'', elements[[1]]$variableListBoxSelected, '\''), collapse = ', '),
+               paste0(paste0('\'', elements[[1]]$variablelist, '\''), collapse = ', '),
                ')], y = ',
                ActiveDataSet(),
                '$',
-               elements[[2]]$variableListBoxSelected,
+               elements[[2]]$variablelist,
                ', discrim = TRUE)'
                )
     }
@@ -213,14 +213,14 @@ PsyAlphaMenu <- function() {
     gettext('Cronbach\'s coefficient alpha...')
     ## Setup dialog element list
     elements = list(
-        'Alpha' = list(type = 'variableListBox', title = gettext('Question scores (pick two or more)'), selectmode = 'multiple', min = 2, error = gettext('You must select two or more variables as question scores.'))
+        'Alpha' = list(type = 'variablelist', title = gettext('Question scores (pick two or more)'), variables = DiscreteNumeric, selectmode = 'multiple', min = 2, error = gettext('You must select two or more variables as question scores.'))
     )
     ## Setup onokcommand function
     onokcommand <- function(elements) {
         paste0('alpha(x = ',
                ActiveDataSet(),
                '[ , c(',
-               paste0(paste0('\'', elements[[1]]$variableListBoxSelected, '\''), collapse = ', '),
+               paste0(paste0('\'', elements[[1]]$variablelist, '\''), collapse = ', '),
                ')]) # ',
                gettext('Cronbach\'s coefficient alpha')
                )
@@ -235,19 +235,19 @@ PsyBSCMenu <- function() {
     gettext('Biserial correlations...')
     ## Setup dialog element list
     elements = list(
-        'QScores' = list(type = 'variableListBox', title = gettext('Question scores (pick one or more)'), selectmode = 'multiple', error = gettext('You must select one or more variables as question score.')),
-        'TScore' = list(type = 'variableListBox', title = gettext('Test score (pick one)'), selectmode = 'single', max = 1, error = gettext('You must select one variables as test score.'))
+        'QScores' = list(type = 'variablelist', title = gettext('Question scores (pick one or more)'), variables = DiscreteNumeric, selectmode = 'multiple', error = gettext('You must select one or more variables as question score.')),
+        'TScore' = list(type = 'variablelist', title = gettext('Test score (pick one)'), variables = DiscreteNumeric, selectmode = 'single', max = 1, error = gettext('You must select one variables as test score.'))
     )
     ## Setup onokcommand function
     onokcommand <- function(elements) {
         paste0('biserial(x = ',
                ActiveDataSet(),
                '$',
-               elements[[2]]$variableListBoxSelected,
+               elements[[2]]$variablelist,
                ', y = ',
                ActiveDataSet(),
                '[ , c(',
-               paste0(paste0('\'', elements[[1]]$variableListBoxSelected, '\''), collapse = ', '),
+               paste0(paste0('\'', elements[[1]]$variablelist, '\''), collapse = ', '),
                ')])'
                )
     }
@@ -261,14 +261,14 @@ PsyGuttmanMenu <- function() {
     gettext('Guttman\'s coefficient...')
     ## Setup dialog element list
     elements = list(
-        'Alpha' = list(type = 'variableListBox', title = gettext('Question scores (pick two or more)'), selectmode = 'multiple', min = 2, error = gettext('You must select two or more variables as question scores.'))
+        'Alpha' = list(type = 'variablelist', title = gettext('Question scores (pick two or more)'), variables = DiscreteNumeric, selectmode = 'multiple', min = 2, error = gettext('You must select two or more variables as question scores.'))
     )
     ## Setup onokcommand function
     onokcommand <- function(elements) {
         paste0('splitHalf(r = ',
                ActiveDataSet(),
                '[ , c(',
-               paste0(paste0('\'', elements[[1]]$variableListBoxSelected, '\''), collapse = ', '),
+               paste0(paste0('\'', elements[[1]]$variablelist, '\''), collapse = ', '),
                ')]) # ',
                gettext('Guttman\'s coefficient')
                )
@@ -290,13 +290,13 @@ PsyAlphaCIMenu <- function() {
     ## Setup onokcommand function
     onokcommand <- function(elements) {
         paste0('alpha.CI(alpha =',
-               elements[[1]]$VarNumeric,
+               elements[[1]]$numeric,
                ', k =',
-               elements[[2]]$VarNumeric,
+               elements[[2]]$numeric,
                ', N = ',
-               elements[[3]]$VarNumeric,
+               elements[[3]]$numeric,
                ', level = ',
-               elements[[4]]$VarNumeric,
+               elements[[4]]$numeric,
                ')')
     }
     ## Call menu-dialog function
@@ -310,16 +310,16 @@ PsySaturationMenu <- function() {
     gettext('Saturation (McDonald\'s omega)...')
     ## Setup dialog element list
     elements = list(
-        'omega' = list(type = 'variableListBox', title = gettext('Question scores (pick three or more)'), selectmode = 'multiple', min = 3, error = gettext('You must select three or more variables as question scores.')),
+        'omega' = list(type = 'variablelist', title = gettext('Question scores (pick three or more)'), variables = DiscreteNumeric, selectmode = 'multiple', min = 3, error = gettext('You must select three or more variables as question scores.')),
         'nfactors' = list(type = 'entry', title = gettext('Number of factors'), vartype = 'integer', min = 3, error = 'You must provide a number, at least 3, as number of factors')
     )
     ## Setup onokcommand function
     onokcommand <- function(elements) {
-        nfactors <- min(elements[[2]]$VarInteger, length(elements[[1]]$variableListBoxSelected))
+        nfactors <- min(elements[[2]]$integer, length(elements[[1]]$variablelist))
         paste0('omega(m = ',
                ActiveDataSet(),
                '[ , c(',
-               paste0(paste0('\'', elements[[1]]$variableListBoxSelected, '\''), collapse = ', '),
+               paste0(paste0('\'', elements[[1]]$variablelist, '\''), collapse = ', '),
                ')], nfactors = ',
                nfactors,
                ') # ',
@@ -338,17 +338,17 @@ PsySBMenu <-function() {
     gettext('Spearman-Brown coefficient...')
     ## Setup dialog element list
     elements = list(
-        'Test1' = list(type = 'variableListBox', title = gettext('First test scores (pick one)'), selectmode = 'single', max = 1, error = gettext('You must select one variable as first test scores.')),
-        'Test2' = list(type = 'variableListBox', title = gettext('Second test scores (pick one)'), selectmode = 'single', max = 1, error = gettext('You must select one variable as second test scores.'))
+        'Test1' = list(type = 'variablelist', title = gettext('First test scores (pick one)'), variables = DiscreteNumeric, selectmode = 'single', max = 1, error = gettext('You must select one variable as first test scores.')),
+        'Test2' = list(type = 'variablelist', title = gettext('Second test scores (pick one)'), variables = DiscreteNumeric, selectmode = 'single', max = 1, error = gettext('You must select one variable as second test scores.'))
     )
     ## Setup onokcommand function
     onokcommand <- function(elements) {
         paste0('with(',
                ActiveDataSet(),
                ', spearman_brown(x = ',
-               elements[[1]]$variableListBoxSelected,
+               elements[[1]]$variablelist,
                ', y = ',
-               elements[[2]]$variableListBoxSelected,
+               elements[[2]]$variablelist,
                '))'
                )
     }
@@ -369,9 +369,9 @@ PsySBReliabilityMenu <-function() {
     ## CTT package version
     onokcommand.ctt <- function(elements) {
         paste0('spearman.brown(r.xx = ',
-               elements[[1]]$VarNumeric,
+               elements[[1]]$numeric,
                ', input = ',
-               elements[[2]]$VarNumeric,
+               elements[[2]]$numeric,
                ', n.or.r = "n") # ',
                gettext('New reliability')
                )
@@ -379,9 +379,9 @@ PsySBReliabilityMenu <-function() {
     ## psychometric package version
     onokcommand.psy <- function(elements) {
         paste0('SBrel(rxx = ',
-               elements[[1]]$VarNumeric,
+               elements[[1]]$numeric,
                ', Nlength = ',
-               elements[[2]]$VarNumeric,
+               elements[[2]]$numeric,
                ') # ',
                gettext('New reliability')
                )
@@ -403,9 +403,9 @@ PsySBSizeMenu <-function() {
     ## CTT package version
     onokcommand.ctt <- function(elements) {
         paste0('spearman.brown(r.xx = ',
-               elements[[1]]$VarNumeric,
+               elements[[1]]$numeric,
                ', input = ',
-               elements[[2]]$VarNumeric,
+               elements[[2]]$numeric,
                ', n.or.r = "r") # ',
                gettext('Resize factor')
                )
@@ -413,9 +413,9 @@ PsySBSizeMenu <-function() {
     ## psychometric package version
     onokcommand.psy <- function(elements) {
         paste0('SBlength(rxx = ',
-               elements[[1]]$VarNumeric,
+               elements[[1]]$numeric,
                ', rxxp = ',
-               elements[[2]]$VarNumeric,
+               elements[[2]]$numeric,
                ') # ',
                gettext('Resize factor')
                )
@@ -424,43 +424,3 @@ PsySBSizeMenu <-function() {
     .Menu(dialogtitle = gettext('Spearman-Browm formula for size'), elements = elements, help = gettext('Spearman-Brown_size'), recall = PsySBSizeMenu, reset = "PsySBSizeMenu", apply = "PsySBSizeMenu", onokcommand = onokcommand.psy) 
 }
 
-
-#' @export
-PsyScoreMenu <- function() {
-    gettext("Test score...")
-    initializeDialog(title = gettext("Test score"))
-    variablesBox <- variableListBox(top, DiscreteNumeric(), selectmode="multiple", initialSelection=NULL, title = gettext("Question scores (pick two or more)"))
-    variablesFrame <- tkframe(top)
-    nameVar <- tclVar()
-    nameEntry <- ttkentry(variablesFrame, width="20", textvariable = nameVar)
-    onOK <- function() {
-        scores <- getSelection(variablesBox)
-        name <- tclvalue(nameVar)
-        if (length(scores) < 2) {
-            errorCondition(recall = PsyScoreMenu, message = gettext("You must select two or more variables."))
-            return()
-        }
-        if (!is.valid.name(name)) {
-            errorCondition(recall = PsyScoreMenu, message = paste(name, gettextRcmdr("is not a valid name.")))
-            return()
-        }
-        closeDialog()
-        if (is.element(name, Variables())) {
-            if ("no" == tclvalue(checkReplace(name, gettext("TestScore")))) {
-                PsyScoreMenu()
-                return()
-            }
-        }
-        command <- paste0(ActiveDataSet(), "$", name, " <- with(", ActiveDataSet(), ", ", paste0(scores, collapse = " + "), ")")
-        doItAndPrint(command)
-        activeDataSet(ActiveDataSet(), flushModel = FALSE, flushDialogMemory = FALSE)
-        ## activeDataSetP()
-        tkfocus(CommanderWindow())
-    }
-    OKCancelHelp(helpSubject = "Test_score", reset = "PsyScoreMenu", apply = "PsyScoreMenu")
-    tkgrid(getFrame(variablesBox), sticky="nw")
-    tkgrid(tklabel(variablesFrame, text=gettextRcmdr("New variable name")), nameEntry, sticky = "w")
-    tkgrid(variablesFrame, sticky = "w")
-    tkgrid(buttonsFrame, sticky = "w", columnspan = 8)
-    dialogSuffix(columns = 8)
-}
