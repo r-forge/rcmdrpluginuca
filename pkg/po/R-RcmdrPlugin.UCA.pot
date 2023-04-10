@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: RcmdrPlugin.UCA 6.9-2\n"
-"POT-Creation-Date: 2023-04-09 19:07\n"
+"POT-Creation-Date: 2023-04-10 23:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -83,6 +83,12 @@ msgid "Population variance"
 msgstr ""
 
 msgid "Null hypothesis: sigma^2 ="
+msgstr ""
+
+msgid "Elements of type variablelist must include variable selector"
+msgstr ""
+
+msgid "Less variables than required"
 msgstr ""
 
 msgid "Var type, vartype, not provided"

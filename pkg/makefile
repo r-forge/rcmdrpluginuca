@@ -1,5 +1,5 @@
 package := RcmdrPlugin.UCA
-version := 6.9-2
+version := 6.9-3
 R := $(wildcard R/*.R)
 Rd := $(wildcard man/*.Rd)
 Rmd := $(wildcard vignettes/*.Rmd)

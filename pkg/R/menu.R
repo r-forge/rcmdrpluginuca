@@ -16,8 +16,12 @@
                    if ((elements[[i]]$max < 1) || (elements[[i]]$min > elements[[i]]$max)) elements[[i]]$max <- elements[[i]]$min
                    ## Check selectmode
                    elements[[i]]$selectmode <- match.arg(elements[[i]]$selectmode, c('single', 'multiple'))
+                   ## Build variable list
+                   if (is.null(elements[[i]]$variables)) stop(gettext('Elements of type variablelist must include variable selector'))
+                   if (is.function(elements[[i]]$variables)) variables <- elements[[i]]$variables()
+                   if (length(variables) < elements[[i]]$min) stop(gettext('Less variables than required'))
                    ## Create element
-                   elements[[i]]$variableListBox <- variableListBox(top, DiscreteNumeric(), selectmode = elements[[i]]$selectmode, initialSelection=NULL, title = elements[[i]]$title)
+                   elements[[i]]$variableListBox <- variableListBox(top, variables, selectmode = elements[[i]]$selectmode, initialSelection=NULL, title = elements[[i]]$title)
                },
                entry = {
                    ## Check min parameter 

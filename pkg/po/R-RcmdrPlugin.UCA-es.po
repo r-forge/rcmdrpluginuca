@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RcmdrPlugin.UCA\n"
 "Report-Msgid-Bugs-To: manuel.munoz@uca.es\n"
-"POT-Creation-Date: 2023-04-09 19:07\n"
-"PO-Revision-Date: 2023-04-09 19:07+0200\n"
+"POT-Creation-Date: 2023-04-10 23:00\n"
+"PO-Revision-Date: 2023-04-10 23:05+0200\n"
 "Last-Translator: Manuel Munoz-Marquez <manuel.munoz@uca.es>\n"
 "Language-Team: manuel.munoz@uca.es\n"
 "Language: es_ES\n"
@@ -92,6 +92,12 @@ msgstr "Varianza poblacional"
 
 msgid "Null hypothesis: sigma^2 ="
 msgstr "Hipótesis nula: sigma^2 ="
+
+msgid "Elements of type variablelist must include variable selector"
+msgstr "Los elementos de tipo variablelist deben incluir el selector de variables"
+
+msgid "Less variables than required"
+msgstr "Menos variables de las requeridas"
 
 msgid "Var type, vartype, not provided"
 msgstr "Tipo de variable, vartype, no especificado"
@@ -584,6 +590,9 @@ msgstr "Gráfico xbar fase II desde datos (columnas múltiples)"
 
 msgid "xbar-chart phase II from parameters (multiple columns)"
 msgstr "Gráfico xbar fase II desde parámetros (columnas múltiples)"
+
+#~ msgid "variablelist element must specify variables"
+#~ msgstr "los elementos de tipo variablelist deben especificar variables"
 
 #~ msgid "You must select two or more variables."
 #~ msgstr "Debe seleccionar al menos dos variables."
