@@ -155,33 +155,6 @@ DIMenu_ <- function(corrected = FALSE, discrete = FALSE)
 }
 
 
-
-
-#' @export
-NIAMenu <- function() {
-    ## Setup dialog element list
-    elements = list(
-        'QScores' = list(type = 'variablelist', title = gettext('Question scores (pick two or more)'), variables = DiscreteNumeric, selectmode = 'multiple', min = 2, error = gettext('You must select two or more variables as question scores.')),
-        'TScore' = list(type = 'variablelist', title = gettext('Test score (pick one)'), variables = DiscreteNumeric, selectmode = 'single', max = 1, error = gettext('You must select one variables as test score.'))
-    )
-    ## Setup onokcommand function
-    onokcommand <- function(elements) {
-        paste0('item.exam(x = ',
-               ActiveDataSet(),
-               '[ , c(',
-               paste0(paste0('\'', elements[[1]]$variablelist, '\''), collapse = ', '),
-               ')], y = ',
-               ActiveDataSet(),
-               '$',
-               elements[[2]]$variablelist,
-               ', discrim = TRUE)'
-               )
-    }
-    ## Call menu-dialog function
-    .Menu(dialogtitle = gettext('Numerical item analysis'), elements = elements, help = gettext('Numerical_item_analysis'), recall = NIAMenu, reset = "NIAMenu", apply = "NIAMenu", onokcommand = onokcommand)
-}
-
-
 #' @export
 PsyA2SMenu <- function() {
     stop('Not yet implemented')
@@ -204,7 +177,7 @@ PsyA2SMenu <- function() {
                )
     }
     ## Call menu-dialog function
-    .Menu(dialogtitle = gettext('Numerical item analysis'), elements = elements, help = gettext('Numerical_item_analysis'), recall = NIAMenu, reset = "NIAMenu", apply = "NIAMenu", onokcommand = onokcommand)
+    .Menu(dialogtitle = gettext('Numerical item analysis'), elements = elements, help = gettext('Numerical_item_analysis'), recall = PsyA2SMenu, reset = "PsyA2SMenu", apply = "PsyA2SMenu", onokcommand = onokcommand)
 }
 
 

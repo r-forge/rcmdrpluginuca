@@ -11,7 +11,6 @@
 \alias{Dicotomics}
 \alias{DicotomicsP}
 \alias{input2predict}
-\alias{NIAMenu}
 \alias{npchart1Menu}
 \alias{npchart2Menu}
 \alias{npchartpMenu}

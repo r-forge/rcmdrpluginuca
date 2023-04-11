@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: RcmdrPlugin.UCA 6.9-2\n"
-"POT-Creation-Date: 2023-04-10 23:00\n"
+"Project-Id-Version: RcmdrPlugin.UCA 6.9-4\n"
+"POT-Creation-Date: 2023-04-11 12:04\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,6 +32,21 @@ msgid "Test score"
 msgstr ""
 
 msgid "Test_score"
+msgstr ""
+
+msgid "You must select two or more variables as question scores."
+msgstr ""
+
+msgid "Test score (pick one)"
+msgstr ""
+
+msgid "You must select one variables as test score."
+msgstr ""
+
+msgid "Numerical item analysis"
+msgstr ""
+
+msgid "Numerical_summaries"
 msgstr ""
 
 msgid "Predict using active model"
@@ -160,21 +175,6 @@ msgstr ""
 msgid "Number of options per question:"
 msgstr ""
 
-msgid "You must select two or more variables as question scores."
-msgstr ""
-
-msgid "Test score (pick one)"
-msgstr ""
-
-msgid "You must select one variables as test score."
-msgstr ""
-
-msgid "Numerical item analysis"
-msgstr ""
-
-msgid "Numerical_item_analysis"
-msgstr ""
-
 msgid "Not yet implemented"
 msgstr ""
 
@@ -188,6 +188,9 @@ msgid "Answer key (pick one)"
 msgstr ""
 
 msgid "You must select one variables as answer key."
+msgstr ""
+
+msgid "Numerical_item_analysis"
 msgstr ""
 
 msgid "Cronbach's coefficient alpha..."
