@@ -278,13 +278,14 @@ PsyAlphaCIMenu <- function() {
 }
 
 
+## omega from psych package
 #' @export
 PsySaturationMenu <- function() {
     gettext('Saturation (McDonald\'s omega)...')
     ## Setup dialog element list
     elements = list(
-        'omega' = list(type = 'variablelist', title = gettext('Question scores (pick three or more)'), variables = DiscreteNumeric, selectmode = 'multiple', min = 3, error = gettext('You must select three or more variables as question scores.')),
-        'nfactors' = list(type = 'entry', title = gettext('Number of factors'), vartype = 'integer', min = 3, error = 'You must provide a number, at least 3, as number of factors')
+        'omega' = list(type = 'variablelist', title = gettext('Question scores (pick two or more)'), variables = DiscreteNumeric, selectmode = 'multiple', min = 2, error = gettext('You must select two or more variables as question scores.')),
+        'nfactors' = list(type = 'entry', title = gettext('Number of factors'), vartype = 'integer', default = 3, min = 1, error = 'You must provide a number, at least 1, as number of factors')
     )
     ## Setup onokcommand function
     onokcommand <- function(elements) {
@@ -296,37 +297,47 @@ PsySaturationMenu <- function() {
                ')], nfactors = ',
                nfactors,
                ') # ',
-               gettext('Saturation (McDonald\'s omega)')
+               gettext('Saturation (McDonald\'s omega with'),
+               ' ',
+               nfactors,
+               ' ',
+               gettext('factors'),
+               ')'
                )
     }
     ## Call menu-dialog function
-    .Menu(dialogtitle = gettext('Saturation (McDonald\'s omega)'), elements = elements, help = gettext('Saturation_McDonald_omega'), recall = PsySaturationMenu, reset = "PsySaturationMenu", apply = "PsySaturationMenu", onokcommand = onokcommand)
+    .Menu(dialogtitle = gettext('Saturation (McDonald\'s omega)'), elements = elements, help = gettext('omega'), recall = PsySaturationMenu, reset = "PsySaturationMenu", apply = "PsySaturationMenu", onokcommand = onokcommand)
 }
 
 
 
 #' @export
+#' Use the function spearman_brown from splithalfr package
 PsySBMenu <-function() {
     gettext('Reliability of scores...')
     gettext('Spearman-Brown coefficient...')
     ## Setup dialog element list
     elements = list(
-        'Test1' = list(type = 'variablelist', title = gettext('First test scores (pick one)'), variables = DiscreteNumeric, selectmode = 'single', max = 1, error = gettext('You must select one variable as first test scores.')),
-        'Test2' = list(type = 'variablelist', title = gettext('Second test scores (pick one)'), variables = DiscreteNumeric, selectmode = 'single', max = 1, error = gettext('You must select one variable as second test scores.'))
+        'Test1' = list(type = 'variablelist', title = gettext('First part question scores'), variables = DiscreteNumeric, selectmode = 'multiple', error = gettext('Select at least one variable as first part question scores.')),
+        'Test2' = list(type = 'variablelist', title = gettext('Second part question scores'), variables = DiscreteNumeric, selectmode = 'multiple', error = gettext('Select at least one variable as second part question scores.'))
     )
     ## Setup onokcommand function
     onokcommand <- function(elements) {
+        if (length(elements[[1]]$variablelist) != length(elements[[2]]$variablelist)) {
+            errorCondition(recall = PsySBMenu, message = gettext("Select the same number of variables for both parts"))
+            return()            
+            }
         paste0('with(',
                ActiveDataSet(),
-               ', spearman_brown(x = ',
-               elements[[1]]$variablelist,
-               ', y = ',
-               elements[[2]]$variablelist,
-               '))'
+               ', spearman_brown(x = cbind(',
+               paste0(elements[[1]]$variablelist, collapse = ", "),
+               '), y = cbind(',
+               paste0(elements[[2]]$variablelist, collapse = ", "),
+               ')))'
                )
     }
     ## Call menu-dialog function
-    .Menu(dialogtitle = gettext('Spearman-Brown coefficient'), elements = elements, help = gettext('Spearman-Brown_coefficient'), recall = PsySBMenu, reset = "PsySBMenu", apply = "PsySBMenu", onokcommand = onokcommand) 
+    .Menu(dialogtitle = gettext('Spearman-Brown coefficient'), elements = elements, help = gettext('spearman_brown'), recall = PsySBMenu, reset = "PsySBMenu", apply = "PsySBMenu", onokcommand = onokcommand) 
 }
 
 

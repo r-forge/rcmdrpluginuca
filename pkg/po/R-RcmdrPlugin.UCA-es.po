@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RcmdrPlugin.UCA\n"
 "Report-Msgid-Bugs-To: manuel.munoz@uca.es\n"
-"POT-Creation-Date: 2023-04-11 11:32\n"
-"PO-Revision-Date: 2023-04-11 11:33+0200\n"
+"POT-Creation-Date: 2023-05-05 18:15\n"
+"PO-Revision-Date: 2023-05-05 18:15+0200\n"
 "Last-Translator: Manuel Munoz-Marquez <manuel.munoz@uca.es>\n"
 "Language-Team: manuel.munoz@uca.es\n"
 "Language: es_ES\n"
@@ -43,7 +43,8 @@ msgid "Test_score"
 msgstr "Puntuación_del_test"
 
 msgid "You must select two or more variables as question scores."
-msgstr "Debe seleccionar al menos dos variables como puntuaciones de preguntas."
+msgstr ""
+"Debe seleccionar al menos dos variables como puntuaciones de preguntas."
 
 msgid "Test score (pick one)"
 msgstr "Puntuaciones del test (elija una)"
@@ -109,7 +110,8 @@ msgid "Null hypothesis: sigma^2 ="
 msgstr "Hipótesis nula: sigma^2 ="
 
 msgid "Elements of type variablelist must include variable selector"
-msgstr "Los elementos de tipo variablelist deben incluir el selector de variables"
+msgstr ""
+"Los elementos de tipo variablelist deben incluir el selector de variables"
 
 msgid "Less variables than required"
 msgstr "Menos variables de las requeridas"
@@ -174,8 +176,10 @@ msgstr "Índice_de_dificultad"
 msgid "Difficulty index"
 msgstr "Índice de dificultad"
 
-msgid "The number of options per question is not an integer or is not at least 2"
-msgstr "El número de opciones por pregunta no es un valor entero o no es al menos 2"
+msgid ""
+"The number of options per question is not an integer or is not at least 2"
+msgstr ""
+"El número de opciones por pregunta no es un valor entero o no es al menos 2"
 
 msgid "for success"
 msgstr "para éxito"
@@ -270,20 +274,20 @@ msgstr "Intervalo_de_confianza_para_el_coeficiente_alpha"
 msgid "Saturation (McDonald's omega)..."
 msgstr "Saturación (omega de McDonald)..."
 
-msgid "Question scores (pick three or more)"
-msgstr "Puntuaciones de las preguntas (elija tres o más)"
-
-msgid "You must select three or more variables as question scores."
-msgstr "Debe seleccionar al menos tres variables como puntuaciones de preguntas."
-
 msgid "Number of factors"
 msgstr "Número de factores"
+
+msgid "Saturation (McDonald's omega with"
+msgstr "Saturación (omega de McDonald con"
+
+msgid "factors"
+msgstr "factores"
 
 msgid "Saturation (McDonald's omega)"
 msgstr "Saturación (omega de McDonald)"
 
-msgid "Saturation_McDonald_omega"
-msgstr "Saturación_omega_McDonald"
+msgid "omega"
+msgstr "omega"
 
 msgid "Reliability of scores..."
 msgstr "Fiabilidad de puntuaciones..."
@@ -291,23 +295,30 @@ msgstr "Fiabilidad de puntuaciones..."
 msgid "Spearman-Brown coefficient..."
 msgstr "Coeficiente Spearman-Brown..."
 
-msgid "First test scores (pick one)"
-msgstr "Puntuaciones del primer test (elija una)"
+msgid "First part question scores"
+msgstr "Puntuaciones de la primera parte"
 
-msgid "You must select one variable as first test scores."
-msgstr "Debe seleccionar una variable como puntuación del primer test."
+msgid "Select at least one variable as first part question scores."
+msgstr ""
+"Seleccione al menos una variable como puntuaciones de preguntas de la "
+"primera parte."
 
-msgid "Second test scores (pick one)"
-msgstr "Puntuaciones del segundo test (elija una)"
+msgid "Second part question scores"
+msgstr "Puntuaciones de preguntas segunda parte"
 
-msgid "You must select one variable as second test scores."
-msgstr "Debe seleccionar una variable como puntuación del segundo test."
+msgid "Select at least one variable as second part question scores."
+msgstr ""
+"Seleccione al menos una variable como puntuaciones de preguntas de la "
+"segunda parte."
+
+msgid "Select the same number of variables for both parts"
+msgstr "Elija el mismo número de variables para ambas partes"
 
 msgid "Spearman-Brown coefficient"
 msgstr "Coeficiente Spearman-Brown"
 
-msgid "Spearman-Brown_coefficient"
-msgstr "Coeficiente_Spearman-Brown"
+msgid "spearman_brown"
+msgstr "spearman_brown"
 
 msgid "Spearman-Browm formula for reliability..."
 msgstr "Fórmula Spearman-Browm para la fiabilidad..."
@@ -593,6 +604,19 @@ msgstr "Gráfico xbar fase II desde datos (columnas múltiples)"
 
 msgid "xbar-chart phase II from parameters (multiple columns)"
 msgstr "Gráfico xbar fase II desde parámetros (columnas múltiples)"
+
+#~ msgid "Question scores (pick three or more)"
+#~ msgstr "Puntuaciones de las preguntas (elija tres o más)"
+
+#~ msgid "You must select three or more variables as question scores."
+#~ msgstr ""
+#~ "Debe seleccionar al menos tres variables como puntuaciones de preguntas."
+
+#~ msgid "Saturation_McDonald_omega"
+#~ msgstr "Saturación_omega_McDonald"
+
+#~ msgid "Spearman-Brown_coefficient"
+#~ msgstr "Coeficiente_Spearman-Brown"
 
 #~ msgid "variablelist element must specify variables"
 #~ msgstr "los elementos de tipo variablelist deben especificar variables"
