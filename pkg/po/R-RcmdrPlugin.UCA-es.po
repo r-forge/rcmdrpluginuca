@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RcmdrPlugin.UCA\n"
 "Report-Msgid-Bugs-To: manuel.munoz@uca.es\n"
-"POT-Creation-Date: 2023-05-06 13:26\n"
-"PO-Revision-Date: 2023-05-06 13:38+0200\n"
+"POT-Creation-Date: 2023-05-07 01:48\n"
+"PO-Revision-Date: 2023-05-07 01:48+0200\n"
 "Last-Translator: Manuel Munoz-Marquez <manuel.munoz@uca.es>\n"
 "Language-Team: manuel.munoz@uca.es\n"
 "Language: es_ES\n"
@@ -140,20 +140,14 @@ msgstr "Test de normalidad multivariante..."
 msgid "Variables (pick two or more)"
 msgstr "Variables (elija dos o más)"
 
+msgid "You must select two or more variables."
+msgstr "Debe seleccionar al menos dos variables."
+
 msgid "Multivariate normality tests"
+msgstr "Test de normalidad multivariante..."
+
+msgid "Multivariate Normality Test"
 msgstr "Test de normalidad multivariante"
-
-msgid "mvn"
-msgstr "mvn"
-
-msgid "Number of factors..."
-msgstr "Número de factores..."
-
-msgid "Number of factors"
-msgstr "Número de factores"
-
-msgid "number_of_factors_factor_analysis"
-msgstr "numero_de_factores_analisis_factorial"
 
 msgid "noptions is not an integer or is not at least 2"
 msgstr "noptions no es un entero al menos 2"
@@ -294,6 +288,9 @@ msgstr "Intervalo_de_confianza_para_el_coeficiente_alpha"
 
 msgid "Saturation (McDonald's omega)..."
 msgstr "Saturación (omega de McDonald)..."
+
+msgid "Number of factors"
+msgstr "Número de factores"
 
 msgid "Saturation (McDonald's omega with"
 msgstr "Saturación (omega de McDonald con"
@@ -623,6 +620,18 @@ msgstr "Gráfico xbar fase II desde datos (columnas múltiples)"
 msgid "xbar-chart phase II from parameters (multiple columns)"
 msgstr "Gráfico xbar fase II desde parámetros (columnas múltiples)"
 
+#~ msgid "Multivariate_nomality_test"
+#~ msgstr "Test_de_normalidad_multivariante"
+
+#~ msgid "mvn"
+#~ msgstr "mvn"
+
+#~ msgid "Number of factors..."
+#~ msgstr "Número de factores..."
+
+#~ msgid "number_of_factors_factor_analysis"
+#~ msgstr "numero_de_factores_analisis_factorial"
+
 #~ msgid "Question scores (pick three or more)"
 #~ msgstr "Puntuaciones de las preguntas (elija tres o más)"
 
@@ -638,9 +647,6 @@ msgstr "Gráfico xbar fase II desde parámetros (columnas múltiples)"
 
 #~ msgid "variablelist element must specify variables"
 #~ msgstr "los elementos de tipo variablelist deben especificar variables"
-
-#~ msgid "You must select two or more variables."
-#~ msgstr "Debe seleccionar al menos dos variables."
 
 #~ msgid "TestScore"
 #~ msgstr "PuntuacionTest"

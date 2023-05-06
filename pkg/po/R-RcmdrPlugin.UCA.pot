@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: RcmdrPlugin.UCA 6.9-5\n"
-"POT-Creation-Date: 2023-05-06 13:26\n"
+"Project-Id-Version: RcmdrPlugin.UCA 6.10-1\n"
+"POT-Creation-Date: 2023-05-07 01:48\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -130,19 +130,13 @@ msgstr ""
 msgid "Variables (pick two or more)"
 msgstr ""
 
+msgid "You must select two or more variables."
+msgstr ""
+
 msgid "Multivariate normality tests"
 msgstr ""
 
-msgid "mvn"
-msgstr ""
-
-msgid "Number of factors..."
-msgstr ""
-
-msgid "Number of factors"
-msgstr ""
-
-msgid "number_of_factors_factor_analysis"
+msgid "Multivariate Normality Test"
 msgstr ""
 
 msgid "noptions is not an integer or is not at least 2"
@@ -281,6 +275,9 @@ msgid "Confidence_interval_for_coefficient_alpha"
 msgstr ""
 
 msgid "Saturation (McDonald's omega)..."
+msgstr ""
+
+msgid "Number of factors"
 msgstr ""
 
 msgid "Saturation (McDonald's omega with"

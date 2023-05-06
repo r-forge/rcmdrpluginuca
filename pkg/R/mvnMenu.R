@@ -1,25 +1,22 @@
 ### Psychometry extensions: Numerical summaries
 
-#' @name numerical_summaries
-#' @aliases Numerical_summaries
-#' @aliases Numerical_item_analysis
+#' @name Multivariate Normality Test
 #' 
-#' @title Numerical summaries
+#' @title Multivariate Normality Test
 #' 
 #' @description
-#' Calculate some numerical summaries for items
+#' It performs a Henze-Zirkler multivariate normality test.
 #'
 #' @details
-#' From a set of question scores (at least two) and a test scores, this function calls to \code{\link[psychometric]{item.exam}} from psychometric packages.
+#' Given a set of numerical variables (at least two), the Henze-Zirkler test for multivariate normality is performed, and the Anderson-Darling normality test is also performed for each variable.
+#' This function calls \code{\link[MVN]{mvn}} of the MVN package.
+#' Use the link to view additional information about the options for that function.
 #'
-#' Its description in psychometric package documentation is:
-#' Conducts an item level analysis. Provides item-total correlations, Standard deviation in items, difficulty, discrimination, and reliability and validity indices.
+#' To use this function from R-Commander, select from the menu "Statistics" -> "Summaries" -> "Multivariate normality test..."
 #'
-#' To use this function from R-Commander, select from menu "Psychometry" -> "Item analysis..." -> "Numerical summaries..."
-#' 
-#' @seealso \code{\link[psychometric]{item.exam}}
+#' @seealso \code{\link[MVN]{mvn}}
 #'
-#' @return The abovementioned statistics.
+#' @return The results of the tests mentioned above.
 #'
 #' @export
 mvnMenu <- function() {
@@ -27,7 +24,7 @@ mvnMenu <- function() {
     gettext('Multivariate normality tests...')
     ## Setup dialog element list
     elements = list(
-        'Variables' = list(type = 'variablelist', title = gettext('Variables (pick two or more)'), variables = Numeric, selectmode = 'multiple', min = 2, error = gettext('You must select two or more variables as question scores.'))
+        'Variables' = list(type = 'variablelist', title = gettext('Variables (pick two or more)'), variables = Numeric, selectmode = 'multiple', min = 2, error = gettext('You must select two or more variables.'))
     )
     ## Setup onokcommand function
     onokcommand <- function(elements) {
@@ -35,32 +32,31 @@ mvnMenu <- function() {
                ActiveDataSet(),
                '[ , c(',
                paste0(paste0('\'', elements[[1]]$variablelist, '\''), collapse = ', '),
-               ')]',
+               ')], desc = FALSE',
                ')'
                )
     }
     ## Call menu-dialog function
-    .Menu(dialogtitle = gettext('Multivariate normality tests'), elements = elements, help = gettext('mvn'), recall = mvnMenu, reset = "mvnMenu", apply = "mvnMenu", onokcommand = onokcommand)
+    .Menu(dialogtitle = gettext('Multivariate normality tests'), elements = elements, help = gettext('Multivariate Normality Test'), recall = mvnMenu, reset = "mvnMenu", apply = "mvnMenu", onokcommand = onokcommand)
 }
 
-#' @rdname resumenes_numericos
-#' @name Resúmenes_numéricos
+#' @rdname Test-de-normalidad-multivariante
+#' @name Test de normalidad multivariante
 #' 
-#' @title Resúmenes numéricos
+#' @title Test de normalidad multivariante
 #' 
 #' @description
-#' Calcular algunos resúmenes numéricos para los ítems.
+#' Realiza el test de normalidad multivariante de Henze-Zirkler.
 #'
 #' @details
-#' Desde un conjunto de puntaciones de preguntas (al menos dos) y de test, esta función llama a \code{\link[psychometric]{item.exam}} del paquete phychometric.
+#' Dado un conjunto de variables numéricas (al menos dos) se realiza el test de Henze-Zirkler para normlidad multivariante, además para cada variable se realiza el test de normalidad Anderson-Darling.
+#' Esta función llama a \code{\link[MVN]{mvn}} del paquete MVN.
+#' Use el enlace para ver información adicional sobre las opciones de dicha función.
 #'
-#' Su descripción, en inglés, en la documentación del paquete psychometric es:
-#' Realiza un análisis a nivel de elemento. Proporciona correlaciones ítem-total, Desviación estándar en ítems, dificultad, discriminación e índices de confiabilidad y validez.
-#'
-#' Para usar esta función desde R-Commander, seleccione del menú "Psicometría" -> "Análisis de ítems..." -> "Resúmenes numéricos..."
+#' Para usar esta función desde R-Commander, seleccione del menú "Estadísticos" -> "Resúmenes" -> "Test de normalidad multivariante..."
 #' 
-#' @seealso \code{\link[psychometric]{item.exam}}
+#' @seealso \code{\link[MVN]{mvn}}
 #'
-#' @return Los estadísticos mencionados anteriormente.
+#' @return Los resultados de los test mencionados anteriormente.
 #'
 NULL
