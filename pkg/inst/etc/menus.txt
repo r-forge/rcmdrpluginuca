@@ -2,9 +2,14 @@
 # When the plug-in is loaded, these menus are merged with the standard Rcmdr menus
 
 #   type    menu/item         operation/parent  label                                       command/menu      activation           install?
+
+### Statistics
+    item    summariesMenu     command           "Multivariate normality tests..."           mvnMenu         "numericP(2)"        "packageAvailable('MVN')"
     item    variancesMenu     command           "Single-Sample Variance Test..."            sigmaTest         "numericP()"	   ""
     item    nonparametricMenu command           "Randomness test for two level factor..."   randomnessFTest   "twoLevelFactorsP()" ""
     item    nonparametricMenu command           "Randomness test for numeric variable..."   randomnessNTest   "numericP()"         ""
+
+### Models
     item    modelsMenu        separator         ""                                          modelsGraphsMenu  ""                   ""
     menu    predictMenu	      modelsMenu        ""                                          ""                ""                   ""
     item    modelsMenu        cascade           "Predict using active model"  		    predictMenu       "activeModelP()"     ""
@@ -15,6 +20,12 @@
 #   item    topMenu           cascade           "Sample Size"                               SampleSizeMenu    ""                   ""
 #   item    SampleSizeMenu    command           "Normal with known variance"                SampleSizeZMenu   ""                   ""
 
+### Dimensional analysis
+    #remove  factorAnalysis    ""               ""                                          ""                ""                   ""
+    #menu    FactorAnalysisMenu dimensionalMenu  ""                                          ""                ""                   ""
+    #item    dimensionalMenu   cascade           "Factor analysis"                           FactorAnalysisMenu ""                  ""
+    #item    FactorAnalysisMenu command          "Number of factors..."                      nFactorsMenu      "numericP(3)"        "packageAvailable('nFactors')"
+    #item    FactorAnalysisMenu command          "Factor analysis..."                        factorAnalysis    "numericP(3)"        ""
 
 ### Quality control
     menu    QCMenu	      topMenu		""	     	       			    ""		      ""		   ""

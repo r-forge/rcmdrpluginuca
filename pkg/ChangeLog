@@ -1,3 +1,6 @@
+Version 6.10-0
+2023-05-06
+* New option "Multivariate normality test..." at "Statistics" -> "Summaries"
 Version 6.9-5
 2023-05-05
 * Fixed some bugs

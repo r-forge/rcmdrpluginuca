@@ -15,6 +15,12 @@ importFrom('tseries', tseries.runs.test = 'runs.test')
 export('input2predict')
 export('predict4dataset')
 
+### Statistics -> Summaries
+export('mvnMenu')
+
+### Dimensional analysis
+#export('nFactorsMenu')
+
 ### Quality control
 import('IQCC')
 import('qcc')
