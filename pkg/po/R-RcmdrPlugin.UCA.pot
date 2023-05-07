@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: RcmdrPlugin.UCA 6.10-1\n"
-"POT-Creation-Date: 2023-05-07 01:48\n"
+"POT-Creation-Date: 2023-05-07 20:49\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "Data..."
+msgid "Data"
 msgstr ""
 
 msgid "Test score..."
@@ -31,7 +31,7 @@ msgstr ""
 msgid "Test score"
 msgstr ""
 
-msgid "Test_score"
+msgid "Item analysis"
 msgstr ""
 
 msgid "You must select two or more variables as question scores."
@@ -43,10 +43,7 @@ msgstr ""
 msgid "You must select one variables as test score."
 msgstr ""
 
-msgid "Numerical item analysis"
-msgstr ""
-
-msgid "Numerical_summaries"
+msgid "Item numerical summary"
 msgstr ""
 
 msgid "Predict using active model"
@@ -203,6 +200,9 @@ msgid "Answer key (pick one)"
 msgstr ""
 
 msgid "You must select one variables as answer key."
+msgstr ""
+
+msgid "Numerical item analysis"
 msgstr ""
 
 msgid "Numerical_item_analysis"

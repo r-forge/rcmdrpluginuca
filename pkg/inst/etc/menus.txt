@@ -96,13 +96,13 @@
 
 # Psychometry: Data transformation
     menu    PsyDataMenu       PsyMainMenu       ""                                          ""                 ""                  ""
-    item    PsyMainMenu	      cascade		"Data..."                                   PsyDataMenu        ""                  ""
+    item    PsyMainMenu	      cascade		"Data"                                      PsyDataMenu        ""                  ""
     item    PsyDataMenu       command           "Test score..."                             PsyScoreMenu       "discreteNumericP(2)" ""
     # item    PsyDataMenu       command           "Answers to score..."                       PsyA2SMenu         ""                  ""
 
 # Psychometry: Item analysis
     menu    PsyItemMenu       PsyMainMenu       ""                                          ""                 ""                  ""
-    item    PsyMainMenu	      cascade		"Item analysis..."                          PsyItemMenu        ""                  ""
+    item    PsyMainMenu	      cascade		"Item analysis"                             PsyItemMenu        ""                  ""
     item    PsyItemMenu       command           "Numerical summaries..."                    PsySummaryMenu     "discreteNumericP(3)" ""
     item    PsyItemMenu       command           "Difficulty index..."                       PsyDIMenu          "DicotomicsP()"     ""
     item    PsyItemMenu       command           "Corrected difficulty index..."             PsyCDIMenu         "DicotomicsP()"     ""
@@ -114,7 +114,7 @@
 
 # Psychometry: Reliability of scores
     menu    PsyRSMenu         PsyMainMenu       ""                                          ""                 ""                  ""
-    item    PsyMainMenu	      cascade		"Reliability of scores..."                  PsyRSMenu          ""                  ""
+    item    PsyMainMenu	      cascade		"Reliability of scores"                     PsyRSMenu          ""                  ""
     item    PsyRSMenu         command           "Spearman-Browm coefficient..."             PsySBMenu          "discreteNumericP(2)" "packageAvailable('splithalfr')"
     item    PsyRSMenu         command           "Spearman-Browm formula for size..."        PsySBSizeMenu      ""                  "packageAvailable('splithalfr')"
     item    PsyRSMenu         command           "Spearman-Browm formula for reliability..." PsySBReliabilityMenu ""                "packageAvailable('splithalfr')"

@@ -1,10 +1,8 @@
-### Psychometry extensions: Numerical summaries
+### Psychometry extensions: Numerical summaries of test scores
 
-#' @name numerical_summaries
-#' @aliases Numerical_summaries
-#' @aliases Numerical_item_analysis
+#' @name Item numerical summary
 #' 
-#' @title Numerical summaries
+#' @title Item numerical summary
 #' 
 #' @description
 #' Calculate some numerical summaries for items
@@ -15,7 +13,7 @@
 #' Its description in psychometric package documentation is:
 #' Conducts an item level analysis. Provides item-total correlations, Standard deviation in items, difficulty, discrimination, and reliability and validity indices.
 #'
-#' To use this function from R-Commander, select from menu "Psychometry" -> "Item analysis..." -> "Numerical summaries..."
+#' To use this function from R-Commander, select from menu "Psychometry" -> "Item analysis" -> "Numerical summaries..."
 #' 
 #' @seealso \code{\link[psychometric]{item.exam}}
 #'
@@ -23,6 +21,8 @@
 #'
 #' @export
 PsySummaryMenu <- function() {
+    require('psychometric', quietly = TRUE)
+    gettext('Item analysis')
     ## Setup dialog element list
     elements = list(
         'QScores' = list(type = 'variablelist', title = gettext('Question scores (pick two or more)'), variables = DiscreteNumeric, selectmode = 'multiple', min = 2, error = gettext('You must select two or more variables as question scores.')),
@@ -42,24 +42,24 @@ PsySummaryMenu <- function() {
                )
     }
     ## Call menu-dialog function
-    .Menu(dialogtitle = gettext('Numerical item analysis'), elements = elements, help = gettext('Numerical_summaries'), recall = PsySummaryMenu, reset = "PsySummaryMenu", apply = "PsySummaryMenu", onokcommand = onokcommand)
+    .Menu(dialogtitle = gettext('Item numerical summary'), elements = elements, help = gettext('Item numerical summary'), recall = PsySummaryMenu, reset = "PsySummaryMenu", apply = "PsySummaryMenu", onokcommand = onokcommand)
 }
 
-#' @rdname resumenes_numericos
-#' @name Resúmenes_numéricos
+#' @rdname Resumen-numerico-de-items
+#' @name Resumen numérico de ítems
 #' 
-#' @title Resúmenes numéricos
+#' @title Resumen numérico de ítems
 #' 
 #' @description
 #' Calcular algunos resúmenes numéricos para los ítems.
 #'
 #' @details
-#' Desde un conjunto de puntaciones de preguntas (al menos dos) y de test, esta función llama a \code{\link[psychometric]{item.exam}} del paquete phychometric.
+#' Desde un conjunto de puntaciones de preguntas (al menos dos) y de test, esta función llama a \code{\link[psychometric]{item.exam}} del paquete psychometric.
 #'
 #' Su descripción, en inglés, en la documentación del paquete psychometric es:
 #' Realiza un análisis a nivel de elemento. Proporciona correlaciones ítem-total, Desviación estándar en ítems, dificultad, discriminación e índices de confiabilidad y validez.
 #'
-#' Para usar esta función desde R-Commander, seleccione del menú "Psicometría" -> "Análisis de ítems..." -> "Resúmenes numéricos..."
+#' Para usar esta función desde R-Commander, seleccione del menú "Psicometría" -> "Análisis de ítems" -> "Resúmenes numéricos..."
 #' 
 #' @seealso \code{\link[psychometric]{item.exam}}
 #'

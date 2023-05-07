@@ -1,7 +1,6 @@
 ### Psychometry extensions: Test score
 
-#' @name test_score
-#' @aliases Test_score
+#' @name Test score
 #' 
 #' @title Test score
 #' 
@@ -13,13 +12,13 @@
 #' For factor type variables, the last level is taken as one and the other as 0.
 #' NA's are allowed, but the result will be NA.
 #'
-#' To use this function from R-Commander, select from menu "Psychometry" -> "Data..." -> "Test Score..."
+#' To use this function from R-Commander, select from menu "Psychometry" -> "Data" -> "Test Score..."
 #' 
 #' @return It returns nothing. This function is used for its side effect of creating a new column in the active data set.
 #'
 #' @export
 PsyScoreMenu <- function() {
-    gettext("Data...")
+    gettext("Data")
     gettext("Test score...")
     ## Setup dialog element list
     elements = list(
@@ -39,14 +38,14 @@ PsyScoreMenu <- function() {
                )
     }
     ## Call menu-dialog function
-    .Menu(dialogtitle = gettext('Test score'), elements = elements, help = gettext('Test_score'), recall = PsyScoreMenu, reset = "PsyScoreMenu", apply = "PsyScoreMenu", onokcommand = onokcommand)   
+    .Menu(dialogtitle = gettext('Test score'), elements = elements, help = gettext('Test score'), recall = PsyScoreMenu, reset = "PsyScoreMenu", apply = "PsyScoreMenu", onokcommand = onokcommand)   
 }
 
 
-#' @rdname puntuaciones_test
-#' @name Puntuación_del_test
+#' @rdname Puntuacion-del-test
+#' @name Puntuación del test
 #' 
-#' @title Puntuaciones de test
+#' @title Puntuación del test
 #' 
 #' @description
 #' Cálculo de la puntuación del test a partir de las puntuaciones de las preguntas.
@@ -56,7 +55,7 @@ PsyScoreMenu <- function() {
 #' Para variables de tipo factor, se toma el último nivel como uno y el otro como 0.
 #' Se permiten NAs, pero el resultado será NA.
 #'
-#' Para usar esta función desde R-Commander, seleccione del menú "Psicometría" -> "Datos..." -> "Puntuación del test..."
+#' Para usar esta función desde R-Commander, seleccione del menú "Psicometría" -> "Datos" -> "Puntuación del test..."
 #'
 #' @return No devuelve nada. Esta función se usa por su efecto colateral de crear una nueva variable en el conjunto de datos activo.
 NULL
