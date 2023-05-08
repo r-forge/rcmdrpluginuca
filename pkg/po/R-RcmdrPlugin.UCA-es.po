@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RcmdrPlugin.UCA\n"
 "Report-Msgid-Bugs-To: manuel.munoz@uca.es\n"
-"POT-Creation-Date: 2023-05-07 20:49\n"
-"PO-Revision-Date: 2023-05-07 21:02+0200\n"
+"POT-Creation-Date: 2023-05-08 22:29\n"
+"PO-Revision-Date: 2023-05-08 23:43+0200\n"
 "Last-Translator: Manuel Munoz-Marquez <manuel.munoz@uca.es>\n"
 "Language-Team: manuel.munoz@uca.es\n"
 "Language: es_ES\n"
@@ -17,6 +17,27 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Generator: Poedit 3.0.1\n"
+
+msgid "Psychometry"
+msgstr "Psicometría"
+
+msgid "Item analysis"
+msgstr "Análisis de ítems"
+
+msgid "Difficulty index for answers..."
+msgstr "Índice de dificultad de respuestas..."
+
+msgid "Item answers"
+msgstr "Respuestas al ítem"
+
+msgid "No variable were selected."
+msgstr "No se ha seleccionado ninguna variable."
+
+msgid "Difficulty index for success ="
+msgstr "Índice de dificultad para éxito ="
+
+msgid "Difficulty index for answers"
+msgstr "Índice de dificultad de respuestas"
 
 msgid "Data"
 msgstr "Datos"
@@ -38,9 +59,6 @@ msgstr "Debe proporcionar un nombre válido para la nueva variable."
 
 msgid "Test score"
 msgstr "Puntuación del test"
-
-msgid "Item analysis"
-msgstr "Análisis de ítems"
 
 msgid "You must select two or more variables as question scores."
 msgstr ""
@@ -106,6 +124,9 @@ msgstr "Varianza poblacional"
 msgid "Null hypothesis: sigma^2 ="
 msgstr "Hipótesis nula: sigma^2 ="
 
+msgid "noptions is not an integer or is not at least 2"
+msgstr "noptions no es un entero al menos 2"
+
 msgid "Elements of type variablelist must include variable selector"
 msgstr ""
 "Los elementos de tipo variablelist deben incluir el selector de variables"
@@ -146,9 +167,6 @@ msgstr "Test de normalidad multivariante..."
 msgid "Multivariate Normality Test"
 msgstr "Test de normalidad multivariante"
 
-msgid "noptions is not an integer or is not at least 2"
-msgstr "noptions no es un entero al menos 2"
-
 msgid "corrected is not TRUE neither FALSE"
 msgstr "corrected no es TRUE ni FALSE"
 
@@ -164,9 +182,6 @@ msgstr "Índice de dificultad..."
 msgid "Item analysis..."
 msgstr "Análisis de ítems..."
 
-msgid "Psychometry"
-msgstr "Psicometría"
-
 msgid "Score difficulty index..."
 msgstr "Índice de dificultad de puntuaciones..."
 
@@ -181,9 +196,6 @@ msgstr "Índice_de_dificultad_corregido"
 
 msgid "Corrected difficulty index"
 msgstr "Índice de dificultad corregido"
-
-msgid "Difficulty_index"
-msgstr "Índice_de_dificultad"
 
 msgid "Difficulty index"
 msgstr "Índice de dificultad"
@@ -619,6 +631,21 @@ msgstr "Gráfico xbar fase II desde datos (columnas múltiples)"
 
 msgid "xbar-chart phase II from parameters (multiple columns)"
 msgstr "Gráfico xbar fase II desde parámetros (columnas múltiples)"
+
+#~ msgid "Item answer (pick one)"
+#~ msgstr "Respuestas del ítem (elija una)"
+
+#~ msgid "You must select one variable."
+#~ msgstr "Debe seleccionar una variable."
+
+#~ msgid "Difficulty index menu option"
+#~ msgstr "Opción de menú índice de dificultad"
+
+#~ msgid "Question score (pick one)"
+#~ msgstr "Puntuaciones del ítem (elija una)"
+
+#~ msgid "Difficulty_index"
+#~ msgstr "Índice_de_dificultad"
 
 #~ msgid "Test_score"
 #~ msgstr "Puntuación_del_test"

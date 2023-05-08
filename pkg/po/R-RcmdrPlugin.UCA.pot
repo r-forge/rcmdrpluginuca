@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: RcmdrPlugin.UCA 6.10-1\n"
-"POT-Creation-Date: 2023-05-07 20:49\n"
+"Project-Id-Version: RcmdrPlugin.UCA 6.10-2\n"
+"POT-Creation-Date: 2023-05-08 22:29\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -9,6 +9,27 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+msgid "Psychometry"
+msgstr ""
+
+msgid "Item analysis"
+msgstr ""
+
+msgid "Difficulty index for answers..."
+msgstr ""
+
+msgid "Item answers"
+msgstr ""
+
+msgid "No variable were selected."
+msgstr ""
+
+msgid "Difficulty index for success ="
+msgstr ""
+
+msgid "Difficulty index for answers"
+msgstr ""
 
 msgid "Data"
 msgstr ""
@@ -29,9 +50,6 @@ msgid "You must provide a valid name for new variable."
 msgstr ""
 
 msgid "Test score"
-msgstr ""
-
-msgid "Item analysis"
 msgstr ""
 
 msgid "You must select two or more variables as question scores."
@@ -97,6 +115,9 @@ msgstr ""
 msgid "Null hypothesis: sigma^2 ="
 msgstr ""
 
+msgid "noptions is not an integer or is not at least 2"
+msgstr ""
+
 msgid "Elements of type variablelist must include variable selector"
 msgstr ""
 
@@ -136,9 +157,6 @@ msgstr ""
 msgid "Multivariate Normality Test"
 msgstr ""
 
-msgid "noptions is not an integer or is not at least 2"
-msgstr ""
-
 msgid "corrected is not TRUE neither FALSE"
 msgstr ""
 
@@ -154,9 +172,6 @@ msgstr ""
 msgid "Item analysis..."
 msgstr ""
 
-msgid "Psychometry"
-msgstr ""
-
 msgid "Score difficulty index..."
 msgstr ""
 
@@ -170,9 +185,6 @@ msgid "Corrected_difficulty_index"
 msgstr ""
 
 msgid "Corrected difficulty index"
-msgstr ""
-
-msgid "Difficulty_index"
 msgstr ""
 
 msgid "Difficulty index"

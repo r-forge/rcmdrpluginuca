@@ -23,7 +23,7 @@ mvnMenu <- function() {
     require('MVN', quietly = TRUE)
     gettext('Multivariate normality tests...')
     ## Setup dialog element list
-    elements = list(
+    elements <- list(
         'Variables' = list(type = 'variablelist', title = gettext('Variables (pick two or more)'), variables = Numeric, selectmode = 'multiple', min = 2, error = gettext('You must select two or more variables.'))
     )
     ## Setup onokcommand function
