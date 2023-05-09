@@ -21,8 +21,15 @@
 #'
 #' @export
 PsySummaryMenu <- function() {
-    require('psychometric', quietly = TRUE)
+    ## Load required package
+    if (!require('psychometric', quietly = TRUE)) {
+        Message(paste(gettext('Error loading the required package:'), 'psychometric'), type = "error")
+        return()
+    }
+    ## Be sure to include required strings in translations
+    gettext('Psychometry')
     gettext('Item analysis')
+    gettext('Numerical summaries...')
     ## Setup dialog element list
     elements = list(
         'QScores' = list(type = 'variablelist', title = gettext('Question scores (pick two or more)'), variables = DiscreteNumeric, selectmode = 'multiple', min = 2, error = gettext('You must select two or more variables as question scores.')),

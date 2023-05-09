@@ -18,13 +18,15 @@
 #'
 #' @export
 PsyScoreMenu <- function() {
-    gettext("Data")
-    gettext("Test score...")
+    ## Be sure to include required strings in translations
+    gettext('Psychometry')
+    gettext('Data')
+    gettext('Test score...')
     ## Setup dialog element list
     elements = list(
         'QScores' = list(type = 'variablelist', title = gettext('Question scores (pick two or more)'), variables = DiscreteNumeric, selectmode = 'multiple', min = 2, error = gettext('You must select two or more variables as question score.')),
         'NewVariable' = list(type = 'entry', title = gettext('New variable name'), vartype = 'varname', error = gettext('You must provide a valid name for new variable.'))
-        )
+    )
     ## Setup onokcommand function
     onokcommand <- function(elements) {
         paste0(ActiveDataSet(),

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: RcmdrPlugin.UCA 6.10-4\n"
-"POT-Creation-Date: 2023-05-09 11:00\n"
+"Project-Id-Version: RcmdrPlugin.UCA 6.10-5\n"
+"POT-Creation-Date: 2023-05-09 21:53\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,6 +46,15 @@ msgstr ""
 msgid "Difficulty index for answers"
 msgstr ""
 
+msgid "Score difficulty index..."
+msgstr ""
+
+msgid "Test scores"
+msgstr ""
+
+msgid "Score difficulty index"
+msgstr ""
+
 msgid "Data"
 msgstr ""
 
@@ -65,6 +74,12 @@ msgid "You must provide a valid name for new variable."
 msgstr ""
 
 msgid "Test score"
+msgstr ""
+
+msgid "Error loading the required package:"
+msgstr ""
+
+msgid "Numerical summaries..."
 msgstr ""
 
 msgid "You must select two or more variables as question scores."
@@ -170,36 +185,6 @@ msgid "Multivariate normality tests"
 msgstr ""
 
 msgid "Multivariate Normality Test"
-msgstr ""
-
-msgid "corrected is not TRUE neither FALSE"
-msgstr ""
-
-msgid "discrete is not TRUE neither FALSE"
-msgstr ""
-
-msgid "Difficulty index..."
-msgstr ""
-
-msgid "Item analysis..."
-msgstr ""
-
-msgid "Score difficulty index..."
-msgstr ""
-
-msgid "Score_difficulty_index"
-msgstr ""
-
-msgid "Score difficulty index"
-msgstr ""
-
-msgid "Corrected_difficulty_index"
-msgstr ""
-
-msgid "Difficulty index"
-msgstr ""
-
-msgid "for success"
 msgstr ""
 
 msgid "Not yet implemented"

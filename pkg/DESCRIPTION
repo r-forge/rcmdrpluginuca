@@ -1,7 +1,7 @@
 Package: RcmdrPlugin.UCA
 Type: Package
 Title: UCA Rcmdr Plug-in
-Version: 6.10-4
+Version: 6.10-5
 Date: 2023-05-08
 Encoding: UTF-8
 Author: Manuel Munoz-Marquez <manuel.munoz@uca.es>, Fernando Fernández Palacín <fernando.fernandez@uca.es> and Rocío Gómez Molinero <rocio.gomez@uca.es>

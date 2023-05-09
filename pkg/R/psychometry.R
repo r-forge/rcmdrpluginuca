@@ -1,89 +1,6 @@
 ### Psychometry extensions
 
 #' @export
-SDIMenu <- function() DIMenu_(discrete = TRUE)
-## Low level function for menus
-DIMenu_ <- function(corrected = FALSE, discrete = FALSE)
-{
-    ## Check input parameters
-    if (!isTRUE(corrected) && !isFALSE(corrected)) stop('corrected is not TRUE neither FALSE')
-    if (!isTRUE(discrete) && !isFALSE(discrete)) stop('discrete is not TRUE neither FALSE')
-    ## To ensure that menu name is included in pot file
-    gettext('Corrected difficulty index...')
-    gettext('Difficulty index...')
-    gettext('Item analysis...')
-    gettext('Psychometry')
-    gettext('Score difficulty index...')
-    ## Build dialog
-    if (discrete) {
-        help <- gettext("Score_difficulty_index")
-        menu <- "SDIMenu"
-        recall <- SDIMenu
-        title <- gettext("Score difficulty index")
-        variables <- DiscreteNumeric()
-    } else {
-        variables <- Dicotomics()
-        if (corrected) {
-            help <- gettext("Corrected_difficulty_index")
-            menu <- "PsyCDIMenu"
-            recall <- PsyCDIMenu
-            title <- gettext("Corrected difficulty index")
-        } else {
-            help <- gettext("Difficulty index")
-            menu <- "PsyDIMenu"
-            recall <- PsyDIMenu
-            title <- gettext("Difficulty index")
-        }
-    }
-    initializeDialog(title = title)
-    ## Define variable selection box
-    variablesBox <- variableListBox(top, variables, selectmode="single", initialSelection=NULL, title=gettextRcmdr("Variable (pick one)"))
-    ## Define noptions input box
-    if (corrected) {
-        noptionsVar <- tclVar("")
-        noptionsEntry <- tkentry(top, width = "8", textvariable = noptionsVar)
-    }
-    onOK <- function() {
-        x <- getSelection(variablesBox)
-        if (length(x) == 0) {
-            errorCondition(recall = menu, message = gettextRcmdr("No variable were selected."))
-            return()
-        }
-        ## Get variable type and its levels
-        .data <- eval(parse(text=x), envir=get(ActiveDataSet(), envir=.GlobalEnv))
-        if (is.numeric(.data)) {
-            success <- 1
-        } else {
-            success <- paste0('"', levels(.data)[2], '"')
-        }
-        command <- paste0("with(", ActiveDataSet(), ", difficultyindex(", x)
-        if (isFALSE(discrete)) command <- paste0(command, ", success = ", success)
-        if (corrected) {
-            suppressWarnings(noptions <- round(as.numeric(tclvalue(noptionsVar))))
-            if (is.na(noptions) || (noptions < 2)) {
-                errorCondition(recall = recall, message = gettext('The number of options per question is not an integer or is not at least 2'))
-                return()
-            }
-            command <- paste0(command, ", noptions = ", noptions)
-        }
-        command <- paste0(command, ")) # ", title)
-        if (isFALSE(discrete)) command <- paste0(command, " ", gettext("for success"), " = ", success)
-        closeDialog()
-        ## Execute command
-        doItAndPrint(command)
-        tkfocus(CommanderWindow())
-    }
-    OKCancelHelp(helpSubject = help, reset = menu, apply = menu)
-    tkgrid(getFrame(variablesBox), sticky="nw")
-    if (corrected) {
-        tkgrid(tklabel(top, text = gettext("Number of options per question:")), noptionsEntry, sticky = "w")
-    }
-    tkgrid(buttonsFrame, sticky="w", columnspan = 8)
-    dialogSuffix(rows=3, columns = 8)
-}
-
-
-#' @export
 PsyA2SMenu <- function() {
     stop('Not yet implemented')
     ## Setup dialog element list
@@ -254,7 +171,7 @@ PsySBMenu <-function() {
         if (length(elements[[1]]$variablelist) != length(elements[[2]]$variablelist)) {
             errorCondition(recall = PsySBMenu, message = gettext("Select the same number of variables for both parts"))
             return()            
-            }
+        }
         paste0('with(',
                ActiveDataSet(),
                ', spearman_brown(x = cbind(',
