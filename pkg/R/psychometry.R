@@ -1,8 +1,6 @@
 ### Psychometry extensions
 
 #' @export
-PsyCDIMenu <- function() DIMenu_(corrected = TRUE)
-#' @export
 SDIMenu <- function() DIMenu_(discrete = TRUE)
 ## Low level function for menus
 DIMenu_ <- function(corrected = FALSE, discrete = FALSE)

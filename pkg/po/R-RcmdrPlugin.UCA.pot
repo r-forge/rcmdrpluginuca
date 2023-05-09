@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: RcmdrPlugin.UCA 6.10-2\n"
-"POT-Creation-Date: 2023-05-08 22:29\n"
+"Project-Id-Version: RcmdrPlugin.UCA 6.10-4\n"
+"POT-Creation-Date: 2023-05-09 11:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,13 +16,28 @@ msgstr ""
 msgid "Item analysis"
 msgstr ""
 
-msgid "Difficulty index for answers..."
+msgid "Corrected difficulty index..."
 msgstr ""
 
 msgid "Item answers"
 msgstr ""
 
 msgid "No variable were selected."
+msgstr ""
+
+msgid "Number of options per question:"
+msgstr ""
+
+msgid "The number of options per question is not an integer or is not at least 2"
+msgstr ""
+
+msgid "Corrected difficulty index for success ="
+msgstr ""
+
+msgid "Corrected difficulty index"
+msgstr ""
+
+msgid "Difficulty index for answers..."
 msgstr ""
 
 msgid "Difficulty index for success ="
@@ -163,9 +178,6 @@ msgstr ""
 msgid "discrete is not TRUE neither FALSE"
 msgstr ""
 
-msgid "Corrected difficulty index..."
-msgstr ""
-
 msgid "Difficulty index..."
 msgstr ""
 
@@ -184,19 +196,10 @@ msgstr ""
 msgid "Corrected_difficulty_index"
 msgstr ""
 
-msgid "Corrected difficulty index"
-msgstr ""
-
 msgid "Difficulty index"
 msgstr ""
 
-msgid "The number of options per question is not an integer or is not at least 2"
-msgstr ""
-
 msgid "for success"
-msgstr ""
-
-msgid "Number of options per question:"
 msgstr ""
 
 msgid "Not yet implemented"
