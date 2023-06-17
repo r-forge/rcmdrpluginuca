@@ -42,26 +42,30 @@ MMM -->
 <h1>[EN] Welcome to RcmdrPlugin.UCA project!</h1>
 
 <p>Some extension to Rcmdr (R Commander) to teach statistics in a first university course made by R-UCA project and used at University of Cadiz (UCA).
-This customization includes: test for randomness, confidence interval and test for sigma for one normal sample and predictions using active model.</p>
+This customization includes: quality control graphs, test for randomness, confidence interval and test for sigma for one normal sample and predictions using active model.</p>
+
+<p>Development version of the package also includes new menu entries to hande psychometric data.</p>
 
 <p>All the customizations provides by this package will be propose to be part of the Rcmdr package. All the customization included in the Rcmdr package will be dropped from here.</p>
 
 <center><img width=400 src="https://knuth.uca.es/images/RcmdrPlugin.UCA_quality_control.png"></center>
 
-<p>The package version in this repository may be newer than the one available in cran. You can install the version available here using the instruction <code>install.packages('RcmdrPlugin.UCA', repos = "http://R-Forge.R-project.org")</code></p>
+<p>The package version in this repository may be newer than the one available in cran. You can install the version available here using the instruction <code>install.packages('RcmdrPlugin.UCA', repos = c('http://R-Forge.R-project.org/', 'https://cran.r-project.org/'), dependencies = TRUE)</code>.</p>
 
 <p>More information in <a href="http://<?php echo $domain; ?>/projects/<?php echo $group_name; ?>/"><strong>r-forge project summary page</strong></a> or in <a href="http://knuth.uca.es/moodle/course/view.php?id=60&lang=en">project page</a>.</p>
 
 <h1>[ES] &iexcl;Bienvenido al proyecto RcmdrPlugin.UCA!</h1>
 
 <p>Algunas extensiones a Rcmdr (R Commander) para la ense&ntilde;anza de un primer curso universitario en estad&iacute;stica hechas por el proyecto R-UCA y usadas en la Universidad de C&aacute;diz (UCA).
-Estas extensiones incluyen: test de aleatoriedad, intervalo de confianza y test de hip&oacute;tesis para sigma en una poblaci&oacute;n normal y realizaci&oacute;n de predicciones usando el modelo activo.</p>
+Estas extensiones incluyen: gráficos de control de calidad, test de aleatoriedad, intervalo de confianza y test de hip&oacute;tesis para sigma en una poblaci&oacute;n normal y realizaci&oacute;n de predicciones usando el modelo activo.</p>
+
+<p>La versión de desarrollo incluye opciones de menú para el tratamiento de datos psicométricos.</p>
 
 <p>Todas las adaptaciones ser&aacute;n propuestas para su incorporaci&oacute;n a Rcmdr. Las adaptaciones que se incorporen al paquete Rcmdr se suprimir&aacute;n de este paquete.</p>
 
 <center><img width=400 src="https://knuth.uca.es/images/RcmdrPlugin.UCA_control_calidad.png"></center>
 
-<p>La versi&oacute;n del paquete en este repositorio puede ser m&aacute;s reciente que la disponible en cran. Puede instalar la versi&oacute;n disponible aqu&iacute; usando la instrucci&oacute;n <code>install.packages('RcmdrPlugin.UCA', repos = "http://R-Forge.R-project.org")</code></p>
+<p>La versi&oacute;n del paquete en este repositorio puede ser m&aacute;s reciente que la disponible en cran. Puede instalar la versi&oacute;n disponible aqu&iacute; usando la instrucci&oacute;n <code>install.packages('RcmdrPlugin.UCA', repos = c('http://R-Forge.R-project.org', 'https://cran.r-project.org/'), dependencies = TRUE)</code>.</p>
 
 <p>M&aacute;s informaci&oacute;n en la <a href="http://<?php echo $domain; ?>/projects/<?php echo $group_name; ?>/"><strong>p&aacute;gina r-forge resumen del proyecto</strong></a> o en la <a href="http://knuth.uca.es/moodle/course/view.php?id=60&lang=es">p&aacute;gina del proyecto</a>.</p>
 
