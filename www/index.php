@@ -50,7 +50,8 @@ This customization includes: quality control graphs, test for randomness, confid
 
 <center><img width=400 src="https://knuth.uca.es/images/RcmdrPlugin.UCA_quality_control.png"></center>
 
-<p>The package version in this repository may be newer than the one available in cran. You can install the version available here using the instruction <code>install.packages('RcmdrPlugin.UCA', repos = c('http://R-Forge.R-project.org/', 'https://cran.r-project.org/'), dependencies = TRUE)</code>.</p>
+<p>The package is available on cran, so you can install it as any other package.
+The package version in this repository may be newer than the one available in cran. You can install the version available here using the instruction <code>install.packages('RcmdrPlugin.UCA', repos = c('http://R-Forge.R-project.org/', 'https://cran.r-project.org/'), dependencies = TRUE)</code>.</p>
 
 <p>More information in <a href="http://<?php echo $domain; ?>/projects/<?php echo $group_name; ?>/"><strong>r-forge project summary page</strong></a> or in <a href="http://knuth.uca.es/moodle/course/view.php?id=60&lang=en">project page</a>.</p>
 
@@ -65,7 +66,8 @@ Estas extensiones incluyen: gráficos de control de calidad, test de aleatorieda
 
 <center><img width=400 src="https://knuth.uca.es/images/RcmdrPlugin.UCA_control_calidad.png"></center>
 
-<p>La versi&oacute;n del paquete en este repositorio puede ser m&aacute;s reciente que la disponible en cran. Puede instalar la versi&oacute;n disponible aqu&iacute; usando la instrucci&oacute;n <code>install.packages('RcmdrPlugin.UCA', repos = c('http://R-Forge.R-project.org', 'https://cran.r-project.org/'), dependencies = TRUE)</code>.</p>
+<p>El paquete está disponible en cran, por lo que puede ser instalado como cualquier otro paquete.
+La versi&oacute;n del paquete en este repositorio puede ser m&aacute;s reciente que la disponible en cran. Puede instalar la versi&oacute;n disponible aqu&iacute; usando la instrucci&oacute;n <code>install.packages('RcmdrPlugin.UCA', repos = c('http://R-Forge.R-project.org', 'https://cran.r-project.org/'), dependencies = TRUE)</code>.</p>
 
 <p>M&aacute;s informaci&oacute;n en la <a href="http://<?php echo $domain; ?>/projects/<?php echo $group_name; ?>/"><strong>p&aacute;gina r-forge resumen del proyecto</strong></a> o en la <a href="http://knuth.uca.es/moodle/course/view.php?id=60&lang=es">p&aacute;gina del proyecto</a>.</p>
 
