@@ -1,0 +1,348 @@
+# Translation string file for RcmdrPlugin.UCA package.
+# Copyright (C) 2011 Manuel Munoz-Marquez
+# This file is distributed under the same license as the RcmdrPlugin.UCA package.
+# Manuel Munoz-Marquez <manuel.munoz@uca.es>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: RcmdrPlugin.UCA\n"
+"Report-Msgid-Bugs-To: manuel.munoz@uca.es\n"
+"POT-Creation-Date: 2022-05-03 19:01\n"
+"PO-Revision-Date: 2022-05-03 20:25+0200\n"
+"Last-Translator: Manuel Munoz-Marquez <manuel.munoz@uca.es>\n"
+"Language-Team: manuel.munoz@uca.es\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: Poedit 3.0\n"
+
+msgid "Predict using active model"
+msgstr "Predecir usando el modelo activo"
+
+msgid "Input data and predict..."
+msgstr "Introducir datos y predecir..."
+
+msgid "Kolmogorov-Smirnov test for two samples..."
+msgstr "Test de Kolmogorov-Smirnov para dos muestras..."
+
+msgid "Kolmogorov-Smirnov test for two samples"
+msgstr "Test de Kolmogorov-Smirnov para dos muestras"
+
+msgid "No variable were selected for fist one."
+msgstr "No se ha seleccionado ninguna variable para la primera variable."
+
+msgid "No variable were selected for second one."
+msgstr "No se ha seleccionado ninguna variable para la segunda variable."
+
+msgid "First variable and second one are the same."
+msgstr "La primera y la segunda variable son la misma."
+
+msgid "Add predictions to existing dataset..."
+msgstr "Añadir predicciones a un conjunto de datos existente..."
+
+msgid "Randomness test for two level factor..."
+msgstr "Test de aleatoriedad para un factor de dos niveles..."
+
+msgid "Randomness test for two level factor"
+msgstr "Test de aleatoriedad para un factor de dos niveles"
+
+msgid "Randomness test for numeric variable..."
+msgstr "Test de aleatoriedad para variable numérica..."
+
+msgid "Randomness test for numeric variable"
+msgstr "Test de aleatoriedad para variable numérica"
+
+msgid "Normal mean with known variance"
+msgstr "Media de normal con varianza conocida"
+
+msgid "Single-Sample Variance Test..."
+msgstr "Test de varianza para una muestra..."
+
+msgid "Single-Sample Variance Test"
+msgstr "Test de varianza para una muestra"
+
+msgid "Population variance"
+msgstr "Varianza poblacional"
+
+msgid "Null hypothesis: sigma^2 ="
+msgstr "Hipótesis nula: sigma^2 ="
+
+msgid "Phase I..."
+msgstr "Fase I..."
+
+msgid "Phase I (multiple columns)..."
+msgstr "Fase I (columnas múltiples)..."
+
+msgid "Phase II (multiple columns)..."
+msgstr "Fase II (columnas múltiples)..."
+
+msgid "Phase II from data (multiple columns)..."
+msgstr "Fase II desde datos (columnas múltiples)..."
+
+msgid "Phase II from parameters (multiple columns)..."
+msgstr "Fase II desde parámetros (columnas múltiples)..."
+
+msgid "No valid numeric value has been provided for the center parameter"
+msgstr "No se ha proporcionado un valor numérico para el parámetro centro"
+
+msgid "No data variable was selected (Phase I)"
+msgstr "No se ha seleccionado ninguna variable para datos (Fase I)"
+
+msgid "Select at least two variables (Phase I)"
+msgstr "Seleccione al menos dos variables (Fase I)"
+
+msgid "No sample size variable was selected (Phase I)"
+msgstr "No se ha seleccionado variable para tamaño de muestra (Fase I)"
+
+msgid "No data variable was selected (Phase II)"
+msgstr "No se ha seleccionado ninguna variable para datos (Fase II)"
+
+msgid "Select at least two variables (Phase II)"
+msgstr "Seleccione al menos dos variables (Fase II)"
+
+msgid "No sample size variable was selected (Phase II)"
+msgstr "No se ha seleccionado variable para tamaño de muestra (Fase II)"
+
+msgid "and"
+msgstr "y"
+
+msgid "with Center"
+msgstr "con centro"
+
+msgid "and StdDev"
+msgstr "y StdDev"
+
+msgid "Center"
+msgstr "Centro"
+
+msgid "Standard Deviation"
+msgstr "Desviación Típica"
+
+msgid "Plot all data"
+msgstr "Dibujar todos los datos"
+
+msgid "Renumber 2nd phase data"
+msgstr "Renumerar los datos de 2ª fase"
+
+msgid "Counts"
+msgstr "Conteos"
+
+msgid "c-chart (rate)..."
+msgstr "Gráfico c (tasa)..."
+
+msgid "c-chart (rate)"
+msgstr "Gráfico c (tasa)"
+
+msgid "c-chart\\nfor"
+msgstr "Gráfico c\\nde"
+
+msgid "Nonconformities"
+msgstr "No conformidades"
+
+msgid "Sizes"
+msgstr "Tamaños"
+
+msgid "c-chart (rate) from data"
+msgstr "Gráfico c (tasa) desde datos"
+
+msgid "Nonconformities (Phase I)"
+msgstr "No conformidades (Fase I)"
+
+msgid "Sizes (Phase I)"
+msgstr "Tamaños (Fase I)"
+
+msgid "Nonconformities (Phase II)"
+msgstr "No conformidades (Fase II)"
+
+msgid "Sizes (Phase II)"
+msgstr "Tamaños (Fase II)"
+
+msgid "c-chart (rate) from parameter"
+msgstr "Gráfico c (tasa) desde parámetros"
+
+msgid "Attributes"
+msgstr "Atributos"
+
+msgid "np-chart (count)"
+msgstr "Gráfico np (conteos)"
+
+msgid "np-chart (Phase I)..."
+msgstr "Gráfico np (Fase I)..."
+
+msgid "np-chart"
+msgstr "Gráfico np"
+
+msgid "np-chart\\nfor"
+msgstr "Gráfico np\\nde"
+
+msgid "Nonconforming units"
+msgstr "Unidades no conformes"
+
+msgid "Sample size"
+msgstr "Tamaño de muestra"
+
+msgid "np-chart phase II from data"
+msgstr "Gráfico np fase II desde datos"
+
+msgid "np-chart phase II\\nfor"
+msgstr "Gráfico np fase II\\nde"
+
+msgid "Nonconforming units (Phase I)"
+msgstr "No conformidades (Fase I)"
+
+msgid "Sample size (Phase I)"
+msgstr "Tamaño de muestra (Fase I)"
+
+msgid "Nonconforming units (Phase II)"
+msgstr "No conformidades (Fase II)"
+
+msgid "Sample size (Phase II)"
+msgstr "Tamaño de muestra (Fase II)"
+
+msgid "np-chart phase II from parameter"
+msgstr "Gráfico no fase II desde parámetros"
+
+msgid "Quality Control"
+msgstr "Control de calidad"
+
+msgid "Pareto chart"
+msgstr "Gráfico de Pareto"
+
+msgid "p-chart (proportion)"
+msgstr "Gráfico p (proporción)"
+
+msgid "p-chart"
+msgstr "Gráfico p"
+
+msgid "p-chart\\nfor"
+msgstr " Gráfico p\\nde "
+
+msgid "Phase II from data..."
+msgstr "Fase II desde datos..."
+
+msgid "p-chart phase II from data"
+msgstr "Gráfico p fase II desde datos"
+
+msgid "p-chart phase II\\nfor"
+msgstr "Gráfico p fase II\\nde"
+
+msgid "Phase II from parameter..."
+msgstr "Fase II desde parámetro..."
+
+msgid "p-chart phase II from parameter"
+msgstr "Gráfico p fase II desde parámetro"
+
+msgid "Range"
+msgstr "Rangos"
+
+msgid "R-chart phase I (multiple columns)"
+msgstr "Gráfico R fase I (columnas múltiples)"
+
+msgid "R-chart\\nfor"
+msgstr " Gráfico R\\nde "
+
+msgid "Measurements (pick two variables or more)"
+msgstr "Medidas (elija dos o más variables)"
+
+msgid "R-chart phase II from data (multiple columns)"
+msgstr "Gráfico R fase II desde datos (columnas múltiples)"
+
+msgid "Measurements phase I from data (pick two variables or more)"
+msgstr "Medidas fase I desde datos (elija dos o más variables)"
+
+msgid "Measurements phase II from data (pick two variables or more)"
+msgstr "Medidas fase II desde datos (elija dos o más variables)"
+
+msgid "R-chart phase II from parameters (multiple columns)"
+msgstr "Gráfico R fase II desde parámetros (columnas múltiples)"
+
+msgid "Measurements phase I from parameters (pick two variables or more)"
+msgstr "Medidas fase I desde parámetros (elija dos o más variables)"
+
+msgid "Measurements phase II from parameters (pick two variables or more)"
+msgstr "Medidas fase II desde parámetros (elija dos o más variables)"
+
+msgid "S-chart (multiple columns)"
+msgstr "Gráfico S (columnas múltiples)"
+
+msgid "S-chart\\nfor"
+msgstr " Gráfico S\\nde "
+
+msgid "S-chart phase II from data (multiple columns)"
+msgstr "Gráfico S fase II desde datos (columnas múltiples)"
+
+msgid "Measurements phase I (pick two variables or more)"
+msgstr "Medidas fase I (elija dos o más variables)"
+
+msgid "Measurements phase II (pick two variables or more)"
+msgstr "Medidas fase II (elija dos o más variables)"
+
+msgid "S-chart phase II from parameters (multiple columns)"
+msgstr "Gráfico S fase II desde parámetros (columnas múltiples)"
+
+msgid "u-chart (average rate)..."
+msgstr "Gráfico u (tasa media)..."
+
+msgid "u-chart (average rate)"
+msgstr "Gráfico u (tasa media)"
+
+msgid "u-chart\\nfor"
+msgstr " Gráfico u\\nde "
+
+msgid "u-chart phase II from data"
+msgstr "Gráfico u fase II desde datos"
+
+msgid "u-chart phase II from parameter"
+msgstr "Gráfico u fase II desde parámetros"
+
+msgid "Continuous"
+msgstr "Continuos"
+
+msgid "One-at-time data"
+msgstr "Un dato cada vez"
+
+msgid "Measurements"
+msgstr "Medidas"
+
+msgid "xbar-chart (multiple columns)"
+msgstr "Gráfico xbar (columnas múltiples)"
+
+msgid "xbar-chart\\nfor"
+msgstr "Gráfico xbar\\npara"
+
+msgid "xbar-chart phase II from data (multiple columns)"
+msgstr "Gráfico xbar fase II desde datos (columnas múltiples)"
+
+msgid "xbar-chart phase II from parameters (multiple columns)"
+msgstr "Gráfico xbar fase II desde parámetros (columnas múltiples)"
+
+#~ msgid "Phase II (multiple columns) from data..."
+#~ msgstr "Fase II (columnas múltiples) desde datos..."
+
+#~ msgid "Phase II (multiple columns) from parameters..."
+#~ msgstr "Fase II (columnas múltiples) desde parámetros..."
+
+#, fuzzy
+#~| msgid "Measurements (pick two variables or more)"
+#~ msgid "Measurements pahse I (pick two variables or more)"
+#~ msgstr "Medidas (elija dos o más variables)"
+
+#~ msgid "No sample size variable was selected"
+#~ msgstr "No se ha seleccionado variable para tamaño de muestra"
+
+#~ msgid "Phase I"
+#~ msgstr "Fase I"
+
+#~ msgid "Phase II"
+#~ msgstr "Fase II"
+
+#~ msgid " phase II chart for "
+#~ msgstr " Gráfico de fase II de"
+
+#~ msgid "No value for center has been provided"
+#~ msgstr "No se ha seleccionado valor para centro"
+
+#~ msgid "p-chart (Phase I)..."
+#~ msgstr "Gráfico p (Fase I)..."

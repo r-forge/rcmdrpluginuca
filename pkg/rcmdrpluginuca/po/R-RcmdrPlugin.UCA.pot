@@ -1,0 +1,311 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: RcmdrPlugin.UCA 4.5-1\n"
+"POT-Creation-Date: 2022-05-03 19:01\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+
+msgid "Predict using active model"
+msgstr ""
+
+msgid "Input data and predict..."
+msgstr ""
+
+msgid "Kolmogorov-Smirnov test for two samples..."
+msgstr ""
+
+msgid "Kolmogorov-Smirnov test for two samples"
+msgstr ""
+
+msgid "No variable were selected for fist one."
+msgstr ""
+
+msgid "No variable were selected for second one."
+msgstr ""
+
+msgid "First variable and second one are the same."
+msgstr ""
+
+msgid "Add predictions to existing dataset..."
+msgstr ""
+
+msgid "Randomness test for two level factor..."
+msgstr ""
+
+msgid "Randomness test for two level factor"
+msgstr ""
+
+msgid "Randomness test for numeric variable..."
+msgstr ""
+
+msgid "Randomness test for numeric variable"
+msgstr ""
+
+msgid "Normal mean with known variance"
+msgstr ""
+
+msgid "Single-Sample Variance Test..."
+msgstr ""
+
+msgid "Single-Sample Variance Test"
+msgstr ""
+
+msgid "Population variance"
+msgstr ""
+
+msgid "Null hypothesis: sigma^2 ="
+msgstr ""
+
+msgid "Phase I..."
+msgstr ""
+
+msgid "Phase I (multiple columns)..."
+msgstr ""
+
+msgid "Phase II (multiple columns)..."
+msgstr ""
+
+msgid "Phase II from data (multiple columns)..."
+msgstr ""
+
+msgid "Phase II from parameters (multiple columns)..."
+msgstr ""
+
+msgid "No valid numeric value has been provided for the center parameter"
+msgstr ""
+
+msgid "No data variable was selected (Phase I)"
+msgstr ""
+
+msgid "Select at least two variables (Phase I)"
+msgstr ""
+
+msgid "No sample size variable was selected (Phase I)"
+msgstr ""
+
+msgid "No data variable was selected (Phase II)"
+msgstr ""
+
+msgid "Select at least two variables (Phase II)"
+msgstr ""
+
+msgid "No sample size variable was selected (Phase II)"
+msgstr ""
+
+msgid "and"
+msgstr ""
+
+msgid "with Center"
+msgstr ""
+
+msgid "and StdDev"
+msgstr ""
+
+msgid "Center"
+msgstr ""
+
+msgid "Standard Deviation"
+msgstr ""
+
+msgid "Plot all data"
+msgstr ""
+
+msgid "Renumber 2nd phase data"
+msgstr ""
+
+msgid "Counts"
+msgstr ""
+
+msgid "c-chart (rate)..."
+msgstr ""
+
+msgid "c-chart (rate)"
+msgstr ""
+
+msgid "c-chart\\nfor"
+msgstr ""
+
+msgid "Nonconformities"
+msgstr ""
+
+msgid "Sizes"
+msgstr ""
+
+msgid "c-chart (rate) from data"
+msgstr ""
+
+msgid "Nonconformities (Phase I)"
+msgstr ""
+
+msgid "Sizes (Phase I)"
+msgstr ""
+
+msgid "Nonconformities (Phase II)"
+msgstr ""
+
+msgid "Sizes (Phase II)"
+msgstr ""
+
+msgid "c-chart (rate) from parameter"
+msgstr ""
+
+msgid "Attributes"
+msgstr ""
+
+msgid "np-chart (count)"
+msgstr ""
+
+msgid "np-chart (Phase I)..."
+msgstr ""
+
+msgid "np-chart"
+msgstr ""
+
+msgid "np-chart\\nfor"
+msgstr ""
+
+msgid "Nonconforming units"
+msgstr ""
+
+msgid "Sample size"
+msgstr ""
+
+msgid "np-chart phase II from data"
+msgstr ""
+
+msgid "np-chart phase II\\nfor"
+msgstr ""
+
+msgid "Nonconforming units (Phase I)"
+msgstr ""
+
+msgid "Sample size (Phase I)"
+msgstr ""
+
+msgid "Nonconforming units (Phase II)"
+msgstr ""
+
+msgid "Sample size (Phase II)"
+msgstr ""
+
+msgid "np-chart phase II from parameter"
+msgstr ""
+
+msgid "Quality Control"
+msgstr ""
+
+msgid "Pareto chart"
+msgstr ""
+
+msgid "p-chart (proportion)"
+msgstr ""
+
+msgid "p-chart"
+msgstr ""
+
+msgid "p-chart\\nfor"
+msgstr ""
+
+msgid "Phase II from data..."
+msgstr ""
+
+msgid "p-chart phase II from data"
+msgstr ""
+
+msgid "p-chart phase II\\nfor"
+msgstr ""
+
+msgid "Phase II from parameter..."
+msgstr ""
+
+msgid "p-chart phase II from parameter"
+msgstr ""
+
+msgid "Range"
+msgstr ""
+
+msgid "R-chart phase I (multiple columns)"
+msgstr ""
+
+msgid "R-chart\\nfor"
+msgstr ""
+
+msgid "Measurements (pick two variables or more)"
+msgstr ""
+
+msgid "R-chart phase II from data (multiple columns)"
+msgstr ""
+
+msgid "Measurements phase I from data (pick two variables or more)"
+msgstr ""
+
+msgid "Measurements phase II from data (pick two variables or more)"
+msgstr ""
+
+msgid "R-chart phase II from parameters (multiple columns)"
+msgstr ""
+
+msgid "Measurements phase I from parameters (pick two variables or more)"
+msgstr ""
+
+msgid "Measurements phase II from parameters (pick two variables or more)"
+msgstr ""
+
+msgid "S-chart (multiple columns)"
+msgstr ""
+
+msgid "S-chart\\nfor"
+msgstr ""
+
+msgid "S-chart phase II from data (multiple columns)"
+msgstr ""
+
+msgid "Measurements phase I (pick two variables or more)"
+msgstr ""
+
+msgid "Measurements phase II (pick two variables or more)"
+msgstr ""
+
+msgid "S-chart phase II from parameters (multiple columns)"
+msgstr ""
+
+msgid "u-chart (average rate)..."
+msgstr ""
+
+msgid "u-chart (average rate)"
+msgstr ""
+
+msgid "u-chart\\nfor"
+msgstr ""
+
+msgid "u-chart phase II from data"
+msgstr ""
+
+msgid "u-chart phase II from parameter"
+msgstr ""
+
+msgid "Continuous"
+msgstr ""
+
+msgid "One-at-time data"
+msgstr ""
+
+msgid "Measurements"
+msgstr ""
+
+msgid "xbar-chart (multiple columns)"
+msgstr ""
+
+msgid "xbar-chart\\nfor"
+msgstr ""
+
+msgid "xbar-chart phase II from data (multiple columns)"
+msgstr ""
+
+msgid "xbar-chart phase II from parameters (multiple columns)"
+msgstr ""

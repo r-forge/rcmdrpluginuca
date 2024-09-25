@@ -1,0 +1,66 @@
+Version 5.1-1
+2022-05-03
+* New "Kolmogorov-Smirnov test for two samples..." option in "Non parametric test" menu.
+Version 4.5-1
+2021-10-22
+* Dialog windows of p charts have been relayout and new options have been included
+Version 4.4-3
+2021-04-02
+* New options in "Quatility control" menu for p, np, c, u, xbar, R and S charts, first and second phase.
+Version 4.3-4
+2021-03-01
+* Fix a bug that prevented menu loading
+Version 4.3-3
+2021-02-24
+* New "Quality control" menu with "Pareto chart" option
+Version 4.2-6
+2018-12-30
+ * Minor changes to comply with the new standard
+Version 4.2-5
+2018-10-16
+ * Minor changes in vignettes and demos
+Version 4.2-4
+2018-06-13
+ * Minor bug solve in variance test
+Version 4.1-4
+2018-04-09
+ * Just a new compilation to make it compatible with new version of car
+Version 4.1-2
+2017-10-06
+ * The entry "Input data and predict..." in "Models menu" now add the name of the active model to the name of the new predicted variable
+ * Minor changes in help
+Version 4.1-1
+2017-05-22
+ * Translation into Spanish of new strings
+Version 4.1-0
+2017-05-21
+ * New option in menu to build confidence interval and test the variance from one normal population
+ * New entries in help for menu entry "Predict using active model"
+ * New entries in help for menu entries "Randomness test for two level factor..." and "Randomness test for numeric variable...".
+Version 3.1-0
+2016-09-15
+ * demo for menu options in the package are added.
+Version 3.0-1
+2016-09-09
+ * Two new options added in "Models menu" to fit values using current model.
+Version 2.0-5
+2016-01-12
+ * Minor bug fixed.
+Version 2.0-4
+2015-06-10
+ * Minor bug fixed.
+Version 2.0-3
+2015-06-10
+ * The option "Drop unused factor levels" has been moved to Rcmdr so dropped from this package.
+ * Two options for randomness test has been added to Rcmdr menu. One for numeric variable and the other for two level factor.
+Version 1.0-2
+2013-10-18
+ * Just a new build
+Version 1.0-1
+2012-03-12
+ * Change in package load function.
+ * ChangeLog file added.
+Version 1.0-0
+2011-12-02
+ * First release.
+ * "Drop unused factor levels" option has been added to Rcmdr menu.
