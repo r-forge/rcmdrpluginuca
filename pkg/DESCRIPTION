@@ -3,8 +3,10 @@ Type: Package
 Title: UCA Rcmdr Plug-in
 Version: 5.1-2
 Date: 2024-09-26
-Author: Manuel Munoz-Marquez <manuel.munoz@uca.es>
-Maintainer: Manuel Munoz-Marquez <manuel.munoz@uca.es>
+Authors@R: person(given = "Manuel",
+   family = "Munoz-Marquez",
+   role = c("aut", "cre"),
+   email = "manuel.munoz@uca.es")
 Depends: IQCC, qcc, qicharts2, randtests, rmarkdown, TeachingDemos, tseries
 Suggests: car, carData, knitr
 VignetteBuilder: knitr
