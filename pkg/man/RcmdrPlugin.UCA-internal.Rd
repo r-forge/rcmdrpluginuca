@@ -3,11 +3,13 @@
   R-UCA project and used in teaching statistics at University of Cadiz
   (UCA).}
 
+\alias{browseRUCAWebsite}
+\alias{browseRcmdrPluginUCA}
 \alias{cchart1Menu}
 \alias{cchart2Menu}
 \alias{cchartpMenu}
+\alias{checkRUCAversion}
 \alias{input2predict}
-\alias{ks2samplesTest}
 \alias{npchart1Menu}
 \alias{npchart2Menu}
 \alias{npchartpMenu}

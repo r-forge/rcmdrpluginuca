@@ -1,14 +1,32 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: RcmdrPlugin.UCA 4.5-1\n"
-"POT-Creation-Date: 2022-05-03 19:01\n"
+"Project-Id-Version: RcmdrPlugin.UCA 5.1-2\n"
+"POT-Creation-Date: 2024-09-26 00:28\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+msgid "R-UCA project website"
+msgstr ""
+
+msgid "https://knuth.uca.es/R/doku.php?id=inicio"
+msgstr ""
+
+msgid "RcmdrPlugin.UCA package website"
+msgstr ""
+
+msgid "https://knuth.uca.es/R/doku.php?id=rcmdrplugin.uca"
+msgstr ""
+
+msgid "Check R-UCA package version"
+msgstr ""
+
+msgid "https://knuth.uca.es/version_R-UCA.php?lang=en&version="
+msgstr ""
 
 msgid "Predict using active model"
 msgstr ""

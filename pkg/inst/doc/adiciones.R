@@ -8,32 +8,32 @@ knitr::opts_chunk$set(
 library(RcmdrPlugin.UCA)
 sigma.test <- TeachingDemos::sigma.test
 
-## ---- include = TRUE----------------------------------------------------------
+## ----include = TRUE-----------------------------------------------------------
 data(sweetpotato, package="randtests")
 sweetpotato <- as.data.frame(sweetpotato)
 
-## ---- include = TRUE, results = 'hide'----------------------------------------
+## ----include = TRUE, results = 'hide'-----------------------------------------
 with(sweetpotato, sigma.test(yield[!is.na(yield)], alternative='two.sided', sigmasq=1.0, conf.level=0.95))
 
-## ---- include = TRUE----------------------------------------------------------
+## ----include = TRUE-----------------------------------------------------------
 with(sweetpotato, sigma.test(yield[!is.na(yield)], alternative='two.sided', sigmasq=1.0, conf.level=0.95))
 
-## ---- include = TRUE----------------------------------------------------------
+## ----include = TRUE-----------------------------------------------------------
 data(AMSsurvey, package="carData")
 
-## ---- include = TRUE, results = 'hide'----------------------------------------
+## ----include = TRUE, results = 'hide'-----------------------------------------
 with(AMSsurvey, twolevelfactor.runs.test(sex))
 
-## ---- include = TRUE----------------------------------------------------------
+## ----include = TRUE-----------------------------------------------------------
 with(AMSsurvey, twolevelfactor.runs.test(sex))
 
-## ---- include = TRUE, results = 'hide'----------------------------------------
+## ----include = TRUE, results = 'hide'-----------------------------------------
 with(sweetpotato, numeric.runs.test(yield))
 
-## ---- include = TRUE----------------------------------------------------------
+## ----include = TRUE-----------------------------------------------------------
 with(sweetpotato, numeric.runs.test(yield))
 
-## ---- include = TRUE----------------------------------------------------------
+## ----include = TRUE-----------------------------------------------------------
 data(Chile, package="carData")
 
 ## ----include = TRUE, results = 'hide'-----------------------------------------

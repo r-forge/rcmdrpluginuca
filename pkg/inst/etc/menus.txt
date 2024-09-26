@@ -1,11 +1,10 @@
 # Some Rcmdr menus for the RcmdrPlugin.UCA package
 # When the plug-in is loaded, these menus are merged with the standard Rcmdr menus
 
-# last modified: March 2021 by M. Munoz-Marquez
+# last modified: September 2024 by M. Munoz-Marquez
 
 #   type    menu/item         operation/parent  label                                       command/menu      activation           install?
     item    variancesMenu     command           "Single-Sample Variance Test..."            sigmaTest         "numericP()"	   ""
-    item    nonparametricMenu command           "Kolmogorov-Smirnov test for two samples..."   ks2samplesTest   "numericP(n = 2)" ""
     item    nonparametricMenu command           "Randomness test for two level factor..."   randomnessFTest   "twoLevelFactorsP()" ""
     item    nonparametricMenu command           "Randomness test for numeric variable..."   randomnessNTest   "numericP()"         ""
     item    modelsMenu        separator         ""                                          modelsGraphsMenu  ""                   ""
@@ -81,3 +80,8 @@
     item    qcSMenu	      command		"Phase I (multiple columns)..." 	    S1mcMenu	       "numericP()"	   ""
     item    qcSMenu	      command		"Phase II from data (multiple columns)..." 	    S2mcMenu	       "numericP()"	   ""
     item    qcSMenu	      command		"Phase II from parameters (multiple columns)..."    SpmcMenu	       "numericP()"	   ""
+
+# Help
+    item    helpMenu          command            "R-UCA project website"                    browseRUCAWebsite  ""                  ""
+    item    helpMenu          command            "RcmdrPlugin.UCA package website"          browseRcmdrPluginUCA  ""               ""
+    item    helpMenu          command            "Check R-UCA package version"              checkRUCAversion      ""               ""

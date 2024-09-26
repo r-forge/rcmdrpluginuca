@@ -7,6 +7,7 @@ import("rmarkdown")
 
 importFrom("qicharts2", "paretochart")
 importFrom("randtests", randtest.runs.test = "runs.test")
+importFrom("utils", "browseURL")
 importFrom("TeachingDemos", "sigma.test")
 importFrom("tcltk", "tkbutton")
 importFrom("tseries", tseries.runs.test = "runs.test")
@@ -41,7 +42,6 @@ export("xbarpmcMenu")
 export("xbarone1Menu")
 
 ### Statistics
-export("ks2samplesTest")
 export("randomnessFTest")
 export("randomnessNTest")
 export("twolevelfactor.runs.test")
@@ -49,3 +49,7 @@ export("SampleSizeZMenu")
 export("sigmaTest")
 export("numeric.runs.test")
 
+### Help
+export("browseRUCAWebsite")
+export("browseRcmdrPluginUCA")
+export("checkRUCAversion")

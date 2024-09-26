@@ -23,6 +23,21 @@
     }
 }
 
+browseRUCAWebsite <- function() {
+    gettext("R-UCA project website")
+    browseURL(gettext("https://knuth.uca.es/R/doku.php?id=inicio"))
+    }
+
+browseRcmdrPluginUCA <- function() {
+    gettext("RcmdrPlugin.UCA package website")
+    browseURL(gettext("https://knuth.uca.es/R/doku.php?id=rcmdrplugin.uca"))
+}
+
+checkRUCAversion <- function() {
+    gettext("Check R-UCA package version")
+    browseURL(paste0(gettext("https://knuth.uca.es/version_R-UCA.php?lang=en&version="), version['major'], '.', version['minor']))
+}
+
 
 ### Function to input data and predict values using active model
 input2predict <- function() {
