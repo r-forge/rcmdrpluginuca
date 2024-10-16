@@ -41,6 +41,8 @@ MMM -->
 
 <h1>[EN] Welcome to RcmdrPlugin.UCA project!</h1>
 
+<p><b>Note</b>: This project has been move to <a href="https://github.com/MMunozMarquez/RcmdrPlugin.UCA">github</a></p>
+
 <p>Some extension to Rcmdr (R Commander) to teach statistics in a first university course made by R-UCA project and used at University of Cadiz (UCA).
 This customization includes: quality control graphs, test for randomness, confidence interval and test for sigma for one normal sample and predictions using active model.</p>
 
@@ -56,6 +58,9 @@ The package version in this repository may be newer than the one available in cr
 <p>More information in <a href="http://<?php echo $domain; ?>/projects/<?php echo $group_name; ?>/"><strong>r-forge project summary page</strong></a> or in <a href="http://knuth.uca.es/moodle/course/view.php?id=60&lang=en">project page</a>.</p>
 
 <h1>[ES] &iexcl;Bienvenido al proyecto RcmdrPlugin.UCA!</h1>
+
+<p><b>Note</b>: Este proyecto se ha movido a <a href="https://github.com/MMunozMarquez/RcmdrPlugin.UCA">github</a></p>
+
 
 <p>Algunas extensiones a Rcmdr (R Commander) para la ense&ntilde;anza de un primer curso universitario en estad&iacute;stica hechas por el proyecto R-UCA y usadas en la Universidad de C&aacute;diz (UCA).
 Estas extensiones incluyen: gráficos de control de calidad, test de aleatoriedad, intervalo de confianza y test de hip&oacute;tesis para sigma en una poblaci&oacute;n normal y realizaci&oacute;n de predicciones usando el modelo activo.</p>
